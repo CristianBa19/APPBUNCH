@@ -1,0 +1,113 @@
+page-introduction {
+    .scape-intro-btn-3rd{
+        background-color: transparent;
+    }
+    .bot-button{
+        width: 98%;
+        height: 40px;
+        margin: 5px 0;
+        background-color: #09c;
+        color: white;
+        border-radius: 15px;
+        font-family: RaleTitle;
+    }
+    background-color: rgba(245,245,245,255) !important;
+    .scape-intro-btn {
+        width: 90%;
+        border: none;
+        background: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        text-transform: none;
+        position: relative;
+    }
+    .scape-intro-btn-3rd {
+        width: 90%;
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        text-transform: none;
+        position: relative;
+    }
+    .first-section {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: url("../assets/img/BG_bunch03.png");
+        // background-position-y: -68px;
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat; 
+    }
+    .first-sectionb {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: url("../assets/img/BG_bunch02.png");
+        // background-position-y: -68px;
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat; 
+    }
+    .first-sectionc {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: url("../assets/img/BG_bunch01.png");
+        // background-position-y: -68px;
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat; 
+    }
+
+    .second-section {
+        position:absolute;
+        text-align: center;
+        // top:50%;
+        height: 30%;
+        background-position-y: 1px;
+        overflow-y: auto;
+        font-family: RaleText;
+    }
+    .third-section {
+        margin-left: 5px;
+        position:relative;
+        top:82%;
+        color:white;
+        font-family: RaleNext;
+    }
+
+    .title-text {        
+        margin: 15px auto;
+        text-align: center;
+        width: 100%;
+        font-family: RaleTitle;
+        color: white;
+        font-size: 32px
+    }
+
+    .title-text2 {        
+        // margin: 15px auto;
+        text-align: center;
+        width: 100%;
+        font-family: RaleTitle;
+        color: white;
+        font-size: 27px
+    }
+
+    .body-text {        
+        text-align: center;
+        color: white;
+        max-height: 40%;
+        width: 100%
+    }
+
+    ion-col {
+        height:100%;
+    }
+
+    .slide-zoom {
+        height: 100%;
+    }
+
+}

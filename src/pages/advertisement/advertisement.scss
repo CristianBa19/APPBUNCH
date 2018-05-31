@@ -1,0 +1,11 @@
+page-advertisement {
+    ion-grid{height:100%;}
+    #images{height:45%;img{width:100%;height:100%;}}
+    #body{
+        height:55%;
+        p{padding:0;margin:0;padding-bottom:10px;}
+        #title{font-size:22px;font-weight:bold;}
+        #subTitle{font-size:17px;}
+        #textContainer{margin-bottom:30px;}
+    }        
+}

@@ -1,0 +1,16 @@
+<ion-row class="m-input" id="{{id}}">
+    <ion-col col-11>                                    
+        <ion-row class="m-input-label">
+            <ion-col col-12>{{label}}</ion-col>
+        </ion-row>
+        <ion-row class="m-input-value">
+            <ion-col col-12>
+                <input [attr.maxlength]="maxlength" [type]="type" [value]="field || ''" [attr.disabled]="disabled === true || null" [attr.readonly]="readonly === true || null" spellcheck="false" autocorrect="off">
+            </ion-col>
+        </ion-row>                    
+    </ion-col>    
+    <ion-col col-1>
+        <ion-icon *ngIf="field !== undefined && field !== null" class="m-input-icon m-input-icon-ok" name="ios-checkmark-outline"></ion-icon>
+        <ion-icon *ngIf="field === null" class="m-input-icon m-input-icon-error" name="ios-close-outline"></ion-icon>
+    </ion-col>                            
+</ion-row>

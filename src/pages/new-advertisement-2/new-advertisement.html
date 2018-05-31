@@ -1,0 +1,181 @@
+<ion-header>
+  <ion-grid>
+      <ion-row class="headerRow" align-items-center>
+          <ion-col col-2 id="backContainer">
+              <button icon-only ion-button clear class="header-back-button" (click)="goBack()">            
+                  <ion-icon name="ios-arrow-back"></ion-icon>
+              </button>                
+          </ion-col>
+          <ion-col col-8 id="titleContainer">
+              Publicar anuncio
+          </ion-col>    
+          <ion-col col-2></ion-col>        
+      </ion-row>    
+  </ion-grid>
+</ion-header>
+
+<ion-content padding>    
+
+    <!-- Paso 1 de 5 -->
+    <ion-row class="cliente-tab" [hidden]="step != 1">        
+        <ion-col col-12>
+
+            <ion-row>
+                <ion-col col-12>            
+                    <ion-row>
+                        <ion-col col-12>
+                            <p class="instrucciones">Crea un anuncio y publicalo a tus amigos, familia y conocidos</p>
+                            <p class="sub-instrucciones">Es totalmente gratis</p>                            
+                        </ion-col>            
+                    </ion-row>
+                </ion-col>
+            </ion-row>
+            <br><br>
+            <!---->
+            <ion-row class="m-input" id="tituloAnuncio">
+                <ion-col col-11>                                    
+                    <ion-row class="m-input-label">
+                        <ion-col col-12>
+                          <p>¿Cuál es el título de tu anuncio?</p>
+                          <p>Menciona lo que recomiendas</p>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row class="m-input-value">
+                        <ion-col col-12>
+                            <input type="text" [(ngModel)]="tituloAnuncio">
+                        </ion-col>
+                    </ion-row>                    
+                </ion-col>    
+                <ion-col col-1>
+                    <ion-icon *ngIf="tituloAnuncio !== undefined && tituloAnuncio !== null" class="m-input-icon m-input-icon-ok" name="ios-checkmark-outline"></ion-icon>
+                    <ion-icon *ngIf="tituloAnuncio === null" class="m-input-icon m-input-icon-error" name="ios-close-outline"></ion-icon>
+                </ion-col>                            
+            </ion-row>
+
+            <ion-row class="m-input" id="mensajePersonalizado">
+                <ion-col col-11>                                    
+                    <ion-row class="m-input-label">
+                        <ion-col col-12>
+                          <p>Mensaje personalizado</p>
+                          <p>Detalle el por qué lo recomiendas</p>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row class="m-input-value">
+                        <ion-col col-12>
+                            <input type="text" [(ngModel)]="mensajePersonalizado">
+                        </ion-col>
+                    </ion-row>                    
+                </ion-col>    
+                <ion-col col-1>
+                    <ion-icon *ngIf="mensajePersonalizado !== undefined && mensajePersonalizado !== null" class="m-input-icon m-input-icon-ok" name="ios-checkmark-outline"></ion-icon>
+                    <ion-icon *ngIf="mensajePersonalizado === null" class="m-input-icon m-input-icon-error" name="ios-close-outline"></ion-icon>
+                </ion-col>                            
+            </ion-row>
+            <br><br>
+            <ion-row class="m-button">
+                <ion-col col-3></ion-col>
+                <ion-col col-6>
+                    <button type="button" (tap)="showStep(2)">Continuar</button>
+                </ion-col>                
+            </ion-row>
+        </ion-col>
+    </ion-row>    
+
+    <ion-row class="cliente-tab" [hidden]="step != 2">        
+        <ion-col col-12>
+
+            <ion-row>
+                <ion-col col-12>            
+                    <ion-row>
+                        <ion-col col-12>
+                            <p class="instrucciones">Selecciona una foto para tu anuncio.</p>
+                            <p class="sub-instrucciones">Una imagen vende más que mil palabras</p>                            
+                        </ion-col>            
+                    </ion-row>
+                </ion-col>
+            </ion-row>
+            <br><br>
+            <div id="tablaDeCarros">
+                <ion-row>
+                    <ion-col col-6>
+                      <img src="http://services.bunch.guru/img/car1.jpg" class="image" id="image1" (tap)="selectImage(1)">
+                      <ion-icon name="checkmark-circle" class="img-icon"></ion-icon>
+                    </ion-col>
+                    <ion-col col-6>
+                      <img src="http://services.bunch.guru/img/car2.jpg" class="image" id="image2" (tap)="selectImage(2)">
+                      <ion-icon name="checkmark-circle" class="img-icon"></ion-icon>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                      <ion-col col-6>
+                        <img src="http://services.bunch.guru/img/car3.jpg" class="image" id="image3" (tap)="selectImage(3)">
+                        <ion-icon name="checkmark-circle" class="img-icon"></ion-icon>
+                      </ion-col>
+                      <ion-col col-6>
+                        <img src="http://services.bunch.guru/img/car4.jpg" class="image" id="image4" (tap)="selectImage(4)">
+                        <ion-icon name="checkmark-circle" class="img-icon"></ion-icon>
+                      </ion-col>
+                    </ion-row>
+            </div>            
+            <br><br>
+            <ion-row class="m-button">
+                <ion-col col-3></ion-col>
+                <ion-col col-6>
+                    <button type="button" (tap)="showStep(3)">Continuar</button>
+                </ion-col>                
+            </ion-row>
+        </ion-col>
+    </ion-row>    
+
+    <ion-row class="cliente-tab" [hidden]="step != 3">
+        <ion-col col-12>
+
+            <ion-row>
+                <ion-col col-12>            
+                    <ion-row>
+                        <ion-col col-12>
+                            <p class="instrucciones">Revisa tu anuncio</p>
+                            <p class="sub-instrucciones">Así lo verán los demás</p>
+                        </ion-col>            
+                    </ion-row>
+                </ion-col>
+            </ion-row>
+            <br><br>
+            <div id="demo">                
+                <ion-row>                  
+                  <ion-col col-8></ion-col>
+                  <ion-col col-4>
+                    <ion-row class="demo-fila">
+                        <ion-col col-3><img src="../../assets/icon/logo/asegurdoras-ana.svg"></ion-col>
+                        <ion-col col-3></ion-col>
+                        <ion-col col-6>
+                          $7,500
+                        </ion-col>
+                    </ion-row>                                        
+                    <ion-row class="demo-fila">
+                        <ion-col col-3><img src="../../assets/icon/logo/asegurdoras-axa.svg"></ion-col>
+                        <ion-col col-3></ion-col>
+                        <ion-col col-6>
+                          $8,500
+                        </ion-col>
+                    </ion-row>                                        
+                    <ion-row class="demo-fila">
+                        <ion-col col-3><img src="../../assets/icon/logo/asegurdoras-hdi.svg"></ion-col>
+                        <ion-col col-3></ion-col>
+                        <ion-col col-6>
+                          $3,500
+                        </ion-col>
+                    </ion-row>                                        
+                  </ion-col>
+                </ion-row>
+            </div>            
+            <br><br>
+            <ion-row class="m-button">
+                <ion-col col-3></ion-col>
+                <ion-col col-6>
+                    <button type="button" (tap)="publicarAnuncio()">Publicar</button>
+                </ion-col>                
+            </ion-row>
+        </ion-col>
+    </ion-row>    
+</ion-content>

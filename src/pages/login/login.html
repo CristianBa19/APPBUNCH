@@ -1,0 +1,120 @@
+<!--<ion-content class="login-content" padding>
+    <div>
+        <img class="logo" src="assets/img/Bunch.svg">
+    </div>
+
+    <div class="login-box">
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+            <ion-row>
+                <ion-col>
+                    <ion-list inset>
+                        <div class="login-title">{{ "LoginPage.titleText" | translate }}</div>
+                        <div class="divRow">
+                            <ion-input formControlName="user" type="email" placeholder='Email' class="user" [(ngModel)]="credentials.email"></ion-input>
+                        </div>
+                        <div class="divRow">
+                            <ion-input [type]="password_type" id="password" formControlName="pass" type="password" [placeholder]='"LoginPage.passwordInputPlaceholderText" | translate'
+                                class="pass" [(ngModel)]="credentials.password">
+                            </ion-input>
+                            <ion-icon name="eye" class="icon-eye" (click)="togglePasswordMode()"></ion-icon>
+                        </div>
+                    </ion-list>
+                    <p style="color:red;">{{message}}</p>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <button ion-button type="submit" class="products-btn">Iniciar sesión</button>
+            </ion-row>
+        </form>
+        <div class="linea"></div>
+        <ion-row>
+            <button ion-button class="form-btnX justify" (click)="forgotPass()">¿Olvidaste tu contraseña?</button>
+        </ion-row>
+        <ion-row> 
+            <button type="button" ion-button class="form-btn form-btnX justify" (click)="createAccount()">{{ "LoginPage.createAccaunText" | translate }}
+            </button>
+        </ion-row>
+        <ion-row>
+            <div class="footer-warn">{{ "LoginPage.footerWarnText" | translate }}</div>
+        </ion-row>
+    </div>
+</ion-content>-->
+
+<ion-content>
+    <ion-row>
+        <ion-col col-4></ion-col>
+        <ion-col col-4 class="text-center">
+            <img class="logo" src="assets/img/bunch-blue.png">                    
+        </ion-col>
+    </ion-row>    
+
+    <ion-row>
+        <ion-col col-12>
+            <hr>
+        </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col col-4></ion-col>
+        <ion-col col-4 class="text-center" id="welcomeMsg">
+            ¡Bienvenido<br>
+            a Bunch!
+        </ion-col>
+    </ion-row>
+
+    <div id="form">        
+        <ion-row class="m-input">
+            <ion-col col-11>                                    
+                <ion-row class="m-input-label">
+                    <ion-col col-12>Email</ion-col>
+                </ion-row>
+                <ion-row class="m-input-value">
+                    <ion-col col-12>
+                        <input type="email" [(ngModel)]="email" spellcheck="false" autocorrect="off" (ngModelChange)="emailChange($event)">
+                    </ion-col>
+                </ion-row>                    
+            </ion-col>    
+            <ion-col col-1 align-self-end>
+                <ion-icon *ngIf="email === undefined || email.length == 0" name="ios-mail-outline"></ion-icon>
+                <ion-icon *ngIf="validEmail === true" class="m-input-icon m-input-icon-ok" name="ios-mail-outline"></ion-icon>
+                <ion-icon *ngIf="validEmail === false" class="m-input-icon m-input-icon-error" name="ios-mail-outline"></ion-icon>
+            </ion-col>                            
+        </ion-row>
+    
+        <ion-row class="m-input" id="{{id}}">
+            <ion-col col-10>                                    
+                <ion-row class="m-input-label">
+                    <ion-col col-12>Contraseña (6 o más caracteres)</ion-col>
+                </ion-row>
+                <ion-row class="m-input-value">
+                    <ion-col col-12>
+                        <input [type]="showPass === false ? 'password' : 'type'" [(ngModel)]="password" spellcheck="false" autocorrect="off" (ngModelChange)="passChange($event)">
+                    </ion-col>
+                </ion-row>                    
+            </ion-col>    
+            <ion-col col-1 class="text-center" align-self-end>
+                <ion-icon *ngIf="showPass === false" class="m-input-icon" name="md-eye" (tap)="viewPass(true)"></ion-icon>                    
+                <ion-icon *ngIf="showPass === true" class="m-input-icon" name="md-eye-off" (tap)="viewPass(false)"></ion-icon>                
+            </ion-col>                            
+            <ion-col col-1 class="text-center" align-self-end>
+                <ion-icon *ngIf="password === undefined || password.length == 0" name="ios-lock-outline"></ion-icon>                    
+                <ion-icon *ngIf="validPass === true" class="m-input-icon m-input-icon-ok" name="ios-lock-outline"></ion-icon>
+                <ion-icon *ngIf="validPass === false" class="m-input-icon m-input-icon-error" name="ios-lock-outline"></ion-icon>
+            </ion-col>                            
+        </ion-row>        
+    </div>
+        
+    <ion-row>
+        <ion-col col-3></ion-col>
+        <ion-col col-6>
+            <button type="button" (click)="goIntro()" [attr.disabled]="validPass === undefined || validEmail === undefined || validPass === flase || validEmail === false ? true : null">Iniciar sesión</button>
+        </ion-col>            
+    </ion-row>    
+
+    <ion-row>
+        <ion-col col-12 class="text-center">
+            <a href="#" (click)="forgotPass()">¿Olvidaste tu contraseña?</a>            
+            <a href="#" (click)="createAccount()">Crear cuenta</a>
+        </ion-col>        
+    </ion-row>    
+</ion-content>

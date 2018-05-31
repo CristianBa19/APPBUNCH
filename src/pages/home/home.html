@@ -1,0 +1,15 @@
+<ion-tabs #appTabs selectedIndex="2" (ionChange)="tapped($event)" id="appFooter">
+  <ion-tab [root]="tab1Root" value="0" tabIcon="ios-basket-outline"></ion-tab>
+  <ion-tab [root]="tab2Root" value="1" tabIcon="ios-chatbubbles-outline" ></ion-tab>
+
+
+  <ion-tab #tab3 [show]="!isClient" value="2" tabIcon="ios-notifications-outline"  [root] ="tab3Root"></ion-tab>
+  <div>Poductos</div>
+  <ion-tab #tab4 [show]="!isClient" value="3" tabIcon="ios-podium-outline" [root]="tab4Root"></ion-tab>
+
+
+  <ion-tab #tab5 [show]="isClient" value="4" tabIcon="menu" [root] = "tab5Root"></ion-tab>
+  <ion-tab #tab6 [show]="isClient" value="5" tabIcon="products"  [root]="tab6Root"></ion-tab>
+
+  <ion-tab [root]="tab7Root" value="0" tabIcon="ios-contact-outline" ></ion-tab>
+</ion-tabs>

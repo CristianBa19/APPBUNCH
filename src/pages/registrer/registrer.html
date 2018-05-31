@@ -1,0 +1,138 @@
+<!--<ion-content class="login-content" padding>    
+    <div><img class="logo" src="assets/img/Bunch.svg"></div>
+    <ion-row>
+        <div class="footer-warn footer-warn2">¡Únete a Bunch <br> y comienza a ganar hoy mismo!</div>
+    </ion-row>
+    <div class="login-box">
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+            <ion-row>
+                <ion-col>
+                    <ion-list inset>
+                        <div class="divRow">
+                            <ion-input formControlName="email" type="email" placeholder='Email' class="user" [(ngModel)]="newuser.email" ></ion-input>
+                        </div>
+                        <div class="divRow">
+                            <ion-input formControlName="password" type="password" placeholder="Contraseña (7 o más caracteres)" class="pass" [(ngModel)]="newuser.password"></ion-input>
+                        </div>
+                        <div class="divRow">
+                            <ion-icon name="call" class="cell"></ion-icon><ion-input formControlName="celular" type="tel" [placeholder]='"RegisterAccountPage.celular" | translate'  [(ngModel)]="newuser.celular"></ion-input>
+                        </div>
+                    </ion-list>                    
+                    <p style="color:red;">{{message}}</p>
+                    //<button type="button" ion-button class="form-btn" (click)="createAccount()">{{ "LoginPage.createAccaunText" | translate }} <ion-icon name="ios-arrow-forward"></ion-icon></button>
+                </ion-col>
+            </ion-row>
+            <ion-row>                
+                <button ion-button type="submit" class="products-btn">Unirme Ahora</button>
+            </ion-row>
+        </form>
+        <div class="linea"></div>
+        <ion-row>
+            <div class="footer-warn footer-warn2 form-btnX">¿Ya eres usuario de Bunch?</div>
+        </ion-row>
+        <button ion-button class="form-btnX" (click)="ReturnLoginPage()">Ingresa aquí</button>        
+
+        <ion-row>
+            <div class="footer-warn">{{ "LoginPage.footerWarnText" | translate }}</div>
+        </ion-row>
+    </div>
+</ion-content>-->
+
+<ion-content>
+    <ion-row>
+        <ion-col col-4></ion-col>
+        <ion-col col-4 class="text-center">
+            <img class="logo" src="assets/img/bunch-blue.png">                    
+        </ion-col>
+    </ion-row>    
+
+    <ion-row>
+        <ion-col col-12>
+            <hr>
+        </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col col-2></ion-col>
+        <ion-col col-8 class="text-center" id="welcomeMsg">
+            Únete a Bunch<br>
+            <span id="grayText">¡y comienza a ganar hoy mismo!</span>
+        </ion-col>
+    </ion-row>
+
+    <div id="form">        
+        <ion-row class="m-input">
+            <ion-col col-11>                                    
+                <ion-row class="m-input-label">
+                    <ion-col col-12>Email</ion-col>
+                </ion-row>
+                <ion-row class="m-input-value">
+                    <ion-col col-12>
+                        <input type="email" [(ngModel)]="email" spellcheck="false" autocorrect="off" (ngModelChange)="emailChange($event)">
+                    </ion-col>
+                </ion-row>                    
+            </ion-col>    
+            <ion-col col-1 align-self-end>
+                <ion-icon *ngIf="email === undefined || email.length == 0" name="ios-mail-outline"></ion-icon>
+                <ion-icon *ngIf="validEmail === true" class="m-input-icon m-input-icon-ok" name="ios-mail-outline"></ion-icon>
+                <ion-icon *ngIf="validEmail === false" class="m-input-icon m-input-icon-error" name="ios-mail-outline"></ion-icon>
+            </ion-col>                            
+        </ion-row>
+    
+        <ion-row class="m-input" id="{{id}}">
+            <ion-col col-10>                                    
+                <ion-row class="m-input-label">
+                    <ion-col col-12>Contraseña (6 o más caracteres)</ion-col>
+                </ion-row>
+                <ion-row class="m-input-value">
+                    <ion-col col-12>
+                        <input [type]="showPass === false ? 'password' : 'type'" [(ngModel)]="password" spellcheck="false" autocorrect="off" (ngModelChange)="passChange($event)">
+                    </ion-col>
+                </ion-row>                    
+            </ion-col>    
+            <ion-col col-1 class="text-center" align-self-end>
+                <ion-icon *ngIf="showPass === false" class="m-input-icon" name="md-eye" (tap)="viewPass(true)"></ion-icon>                    
+                <ion-icon *ngIf="showPass === true" class="m-input-icon" name="md-eye-off" (tap)="viewPass(false)"></ion-icon>                
+            </ion-col>                            
+            <ion-col col-1 class="text-center" align-self-end>
+                <ion-icon *ngIf="password === undefined || password.length == 0" name="ios-lock-outline"></ion-icon>                    
+                <ion-icon *ngIf="validPass === true" class="m-input-icon m-input-icon-ok" name="ios-lock-outline"></ion-icon>
+                <ion-icon *ngIf="validPass === false" class="m-input-icon m-input-icon-error" name="ios-lock-outline"></ion-icon>
+            </ion-col>                            
+        </ion-row>        
+
+        <ion-row class="m-input" id="{{id}}">
+            <ion-col col-11>
+                <ion-row class="m-input-label">
+                    <ion-col col-12>Celular (10 dígitos)</ion-col>
+                </ion-row>
+                <ion-row class="m-input-value">
+                    <ion-col col-12>
+                        <input type="number" [(ngModel)]="cel" spellcheck="false" autocorrect="off" (ngModelChange)="celChange($event)">
+                    </ion-col>
+                </ion-row>                    
+            </ion-col>
+            <ion-col col-1 class="text-center" align-self-end>
+                <ion-icon *ngIf="cel === undefined || cel.length == 0" name="ios-phone-portrait"></ion-icon>                    
+                <ion-icon *ngIf="validCel === true" class="m-input-icon m-input-icon-ok" name="ios-phone-portrait"></ion-icon>
+                <ion-icon *ngIf="validCel === false" class="m-input-icon m-input-icon-error" name="ios-phone-portrait"></ion-icon>
+            </ion-col>                            
+        </ion-row>        
+    </div>
+        
+    <ion-row>
+        <ion-col col-3></ion-col>
+        <ion-col col-6>
+            <button type="button" (click)="goIntro()" [attr.disabled]="validPass === undefined || validEmail === undefined || validPass === flase || validEmail === false ? true : null">Unirme ahora</button>
+        </ion-col>            
+    </ion-row>    
+
+    <ion-row>
+        <ion-col col-12 class="text-center">
+            <a href="#" (click)="toLoginPage()">¿Ya eres usuario de Bunch?</a>            
+            <a href="#" (click)="toLoginPage()">Ingresa aquí</a>
+        </ion-col>        
+    </ion-row>    
+
+    <button type="button" (click)="nada()">TEST</button>
+</ion-content>

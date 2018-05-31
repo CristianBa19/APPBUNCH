@@ -1,0 +1,538 @@
+<ion-header>
+    <ion-grid>
+        <ion-row id="headerRow" align-items-center>
+            <ion-col col-2 id="backContainer">
+                <button icon-only ion-button clear class="header-back-button" (click)="goBack()">            
+                    <ion-icon name="ios-arrow-back"></ion-icon>
+                </button>                
+            </ion-col>
+            <ion-col col-8 id="titleContainer">
+                Seguro de Auto
+            </ion-col>    
+            <ion-col col-2></ion-col>        
+        </ion-row>    
+    </ion-grid>
+</ion-header>
+
+<ion-content padding-left padding-right>
+    <!-- Paso 1 de 5 -->
+    <ion-row class="cliente-tab" [hidden]="step != 1">        
+        <ion-col col-12>
+
+            <ion-row id="filita">
+                <ion-col col-12>            
+                    <ion-row>
+                        <ion-col col-12>
+                            <p class="instrucciones">Ingresa la siguiente información</p>
+                            <p class="sub-instrucciones">Obtendrás una cotización inmediata</p>                            
+                        </ion-col>            
+                    </ion-row>
+                </ion-col>
+            </ion-row>
+
+            <!--<ion-row class="m-input" (click)="showAlertCP1()">
+                <ion-col col-12>                                    
+                    <ion-row class="m-input-label">
+                        <ion-col col-12>Código Postal</ion-col>
+                    </ion-row>
+                    <ion-row class="m-input-value">
+                        <ion-col col-12>
+                            {{codigoPostal1}}
+                        </ion-col>
+                    </ion-row>
+                    <ion-icon name="ios-arrow-forward" class="m-input-arrow"></ion-icon>
+                </ion-col>                                
+            </ion-row>-->
+
+            <!--<ion-row class="m-input" (click)="showAlertCP1()">
+                <ion-col col-11>                                    
+                    <ion-row class="m-input-label">
+                        <ion-col col-12>Código Postal</ion-col>
+                    </ion-row>
+                    <ion-row class="m-input-value">
+                        <ion-col col-12>
+                            {{codigoPostal1}}
+                        </ion-col>
+                    </ion-row>                    
+                </ion-col>    
+                <ion-col col-1>
+                    ////<ion-icon name="ios-arrow-forward" class="m-input-arrow"></ion-icon>
+                </ion-col>                            
+            </ion-row>-->
+
+            <!--<m-input label="Código Postal" id="codigoPostal1" [field]="codigoPostal1" (change)="mInputChange('codigoPostal1', codigoPostalChanged)"></m-input>-->
+            <m-input type="number" maxlength="5" label="Código Postal" id="codigoPostal1" [field]="codigoPostal1" (change)="mInputChange('codigoPostal1', codigoPostalChanged)" (keyup)="filterNumeric('codigoPostal1')"></m-input>
+            <m-input label="Edad" id="edad" [field]="edadTxt" (click)="showAlertEdad()" [disabled]="true"></m-input>
+            <m-input label="Género" [field]="genero" id="genero" (click)="showAlertGenero()" [disabled]="true"></m-input>
+            <m-input label="Marca" id="marca" [field]="marca" (click)="showAlertMarca()" [disabled]="true"></m-input>
+            <m-input label="Modelo" id="inputModelo" [field]="modelo" (click)="showAlertModelo()" id="inputModelo" [disabled]="true"></m-input>
+            <m-input label="Submarca" id="inputSubMarca" [field]="subMarca" (click)="showAlertSubMarca()" id="inputSubMarca" [disabled]="true"></m-input>            
+            <m-input label="Descripción" id="inputDescripcion" [field]="descripcion" (click)="showAlertDescripcion()" id="inputDescripcion" [disabled]="true"></m-input>
+            <m-input label="SubDescripción" id="inputSubDescripcion" [field]="subDescripcion" (click)="showAlertSubDescripcion()" id="inputSubDescripcion" [disabled]="true"></m-input>
+            
+            <ion-row class="m-button">
+                <ion-col col-3></ion-col>
+                <ion-col col-6>
+                    <button type="button" (click)="showStep(2)">Cotizar ahora</button>
+                </ion-col>
+            </ion-row>         
+            
+            <ion-row class="m-button">
+                <ion-col col-3></ion-col>
+                <ion-col col-6>
+                    <button type="button" (click)="fillTab1()">TEST</button>
+                </ion-col>
+            </ion-row>
+        </ion-col>
+    </ion-row>
+
+    <!-- Paso 2 de 5 -->
+    <ion-row class="cliente-tab" [hidden]="step != 2">        
+        <ion-col col-12>
+
+            <ion-row id="lala">
+                <ion-col col-12>            
+                    <ion-row>
+                        <ion-col col-10>
+                            <p class="instrucciones">Selecciona la mejor opción</p>                            
+                        </ion-col>     
+                        <ion-col col-2 id="confIconContainer">
+                            <ion-icon name="ios-settings-outline" (click)="showOpcionesCotizacion()"></ion-icon>                            
+                        </ion-col>       
+                    </ion-row>
+                </ion-col>
+            </ion-row>
+
+            <ion-row class="lolo">
+                <ion-col col-12>
+                    <p><span>Cobertura:</span> {{cobertura}}</p>
+                    <p><span>Forma de Pago:</span> {{formaDePago}}</p>
+                    <p>{{marca}} {{subMarca}} {{modelo}}</p>
+                </ion-col>                
+            </ion-row>
+            
+            <ion-row id="resultsContainer">
+                <ion-col col-12>                    
+                    <div class="resultado-aseguradora hidden" *ngFor="let listItem of comparaList">
+                        <ion-row class="result" align-items-center (click)="showStep(3, listItem)" [attr.disabled]="listItem.valueInt <= 0 || null">
+                            <ion-col col-4>
+                                <img [src]="listItem.img">
+                            </ion-col>
+                            <ion-col col-6 class="result-amount">
+                                {{listItem.value}}
+                            </ion-col>
+                            <ion-col col-2 class="result-arrow">
+                                <ion-icon name="ios-arrow-forward"></ion-icon>
+                            </ion-col>
+                        </ion-row>
+                    </div>                    
+                </ion-col>
+            </ion-row>
+
+            <ion-row class="share-button">
+                <ion-col col-3></ion-col>
+                <ion-col col-6>
+                    <button type="button">
+                        <ion-row>
+                            <ion-col col-10>
+                                Compartir Comparativo
+                            </ion-col>
+                            <ion-col col-2>
+                                <ion-icon name="md-share"></ion-icon>
+                            </ion-col>
+                        </ion-row>                                                
+                    </button>
+                </ion-col>
+                <ion-col col-3></ion-col>
+            </ion-row>            
+        </ion-col>
+    </ion-row>                
+
+    <!-- Paso 3 -->
+    <ion-row class="cliente-tab" [hidden]="step != 3">        
+        <ion-col col-12>            
+
+            <ion-row class="lolo">
+                <ion-col col-9>
+                    <p><span>Cobertura:</span> {{cobertura}}</p>
+                    <p><span>Perioricidad de Pago:</span> {{formaDePago}}</p>
+                    <p><span>Pago con:</span> Tarjeta de crédito</p>
+                    <p><span>Costo Total:</span> {{cotizacion.monto}}</p>                    
+                </ion-col>     
+                <ion-col>
+                    <img [src]="cotizacion.logo">
+                </ion-col>           
+            </ion-row>
+            
+            <!--<ion-row id="resumeContainer">
+                <ion-col col-12>-->
+                    <!--<ion-row id="resumeContainerHeader" align-items-center>
+                        <ion-col col-4>
+                            Coberturas
+                        </ion-col>
+                        <ion-col col-4>
+                            Suma Asegurada
+                        </ion-col>
+                        <ion-col col-4>
+                            Deducible
+                        </ion-col>
+                    </ion-row>
+                    
+                    <ion-row class="result" align-items-center *ngFor="let cobertura of cotizacion.coberturas">
+                        <ion-col col-4>
+                            {{cobertura.NombreCobertura}}
+                        </ion-col>
+                        <ion-col col-4>
+                            {{cobertura.SumaAsegurada}}
+                        </ion-col>
+                        <ion-col col-4>
+                            {{cobertura.Deducible}}
+                        </ion-col>
+                    </ion-row>-->
+
+                    <table id="detalles">
+                        <thead>
+                            <th>Coberturas</th>
+                            <th>Suma Asegurada</th>
+                            <th>Deducible</th>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let cobertura of cotizacion.coberturas">
+                                <td>{{cobertura.NombreCobertura}}</td>
+                                <td>
+                                    <div *ngIf="cobertura.SumaAsegurada == 'AMPARADA'">
+                                        <ion-icon name="ios-checkmark-outline" class="amparada"></ion-icon><ion-icon name="ios-checkmark-outline" class="amparada"></ion-icon>
+                                    </div>
+                                    {{cobertura.SumaAsegurada}}
+                                </td>
+                                <td>{{cobertura.Deducible}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                <!--</ion-col>
+            </ion-row>-->
+
+            <ion-row class="share-button">
+                <ion-col col-3></ion-col>
+                <ion-col col-6>
+                    <button type="button">
+                        <ion-row>
+                            <ion-col col-10>
+                                Compartir Comparativo
+                            </ion-col>
+                            <ion-col col-2>
+                                <ion-icon name="md-share"></ion-icon>
+                            </ion-col>
+                        </ion-row>                                                
+                    </button>
+                </ion-col>
+                <ion-col col-3></ion-col>
+            </ion-row>            
+
+            <ion-row class="m-button">
+                <ion-col col-3></ion-col>
+                <ion-col col-6>
+                    <button type="button" (click)="showStep(4)">Comprar</button>
+                </ion-col>
+                <ion-col col-3></ion-col>
+            </ion-row>            
+        </ion-col>
+    </ion-row>                
+    
+    <!-- Paso 4 -->
+    <ion-row class="cliente-tab" [hidden]="step != 4">
+        <ion-col col-12>            
+
+            <ion-row id="filita">
+                <ion-col col-12>            
+                    <ion-row>
+                        <ion-col col-12>
+                            <p class="instrucciones">Ingresa tus datos personales</p>
+                            <p class="sub-instrucciones">Son necesarios para emitir tu póliza</p>
+                        </ion-col>            
+                    </ion-row>
+                </ion-col>
+            </ion-row>
+
+            <m-input label="Email" id="email" [field]="email" (keyup)="toLowerCase('email')" (change)="mInputChange('email', emailChanged)"></m-input>
+            <m-input label="Nombre" id="nombre" [field]="nombre" (keyup)="mInputChange('nombre', nombreChanged)" (change)="validName()"></m-input>
+            <m-input label="Apellido Paterno" id="paterno" [field]="paterno" (keyup)="mInputChange('paterno', paternoChanged)" (change)="validPaterno()"></m-input>
+            <m-input label="Apellido Materno" id="materno" [field]="materno" (keyup)="mInputChange('materno', maternoChanged)" (change)="validMaterno()"></m-input>
+
+            <ion-row class="m-input" id="fechaNacimiento">
+                <ion-col col-11>                                    
+                    <ion-row class="m-input-label">
+                        <ion-col col-12>Fecha de Nacimiento</ion-col>
+                    </ion-row>
+                    <ion-row class="m-input-value">
+                        <ion-col col-12>
+                            <ion-datetime pickerFormat="YYYY MMMM DD" displayFormat="YYYY MMMM DD"  [monthNames]="datePickerNames.month" [(ngModel)]="fechaNacimiento" (ngModelChange)="fechaNacimientoChanged()" cancelText="CANCELAR" doneText="OK" min="{{minYear}}" max="{{maxYear}}"></ion-datetime>
+                        </ion-col>
+                    </ion-row>                    
+                </ion-col>    
+                <ion-col col-1>
+                    <ion-icon *ngIf="fechaNacimiento !== undefined && fechaNacimiento !== null" class="m-input-icon m-input-icon-ok" name="ios-checkmark-outline"></ion-icon>
+                    <ion-icon *ngIf="fechaNacimiento === null" class="m-input-icon m-input-icon-error" name="ios-close-outline"></ion-icon>
+                </ion-col>                            
+            </ion-row>
+            
+            <m-input type="number" maxlength="10" label="Teléfono de Casa" id="telCasa" [field]="telCasa" (change)="mInputChange('telCasa', telCasaChanged)" (keyup)="filterNumeric('telCasa')"></m-input>
+            <m-input type="number" maxlength="10" label="Teléfono Móvil" id="telMovil" [field]="telMovil" (change)="mInputChange('telMovil', telMovilChanged)" (keyup)="filterNumeric('telMovil')"></m-input>            
+            <m-input label="RFC" id="rfc" [field]="rfc" (keyup)="toUpperCase('rfc')" (change)="mInputChange('rfc', rfcChanged)"></m-input>
+            <m-input label="Código Postal" id="codigoPostal2" [field]="codigoPostal1"></m-input>
+            <m-input label="Colonia" id="colonia" [field]="colonia" (click)="showAlertColony()" [disabled]="true"></m-input>
+            <m-input label="Estado" id="estado" [field]="estado"></m-input>
+            <m-input label="Delegación/Municipio" id="delegacion" [field]="delegacion"></m-input>
+            <m-input label="Calle" id="calle" [field]="calle" (keyup)="toUpperCase('calle')" (change)="mInputChange('calle', calleChanged)"></m-input>
+            <m-input label="Número Exterior" id="numExterior" [field]="numExterior" (keyup)="toUpperCase('numExterior')" (change)="mInputChange('numExterior')"></m-input>
+            <m-input label="Número Interior" id="numInterior" [field]="numInterior" (keyup)="toUpperCase('numInterior')" (change)="mInputChange('numInterior')"></m-input>            
+            <m-input label="Número de Motor" id="numMotor" [field]="numMotor" (keyup)="toUpperCase('numMotor')" (change)="mInputChange('numMotor', numMotorChanged)"></m-input>
+            <m-input label="Número de Serie" id="numSerie" [field]="numSerie" (keyup)="toUpperCase('numSerie')" (change)="mInputChange('numSerie', numSerieChanged)"></m-input>
+            <m-input label="Número de Placas" id="numPlacas" [field]="numPlacas" (keyup)="toUpperCase('numPlacas')" (change)="mInputChange('numPlacas', numPlacasChanged)"></m-input>
+            
+            <ion-row class="m-button">
+                <ion-col col-3></ion-col>
+                <ion-col col-6>
+                    <button type="button" (click)="showStep(5)">Continuar</button>
+                </ion-col>
+                <ion-col col-3></ion-col>
+            </ion-row>
+            
+            <ion-row class="m-button">
+                <ion-col col-3></ion-col>
+                <ion-col col-6>
+                    <button type="button" (click)="fillTab3()">TEST</button>
+                </ion-col>
+            </ion-row>
+        </ion-col>
+    </ion-row>                
+
+
+    <!-- Paso 5 -->
+    <ion-row class="cliente-tab" [hidden]="step != 5">
+        <ion-col col-12>
+
+            <ion-row>
+                <ion-col col-12>            
+                    <ion-row>
+                        <ion-col col-12>
+                            <p class="instrucciones">Revisa tu resúmen de compra</p>
+                            <p class="sub-instrucciones">Verifica que tus datos sean correctos</p>
+                        </ion-col>            
+                    </ion-row>
+                </ion-col>
+            </ion-row>
+            
+            <ion-row class="lolo">
+                <ion-col col-12>
+                    <p class="title">Datos personales</p>
+                    <p><span>Nombre:</span> {{nombre}} {{paterno}} {{materno}}</p>
+                    <p><span>Email:</span> {{email}}</p>
+                    <p><span>RFC:</span> {{rfc}}</p>
+                    <p><span>Tel. Celular:</span> {{telMovil}}</p>
+                    <p><span>Código Postal:</span> {{codigoPostal1}}</p>
+                </ion-col>                
+            </ion-row>
+            <br>
+            <ion-row class="lolo">
+                <ion-col col-12>
+                    <p class="title">Datos del vehículo</p>
+                    <p><span>No. de Motor:</span> {{numMotor}}</p>
+                    <p><span>No. Serie:</span> {{numSerie}}</p>
+                    <p><span>Placas:</span> {{numPlacas}}</p>
+                    <p><span>Aseguradora:</span> {{cotizacion.aseguradora}}</p>
+                    <p><span>Prima:</span> {{cotizacion.monto}}</p>
+                </ion-col>                
+            </ion-row>
+
+            <ion-row class="m-button">
+                <ion-col col-3></ion-col>
+                <ion-col col-6>
+                    <button type="button" (click)="showStep(6)">Continuar</button>
+                </ion-col>
+                <ion-col col-3></ion-col>
+            </ion-row>            
+            
+        </ion-col>
+    </ion-row>
+    
+    <ion-row class="cliente-tab" [hidden]="step != 6">
+        <ion-col col-12>
+
+            <ion-row>
+                <ion-col col-12>            
+                    <ion-row>
+                        <ion-col col-12>
+                            <p class="instrucciones">Ingresa tu forma de pago</p>
+                            <p class="sub-instrucciones">Nuestra plataforma es 100% segura</p>
+                        </ion-col>            
+                    </ion-row>
+                </ion-col>
+            </ion-row>
+
+            <!--<m-input label="Número de Tarjeta" id="numTarjeta" [field]="numTarjeta" (click)="showAlertTarjeta()"></m-input>-->
+            <m-input label="Número de Tarjeta" id="numTarjeta" [field]="numTarjeta" (change)="mInputChange('numTarjeta', numTarjetaChanged)"></m-input>
+            <m-input label="Tipo de Tarjeta" id="tipoTarjeta" [field]="tipoTarjeta" (click)="showAlertTipoTarjeta()" [disabled]="true"></m-input>            
+            <!--<m-input label="Titular" id="titular" [field]="titular" (click)="showAlertTitular()"></m-input>-->
+            <m-input label="Titular" id="titular" [field]="titular" (keyup)="toUpperCase('titular')" (change)="mInputChange('titular', titularChanged)"></m-input>
+            <m-input label="Banco" id="inputBank" [field]="banco" (click)="showAlertBancos()" [disabled]="true"></m-input>
+
+            <ion-row>
+                <ion-col col-12>
+                    <div>Carrier</div>                                    
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-12>
+                    <div class="button-bar">
+                        <a class="tarjetas" (tap)="amex()"><img src="assets/img/Amex.svg" id="amex"></a>
+                        <a class="tarjetas" (tap)="master()"><img src="assets/img/MasterCard.svg" id="master"></a>
+                        <a class="tarjetas" (tap)="visa()"><img src="assets/img/Visa.svg" id="visa"></a>
+                    </div> 
+                </ion-col>
+            </ion-row>                                            
+
+            <ion-row class="m-input" id="vigencia">
+                <ion-col col-11>                                    
+                    <ion-row class="m-input-label">
+                        <ion-col col-12>Vigencia</ion-col>
+                    </ion-row>
+                    <ion-row class="m-input-value">
+                        <ion-col col-12>
+                            <ion-datetime pickerFormat="MMMM YY" displayFormat="MM/YY" min="2017" max="2030" [monthNames]="datePickerNames.month" [(ngModel)]="vigencia" cancelText="CANCELAR" doneText="OK"></ion-datetime>                            
+                        </ion-col>
+                    </ion-row>                    
+                </ion-col>    
+                <ion-col col-1>
+                    <ion-icon *ngIf="vigencia !== undefined && vigencia !== null" class="m-input-icon m-input-icon-ok" name="ios-checkmark-outline"></ion-icon>
+                    <ion-icon *ngIf="vigencia === null" class="m-input-icon m-input-icon-error" name="ios-close-outline"></ion-icon>
+                </ion-col>                            
+            </ion-row>
+            
+            <m-input label="CVV" id="cvv" [field]="cvv" (change)="mInputChange('cvv')"></m-input>
+
+            <ion-row>
+                <ion-col col-12>                                    
+                    <input type="checkbox" id="aceptoCobros"> Acepto expresamente que se realicen los cobros de mi póliza a la tarjeta bancaria registrada y que los pagos subsecuentes sean domiciliados a la misma.
+                </ion-col>                                
+            </ion-row>           
+            
+            <ion-row class="m-button">
+                <ion-col col-3></ion-col>
+                <ion-col col-6>
+                    <button type="button" (click)="pay()">Finalizar compra</button>
+                </ion-col>
+                <ion-col col-3></ion-col>
+            </ion-row>    
+            
+            <ion-row class="m-button">
+                <ion-col col-3></ion-col>
+                <ion-col col-6>
+                    <button type="button" (click)="fillPayment()">TEST</button>
+                </ion-col>
+            </ion-row>
+        </ion-col>
+    </ion-row>                
+
+    <ion-row class="cliente-tab" [hidden]="step != 7">
+        <ion-col col-12>
+
+            <ion-row class="felicidades" id="felicidades">
+                <ion-col col-2></ion-col>
+                <ion-col col-8>
+                    <div class="title">Felicidades</div>
+                    <p>La compra del Seguro de tu Auto ha sido exitosa.</p>                    
+                    <p>Tu póliza tiene vigencia a partir de hoy.</p>                    
+                </ion-col>
+            </ion-row>    
+
+            <ion-row class="felicidades" id="felicidadesGNP">
+                <ion-col col-2></ion-col>
+                <ion-col col-8>
+                    <div class="title">¡Felicidades!</div>
+                    <p>Has completado correctamente tu proceso de compra.</p>                    
+                    <p>Hemos enviado tu solicitud de compra a emitir con GNP, en 72 horas como máximo se efectuará el cobro y enviaremos tu póliza a tu correo electrónico.</p>                    
+                </ion-col>
+            </ion-row>    
+            
+            <ion-row>
+                <ion-col col-2></ion-col>
+                <ion-col col-8>
+                    <img src="../../assets/img/like.png" style="width:100%;height:200px;">
+                </ion-col>
+            </ion-row>
+            
+            <ion-row class="m-button">
+                <ion-col col-3></ion-col>
+                <ion-col col-6>                    
+                    <!--<a id="felicidadesButton" href="http://server.anaseguros.com.mx/emision/impresion/temporal-impresion/04011929689000000.php" download target="_blank">Download</a>-->
+                    <button type="button" id="felicidadesButton" click="compartirOrdenDeCompra()">Compartir<br>Órden de Compra</button>
+                    <button type="button" id="felicidadesGNPButton" click="compartirOrdenDeCompra()">Compartir<br>Órden de Compra</button>
+                </ion-col>
+                <ion-col col-3></ion-col>
+            </ion-row>
+        </ion-col>
+    </ion-row>                
+
+    <ion-row class="cliente-tab" [hidden]="step != 8">
+        <ion-col col-12>
+
+            <ion-row class="felicidades">
+                <ion-col col-2></ion-col>
+                <ion-col col-8>
+                    <span class="title2">No pudimos completar tu proceso de compra pero no te preocupes.</span>                    
+                    <p>Un asesor se comunicará contigo a la brevedad, espera su llamada.</p>                    
+                    <p>{{codigoError}}</p>
+                </ion-col>
+            </ion-row>    
+            
+            <ion-row>
+                <ion-col col-2></ion-col>
+                <ion-col col-8>
+                    <img src="../../assets/img/alert.png" style="width:100%;height:180px;">
+                </ion-col>
+            </ion-row>
+            
+            <ion-row class="m-button">
+                <ion-col col-3></ion-col>
+                <ion-col col-6>
+                    <button type="button" (click)="showStep(8)">Enviar chat al cliente</button>
+                </ion-col>
+                <ion-col col-3></ion-col>
+            </ion-row>            
+        </ion-col>
+    </ion-row>                
+</ion-content>
+
+<button id="opcionesCotizacion"></button>
+<div id="opcionesCotizacionTile">
+    <ion-grid padding>
+        <ion-row>                
+            <ion-col col-12>
+                <p class="text-gray">Selecciona el plan que más te convenga</p>                    
+            </ion-col>
+        </ion-row>
+
+        <m-input label="Cobertura" id="cobertura" [field]="cobertura" (click)="showAlertCobertura()"></m-input>
+        <m-input label="Forma de Pago" id="formaDePago" [field]="formaDePago" (click)="showAlertFormaDePago()"></m-input>
+
+        <ion-row>
+            <ion-col col-3></ion-col>
+            <ion-col col-6>
+                <button type="button" class="button-purple" (click)="closeOpcionesCotizacion()">Continuar</button>
+            </ion-col>                
+        </ion-row>         
+    </ion-grid>                
+</div>
+
+<button id="bottomAlertBackground" (click)="closeBottomAlert()"></button>
+<div id="bottomAlertTile">
+        
+    <ion-scroll id="ionScroll" scrollY="true">
+    <ion-list>
+        <ion-item *ngFor="let item of bottomAlertOptionsList" (click)="bottomAlertOptionSelected(item)" [ngClass]="{'selected':item.selected == true}">
+            <span>{{item.value}}</span>            
+        </ion-item>        
+    </ion-list>
+    </ion-scroll>    
+</div>

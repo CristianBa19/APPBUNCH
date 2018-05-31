@@ -1,0 +1,68 @@
+<!--<ion-header class="tab-header-cls">
+  <ion-col>
+    <div class="divImg">
+      <img src="assets/icon/Icon_Productos.png">
+    </div>
+    <div class="login-title">Productos</div>    
+  </ion-col>
+</ion-header>-->
+
+<ion-content>
+  <!--<div class="title1">Seguro de Auto</div>
+  <div class="title2">En menos de 5 minutos descubre y compara el Seguro de tu Auto.</div>
+  <img class="imgAuto" src="assets/img/img-advertisement3.png">  
+  <button ion-button full class="publish-adv-btn" (click)="goAcquireProduct()">¡Cotizar ahora!</button>
+  <button ion-button full class="publish-adv-btn" (click)="goAcquireProduct2()">¡Cotizar ahora! (nuevo)</button>
+  <button ion-button full class="publish-adv-btn2" (click)="newAdv()">{{ "AdvertisementPage.postButtonText" | translate }}</button>  -->
+
+  <ion-grid>
+    <ion-row id="images">
+      <ion-col col-12>
+        <!--<img src="../../assets/img/img-advertisement.jpg">-->
+        <!--<img src="../../assets/img/img-advertisement2.png">-->
+        <img src="assets/img/img-advertisement2.png">
+        <!--<img src="http://services.bunch.guru/img/car1.jpg">-->
+      </ion-col>      
+    </ion-row>
+
+    <ion-row id="body">
+      <ion-col col-12>
+        <ion-row id="textContainer">
+          <ion-col col-1></ion-col>
+          <ion-col col-10 class="text-center">
+            <p id="title" class="text-gray">Seguro de Auto</p>
+            <p id="subTitle" class="text-gray">Cotiza y contrata con las mejores aseguradoras del país.</p>
+          </ion-col>
+        </ion-row>
+    
+        <!--<ion-row>
+          <ion-col col-3></ion-col>
+          <ion-col col-6 class="text-center">
+            <button type="button" class="button-blue" (click)="newAdv()">Publicar un anuncio</button>                
+          </ion-col>
+        </ion-row>    -->
+
+        <ion-row>
+          <ion-col col-2></ion-col>
+          <ion-col col-8 class="text-center">
+            <button type="button" class="button-blue" (click)="newAdv2()">Publicar un anuncio</button>
+          </ion-col>
+        </ion-row>    
+    
+        <!--<ion-row>
+          <ion-col col-3></ion-col>
+          <ion-col col-6 class="text-center">        
+            <button type="button" class="button-purple" (click)="goAcquireProduct()">Cotizar ahora</button>
+          </ion-col>
+        </ion-row>    -->
+
+        <ion-row>
+          <ion-col col-2></ion-col>
+          <ion-col col-8 class="text-center">        
+            <button type="button" class="button-purple" (click)="goAcquireProduct2()">Cotizar ahora</button>
+          </ion-col>
+        </ion-row>    
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

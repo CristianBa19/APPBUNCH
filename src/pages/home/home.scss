@@ -1,0 +1,92 @@
+page-home {
+
+    .ion-ios-notification-outline,.ion-ios-notification,.ion-md-notification,.ion-md-notification-outline {
+        content: url('../assets/icon/alertas0.svg');
+    }
+    .tab-button[aria-selected=true] .tab-button-icon[aria-label="notification"] {
+    content: url('../assets/icon/alertas1.svg');  
+    }
+    .ion-ios-texting-outline,.ion-ios-texting,.ion-md-texting,.ion-md-texting-outline {
+        content: url('../assets/icon/mensajes.svg');
+    }
+    .tab-button[aria-selected=true] .tab-button-icon[aria-label="texting"] {
+        content: url('../assets/icon/mensajes1.svg');        
+    }
+    .ion-ios-advertisement-outline,.ion-ios-advertisement,.ion-md-advertisement,.ion-md-advertisement-outline {
+        content: url('../assets/icon/Icon_Productos_negro.png');
+        height: 16px !important;
+        min-width: 21px !important; 
+    }
+    .tab-button[aria-selected=true] .tab-button-icon[aria-label="advertisement"] {
+        content: url('../assets/icon/Icon_Productos_gris.png');
+        height: 16px !important;
+        min-width: 21px !important;  
+    }
+    .ion-ios-statistics-outline,.ion-ios-statistics,.ion-md-statistics,.ion-md-statistics-outline {
+        content: url('../assets/icon/estadisticas0.svg');
+    }
+    .tab-button[aria-selected=true] .tab-button-icon[aria-label="statistics"] {
+        content: url('../assets/icon/estadisticas1.svg');        
+    }
+    .ion-ios-profile-outline,.ion-ios-profile,.ion-md-profile,.ion-md-profile-outline {
+        content: url('../assets/icon/perfil0.svg');
+    }
+    .tab-button[aria-selected=true] .tab-button-icon[aria-label="profile"] {
+        content: url('../assets/icon/perfil1.svg');        
+    }
+    .ion-ios-menu-outline,.ion-ios-menu,.ion-md-menu,.ion-md-menu-outline {
+        content: url('../assets/icon/termometro0.svg');
+    }
+    .tab-button[aria-selected=true] .tab-button-icon[aria-label="menu"] {
+        content: url('../assets/icon/termometro1.scg');        
+    }
+    .ion-ios-products-outline,.ion-ios-products,.ion-md-products,.ion-md-products-outline {
+        content: url('../assets/icon/productos0.svg');
+    }
+    .tab-button[aria-selected=true] .tab-button-icon[aria-label="products"] {
+        content: url('../assets/icon/productos1.svg');        
+    }
+    /*.tabs-ios,.tabs-md .tab-button[aria-selected=true] .tab-button-icon[aria-label="products"] {
+        content: url('../assets/icon/productos-menu-on.png');        
+    }*/
+
+        /*.tabs-ios,.tabs-md .tab-button[aria-selected=true] .tab-button-icon[aria-label="menu"] {
+        content: url('../assets/icon/termometro-menu-on.png');        
+    }*/
+    /*.tabs-ios,.tabs-md .tab-button[aria-selected=true] .tab-button-icon[aria-label="texting"] {
+        content: url('../assets/icon/mensajes-menu-on.png');        
+    }*/
+
+
+    /*.tabs-ios,.tabs-md .tab-button[aria-selected=true] .tab-button-icon[aria-label="advertisement"] {
+        content: url('../assets/icon/anuncios-menu-on.png');        
+    }*/
+
+
+    /*.tabs-ios,.tabs-md .tab-button[aria-selected=true] .tab-button-icon[aria-label="statistics"] {
+        content: url('../assets/icon/estadisticas-menu-on.png');        
+    }*/
+
+    /*.tabs-ios,.tabs-md .tab-button[aria-selected=true] .tab-button-icon[aria-label="profile"] {
+        content: url('../assets/icon/perfil-menu-on.png');        
+    }*/
+
+
+
+
+    .ion-ios-products-outline,.ion-ios-products,.ion-md-products,.ion-md-products-outline {
+        content: url('../assets/icon/productos0.svg');
+    }
+    /*.tabs-ios,.tabs-md .tab-button[aria-selected=true] .tab-button-icon[aria-label="products"] {
+        content: url('../assets/icon/productos-menu-on.png');        
+    }*/
+
+    .hideTab {
+        display: none !important;
+    }
+
+
+
+.tabbar{background:transparent !important;border-top:2px solid #673192;}
+.tab-button-icon{font-size:40px !important;}
+}

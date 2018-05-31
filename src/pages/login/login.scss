@@ -1,0 +1,256 @@
+page-login {
+    /*.login-titleX {
+        font-size: 20px;
+        font-weight: 100;
+    }
+    input.text-input.text-input-ios{
+        padding: 0;
+        width: 65%;
+    }
+    overflow: hidden;
+    .logo{
+        width: 66%;
+        height: 66%;
+    }
+    ion-title div{
+        color: white !important;
+    }
+
+    .login-content {
+        background-image:url('../assets/img/fondo-registro.jpg') !important;
+        background-size: cover;
+        color: white !important;
+        text-align: center;
+
+        ion-item {
+            border-radius: 3px !important;
+            padding: 0;
+            margin: 10px auto;
+        }
+
+        ion-input {
+            min-height: 20px !important;
+        }
+    
+        .avatar-row {
+            margin: 0 auto;
+            .avatar-container {
+                width: 35%;
+                margin: 30px auto 0 auto;
+                border-radius: 50%;
+            }
+
+            img {
+                border-radius: 50%;
+                overflow: hidden;
+                width: 100%;
+                border: 3px solid white;
+            }
+
+            .subtitle-text{
+                margin: 10px auto;
+                font-size: 20px;
+                font-weight: 100;
+                width: 80%;
+            }
+
+            .toolbar-title-md{
+                margin: 10px auto;
+                font-size: 24px;
+                color:white;
+                width: 100%;
+            }
+        }
+
+        .logo-row {
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+ 
+        .login-box {
+            .imageDiv {
+                min-width: 5px;
+                min-height: 5px;
+                background: red;
+            }
+            .login-title {
+                font-size: 20px;
+                font-weight: 100;
+            }
+            .text-input-md {
+                margin: 13px 40px;
+                padding: 0;
+                width: 65%;
+            }
+            .divRow {
+                width: 100%;
+                margin: 10px auto;
+                text-align: center;
+                border-radius: 5px;
+                border: 1px solid;
+                background: white !important;
+                ion-input {
+                    background: white !important;
+                    border: 1px solid white;
+                    border-radius: 5px;
+                    color: black;
+                }
+
+                ion-input.user::before  {
+                    content: url("../assets/icon/correo-fomularios.png");
+                    width: 30px;
+                    height: 30px;
+                    position: absolute;
+                    left: 3%;
+                    top: 50%;
+                    -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    text-align: center;
+                    line-height: 40px;
+                    align-items: center;
+                }
+                ion-input.pass::before  {
+                    content: url("../assets/icon/contrasena-formularios.png");
+                    width: 30px;
+                    height: 30px;
+                    position: absolute;
+                    left: 3%;
+                    top: 50%;
+                    -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    text-align: center;
+                    line-height: 40px;
+                    align-items: center;
+                }
+            }
+        }
+
+        .signup-col {
+            margin: 0px 16px 0px 16px;
+            padding-bottom: 20px;
+        }
+
+        .item-inner {
+            border-bottom-color: #ffffff !important;
+            box-shadow: none !important;
+        }
+
+        .form-btn {
+            font-family: RaleNext;
+            margin-top:14px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: 100;
+            background: transparent;
+            border: none;
+            box-shadow: none !important;
+            text-transform: none !important;
+            height: auto; 
+        }
+        .form-btnX {
+            font-family: RaleNext;
+            margin-top: 30px; 
+            font-size: 14px;
+            font-weight: 100;
+            background: transparent;
+            border: none;
+            box-shadow: none !important;
+            text-transform: none !important;
+            height: auto; 
+        }    
+
+        .products-btn {
+            font-family: RaleNext;
+            color: #ffffff;
+            font-size: 0.8em;
+            width: 90%;
+            margin: 5px auto 0 auto;
+            border: 1px white solid;
+            font-size: 20px;
+            border-radius: 5px;
+            background: rgba(0,153,204,255);
+            font-weight: 100;
+            text-transform: none;
+            height: 50px;
+        }
+
+        .list-md[inset] {
+            margin-bottom: 0px;
+            margin-top: 0px;    
+        }
+
+        .footer-warn{
+            font-family: RaleNext;
+            margin-top:20px;
+            font-size: 10px;
+            width: 100%;
+            text-align: center;
+            padding-top: 10px;
+        }
+        #toggle{
+            background: none !important;
+            border: none;
+        }
+        .toggleFloat{
+            float: left;
+
+        }
+        .toggleDiv{
+            float: left;
+            padding-top: 10px;
+            padding-left: 5px;
+        }
+        .form-btnX{
+            font-size: 16px !important;
+            color: black !important;
+            font-weight: 600;
+            padding-bottom: 2px;
+            margin-top: 10px !important;
+            text-decoration: underline black !important;
+        }
+        .linea{
+            height: 1px;
+            background-color: white;
+            margin-top: 30px;
+          }
+	    .icon-eye{
+			color:#61c4d4;
+			float:right;
+			z-index: 2;
+			margin-bottom: -83px;
+			margin-top: -32px;
+			margin-left: 40%;
+			font-size: 20px;
+			position: absolute
+          } 
+    }
+
+    .justify{
+        margin: 5px auto 0 auto;
+    }*/
+    ion-content{
+        #form{margin-bottom:16px;padding:16px;}
+        border-top:16px solid map-get($colors, b-purple);
+        border-bottom:16px solid map-get($colors, b-purple);
+        img{margin-top:20px;}
+        
+        .text-center{text-align:center;}
+        hr{border-top:1.5px solid map-get($colors, b-blue);}
+        #welcomeMsg{
+            color:map-get($colors, b-purple);font-size:22px;font-weight:bold;            
+        }
+        .m-input{
+            border-bottom:1px solid lightgray;margin-top:16px;            
+            ion-icon{
+                font-size:2.2em;
+                color:map-get($colors, b-blue);
+            }
+            .m-input-icon-ok{color:green;}
+            .m-input-icon-error{color:red;}
+        }
+        input{width:100%;background:transparent;border:0;}
+        .m-input-label{color:map-get($colors, b-gray);}
+        button{background:map-get($colors, b-blue);}
+        a{margin-top:12px;display:block;color:map-get($colors, b-purple);font-weight:bold;text-decoration: none;font-size:16px;}
+    }
+}

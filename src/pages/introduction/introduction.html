@@ -1,0 +1,41 @@
+<ion-content class="page-introduction">
+  <ion-slides  pager="true" parallax="true">
+
+    <ion-slide>
+      <ion-row>  
+          <div class="first-section">
+        <ion-row class="second-section" padding>
+          <div class="title-text">Gana más dinero</div>
+          <div class="body-text">Desde tu casa o cualquier lugar, BUNCH siempre contigo.</div>
+        </ion-row>
+        <!-- <div class="third-section">  
+          <button ion-button style="color:white; text-align:center;" (click)="goHome()" class="scape-intro-btn">{{ 'IntroductionPage.firstSlide.buttonText' | translate}} </button>   
+        </div>    -->
+      </div>
+      </ion-row>         
+    </ion-slide>
+
+    <ion-slide>
+      <ion-row>  
+          <div class="first-sectionb"></div>
+        </ion-row>
+        <ion-row class="second-section" padding>
+          <div class="title-text2">Gana por recomendar productos financieros</div><br><br>
+          <div class="body-text">Seguros de Auto por ejemplo.</div>
+        </ion-row>
+        <!-- <div class="third-section">  
+          <button ion-button style="color: black; text-align:center;" (click)="goHome()" class="scape-intro-btn">{{ 'IntroductionPage.secondSlide.buttonText' | translate}}</button> 
+        </div> -->
+    </ion-slide>
+
+    <ion-slide>
+      <ion-row (swipeleft)="goHome()">  
+          <div class="first-sectionc" ></div>
+        </ion-row>
+        <ion-row class="second-section" padding>
+          <div class="title-text2">Sé tu propio jefe</div>
+          <div class="body-text">Mientras más recomiendes mayores serán tus ingresos.</div>
+        </ion-row>              
+    </ion-slide>
+  </ion-slides>
+</ion-content>
