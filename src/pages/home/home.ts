@@ -1,8 +1,10 @@
-//import { AcquireProductPage } from './../acquire-product/acquire-product';
-//import { ProductsPage } from './../products/products';
 import { Component, ViewChild } from '@angular/core';
 import { NavController, Events, Tabs, Tab  } from 'ionic-angular';
 import { AdvertisementPage } from './../advertisement/advertisement';
+
+//import { NewAdvertisementPage2 } from './../new-advertisement-2/new-advertisement';
+//import { AcquireProductPage } from './../acquire-product/acquire-product';
+//import { ProductsPage } from './../products/products';
 //import { NotificationPage } from './../notification/notification';
 //import { TextingPage } from '../../pages/texting/texting';
 //import { ProfilePage } from '../../pages/profile/profile';
@@ -19,7 +21,7 @@ export class HomePage {
   public tab2Root: any = AdvertisementPage; //TextingPage;
 
   public tab3Root: any = AdvertisementPage;
-  public tab4Root: any = AdvertisementPage;  //StatisticsPage;
+  public tab4Root: any = AdvertisementPage; //StatisticsPage;
 
   public tab5Root: any = AdvertisementPage; //FilterPage;
   public tab6Root: any = AdvertisementPage; //ProductsPage;

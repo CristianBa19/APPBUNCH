@@ -38,7 +38,13 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  b-blue: #009ade,
+  b-purple: #662d91,
+  b-gray: #616262,  
+  b-light-gray: #bcbec0,
+  background-1: #f5f7f7,
+  background-2: #e5e5e5
 );
 
 
@@ -86,3 +92,27 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+@font-face {
+  font-family: RaleTitle;
+  src: url("../assets/fonts/Quicksand/Quicksand-Bold.ttf");
+  font-size: 24px;
+  }
+  
+  @font-face {
+  font-family: RaleSubtitle;
+  src: url("../assets/fonts/Quicksand/Quicksand-Regular.ttf");
+  font-size: 18px;
+  }
+  
+  @font-face {
+  font-family: RaleText;
+  src: url("../assets/fonts/Quicksand/Quicksand-Regular.ttf");
+  font-size: 14px;
+  }
+  
+  @font-face {
+  font-family: RaleNext;
+  src: url("../assets/fonts/Quicksand/Quicksand-Light.ttf");
+  font-size: 10px;
+  }

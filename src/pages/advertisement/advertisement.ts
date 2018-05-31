@@ -1,19 +1,13 @@
-//import { AcquireProductPage } from './../acquire-product/acquire-product';
-//import { AcquireProductPage2 } from './../acquire-product-2/acquire-product';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-//import { NewAdvertisementPage } from './../new-advertisement/new-advertisement';
 import { NewAdvertisementPage2 } from './../new-advertisement-2/new-advertisement';
+import { AcquireProductPage2 } from './../acquire-product-2/acquire-product';
+
+//import { AcquireProductPage } from './../acquire-product/acquire-product';
+//import { NewAdvertisementPage } from './../new-advertisement/new-advertisement';
 //import { AdDetailPage } from './../ad-detail/ad-detail';
 //import { ProductsPage } from '../products/products';
 //import { PaymentSubmittedPage2 } from '../payment-submited2/payment-submited2';
-
-/**
- * Generated class for the AdvertisementPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-advertisement',
@@ -66,7 +60,7 @@ public goAcquireProduct = () => {
   //this.navCtrl.push(AcquireProductPage, null, {animate: true});
 }
 public goAcquireProduct2 = () => {
-  //this.navCtrl.push(AcquireProductPage2, null, {animate: true});
+  this.navCtrl.push(AcquireProductPage2, null, {animate: true});
 }
 goGetMarcas = () => {
   //this.navCtrl.push(AcquireProductPage, {animate: true});

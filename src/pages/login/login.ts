@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { IntroductionPage } from './../introduction/introduction';
-import { NavController, NavParams, IonicPage, LoadingController, ToastController } from 'ionic-angular';
-//import { RecoveryPage } from '../recovery/recovery';
+import { NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 import { RegistrerPage } from '../registrer/registrer';
 import { HomePage } from '../home/home';
-import { Http, Headers } from '@angular/http';
+import { Http } from '@angular/http';
 import { Storage } from '@ionic/storage';
+import { FormGroup } from '@angular/forms';
+import 'rxjs/add/operator/map';
+
+//import { RecoveryPage } from '../recovery/recovery';
 //import { AuthProvider } from '../../providers/auth/auth';
 //import { usercreds } from '../../models/interfaces/usercreds';
-import { FormGroup, FormControl, Validators, EmailValidator } from '@angular/forms';
 //import { ValidateEmail } from '../../app/validators/email.validator';
 
 @Component({
@@ -19,13 +20,18 @@ export class LoginPage implements OnInit {
     
     //credentials = {} as usercreds;
     
-    constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http, private storage: Storage, 
+    constructor(
+        public navCtrl: NavController, 
+        public navParams: NavParams, 
+        public http: Http, 
+        private storage: Storage, 
         //public authservice: AuthProvider, 
-        public loadingCtrl: LoadingController, public toastCtrl: ToastController) { }
+        public loadingCtrl: LoadingController, 
+        public toastCtrl: ToastController
+    ) { }
     
     email:string;
     password:string;
-
     message: string;
     isEnabled: boolean;
     myForm: FormGroup;
@@ -34,7 +40,7 @@ export class LoginPage implements OnInit {
     validPass;
     showPass = false;
 
-    private viewPass(show:boolean) {
+    viewPass(show:boolean) {
         this.showPass = show;
     }
     
@@ -59,14 +65,7 @@ export class LoginPage implements OnInit {
         //     toaster.setMessage('E-mail o password incorrecto');
         //     toaster.present();
         // }
-    }
-
-    ionViewDidLoad() {        
-        if (localStorage.idContVend != undefined) {
-            this.storage.set('name', localStorage.idContVend);
-            this.navCtrl.push(HomePage, { animate: true });
-        }
-    }
+    }    
 
     createAccount = () => {
         this.navCtrl.push(RegistrerPage, { animate: true });
@@ -83,7 +82,7 @@ export class LoginPage implements OnInit {
         //this.navCtrl.push(Login2Page, { animate: true });
     }
 
-    private emailChange(a) {
+    emailChange(a) {
         if (a.length == 0) {
             this.validEmail = undefined;
         } else { 
@@ -92,7 +91,7 @@ export class LoginPage implements OnInit {
         
     }
 
-    private passChange(pass) {
+    passChange(pass) {
         if (pass.length == 0) {
             this.validPass = undefined;
         } else { 
@@ -100,7 +99,7 @@ export class LoginPage implements OnInit {
         }
     }
 
-    private validateEmail(): boolean {
+    validateEmail(): boolean {
         let email = this.email;
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         let result = re.test(String(email).toLowerCase());
@@ -161,13 +160,17 @@ export class LoginPage implements OnInit {
                 encodedString = btoa(string),
                 url = `http://services.bunch.guru/WebService.asmx/Login?param=${encodedString}`;            
 
-            this.http.get(url).map(res => res.json()).subscribe(data => {                
+            console.log(url);
+
+            //this.http.get(url).map(res => res.json()).subscribe(data => {                
+            this.http.get(url).map(res => res.json()).subscribe(data => {
 
                 switch (data.respuesta) {
                     case 'true':
                         localStorage.idContVend = data.idContVend;
                         this.storage.set('name', data.idContVend);
-                        this.signin();
+                        //this.signin();
+                        this.navCtrl.push(HomePage, { animate: true });
                         break;
                     case 'false':
                         this.isEnabled = true;
@@ -202,17 +205,16 @@ export class LoginPage implements OnInit {
         }
     }
 
-    signin() {
-        /*let credentials = {email: this.email, password: this.password};
+    /*signin() {
+        let credentials = {email: this.email, password: this.password};
         this.authservice.login(credentials).then((res: any) => {
             if (!res.code) {
                 this.navCtrl.push(HomePage, { animate: true });
             } else {
                 localStorage.idContVend = undefined;                
             }
-        });*/
-        this.navCtrl.push(HomePage, { animate: true });
-    }
+        });
+    }*/
 
     togglePasswordMode() {
         this.password_type = this.password_type === 'text' ? 'password' : 'text';

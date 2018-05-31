@@ -1,25 +1,25 @@
-//import { Component, ViewChild } from '@angular/core';
 import { Component } from '@angular/core';
-//import { NavController, NavParams, Slides, Platform } from 'ionic-angular';
 import { NavController, NavParams } from 'ionic-angular';
 import { DatePicker } from '@ionic-native/date-picker';
+import { Http } from '@angular/http';
+import { Storage } from '@ionic/storage';
+import { LoadingController, ToastController } from 'ionic-angular';
+import { FormGroup } from '@angular/forms';
+import { Keyboard } from '@ionic-native/keyboard';
+import { LoginPage } from '../login/login';
+import { SocialSharing } from '@ionic-native/social-sharing';
+import { HomePage } from '../home/home';
+
+//import { Component, ViewChild } from '@angular/core';
+//import { NavController, NavParams, Slides, Platform } from 'ionic-angular';
 //import { StatisticsPage } from '../statistics/statistics';
 //import { LocalizationModel } from '../../_helpers/localizationModel';
 //import { Http, Headers } from '@angular/http';
-import { Http } from '@angular/http';
-import { Storage } from '@ionic/storage';
 //import { IonicPage, LoadingController, ToastController } from 'ionic-angular';
-import { LoadingController, ToastController } from 'ionic-angular';
 //import { UserProvider } from '../../providers/user/user';
 //import { Console } from '@angular/core/src/console';
 //import { FormGroup, FormControl, Validators, EmailValidator  } from '@angular/forms';
-import { FormGroup } from '@angular/forms';
 //import { ValidateEmail } from '../../app/validators/email.validator';
-
-import { Keyboard } from '@ionic-native/keyboard';
-import { LoginPage } from '../login/login';
-//import { HomePage } from '../home/home';
-import { SocialSharing } from '@ionic-native/social-sharing';
 
 @Component({
     selector: 'page-registrer',
@@ -28,9 +28,8 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 
 })
 export class RegistrerPage {
-
-
-    constructor(public navCtrl: NavController,
+    constructor(
+        public navCtrl: NavController,
         public navParams: NavParams,
         public dPicker: DatePicker,
         //private kBoard: Keyboard,
@@ -41,9 +40,9 @@ export class RegistrerPage {
         //public userservice: UserProvider,
         private socialSharing: SocialSharing,
         public loadingCtrl: LoadingController, 
-        public toastCtrl: ToastController) {
+        public toastCtrl: ToastController
+    ) {}
 
-    }
     myForm: FormGroup;
     message: string;    
     newuser = {
@@ -61,6 +60,13 @@ export class RegistrerPage {
     email:string;
     password:string;
     cel:number;
+
+    ionViewDidLoad() {        
+        if (localStorage.idContVend != undefined) {
+            this.storage.set('name', localStorage.idContVend);
+            this.navCtrl.push(HomePage, { animate: true });
+        }
+    }
 
     
     onSubmit(form: FormGroup) {
@@ -90,9 +96,7 @@ export class RegistrerPage {
         //     this.message = 'E-mail o password incorrecto';
         // }        
     }
-    ReturnLoginPage = () => {
-        //this.navCtrl.push(LoginPage, { animate: true });
-    }
+
     ngOnInit() {
         /*this.myForm = new FormGroup({
             email: new FormControl('', [Validators.required, ValidateEmail]),
@@ -356,7 +360,7 @@ export class RegistrerPage {
       }
 
     toLoginPage() {
-        //this.navCtrl.push(LoginPage, { animate: true });
+        this.navCtrl.push(LoginPage, { animate: true });
     }
 
     emailChange(a) {
