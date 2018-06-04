@@ -1,0 +1,84 @@
+.tab-header-cls {
+    //background: url(../assets/img/splash2.jpg);
+    background-color: #2492ff;
+    background-position-y: 140px;
+    color: white;
+    margin: 0 auto;
+    background-size: cover;
+        min-height:20px; 
+        max-height: 70px;
+
+    div.divImg {
+        width: 25%;
+        height:10%;
+        margin: 5px auto;
+        img {
+            position:relative;
+            top:-65px;
+            height: 140px !important;            
+            margin-top: 15px;
+            background-color:transparent;
+            z-index: -1px;
+        }
+    }
+    .titleForm {
+        width: 90%;
+        margin: 5px auto;
+        text-align: center;
+    }
+}
+
+page-statistics {
+    .stat-row{
+        /*border: solid 1px #e1e1e1;*/
+        /*border-radius: 8px;*/    
+        border: 1px solid black;
+        background:white;
+        margin-bottom:16px;
+        .title{
+            font-weight: 600;
+            text-align: center;
+        }
+        .value{
+            font-weight: 700;
+            font-size: 50px;
+            text-align: center;
+        }
+        .icon-container{
+            text-align: right;
+            img{
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+    .main-text{
+        font-size: 14px;
+        font-weight: 600;
+        width: 100%;
+    }
+    .item-wrapper{
+        width: 100%;
+        height: 42px;
+        border: solid 1px #e1e1e1;
+        border-radius: 8px;
+        margin: 5px 0;
+        .head-icon{
+            width: 20%;
+        }
+        .center{
+            width: 75%;
+        }
+    }
+    .text-wrap{
+        height: 100%;
+        width:76%;
+        float: left;
+        color: #09c;
+    }
+    .arrow-button{
+        width: 3% !important;
+        padding-left: 0 !important;
+        height: 100%;
+    }
+}

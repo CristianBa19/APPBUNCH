@@ -1,0 +1,39 @@
+<ion-header class="header-cls">
+
+    <ion-toolbar>
+        <ion-buttons left>
+            <button icon-only ion-button class="backButton" (tap)="goBack()">
+                <img src="assets/icon/bt-regresar-menu.png" class="image-left">
+            </button>
+        </ion-buttons>
+        <ion-buttons right>
+            <button icon-only ion-button  (tap)="search()" >
+                <img src="assets/icon/buscar.png" class="image-right">
+            </button>
+        </ion-buttons>
+
+        <ion-title class="titleStyle">Semanas</ion-title>
+    </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding class="content">
+    <ion-row>
+        <ion-col col-6>Semana</ion-col>
+        <ion-col col-6 style="text-align:right;">Cotizaciones</ion-col>
+    </ion-row>
+
+    <div id="weeksContainer">
+        <ion-row class="item" *ngFor="let week of weeks" (tap)="selectWeek(week.id)">
+            <ion-col col-9>
+                {{week.weekStr}}
+            </ion-col>
+            <ion-col col-3>
+                {{week.cotizaciones}}
+            </ion-col>
+        </ion-row>        
+    </div>        
+</ion-content>
+
+

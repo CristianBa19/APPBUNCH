@@ -1,0 +1,24 @@
+<ion-header class="tab-header-cls">
+  <!--<ion-col>
+    <div class="divImg">-->
+      <ion-row>
+        <ion-col col-4></ion-col>
+        <ion-col col-4 id="iconContainer">
+          <img src="assets/icon/alertas2.svg">      
+        </ion-col>
+      </ion-row>      
+    <!--</div>
+  </ion-col>-->
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row *ngFor="let item of items" class="item-wrapper" (click)="itemSelected(item)" id="{{item.id}}">
+    <ion-row align-items-center class="main-text">
+      <span>{{ item.message }}</span>
+    </ion-row>
+    <ion-row align-items-center class="arrow-button">
+      <img src="assets/icon/bt-siguiente.png">
+    </ion-row>
+  </ion-row>
+</ion-content>

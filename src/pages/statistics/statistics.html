@@ -1,0 +1,120 @@
+<ion-header class="tab-header-cls">
+  <ion-col>
+    <div class="divImg">
+      <img src="assets/icon/estadisticas2.svg">
+    </div>
+    <!--
+    <div class="titleForm">{{ "StatisticsPage.titleText" | translate }}</div>
+    -->
+  </ion-col>
+</ion-header>
+
+
+<ion-content style="background:#F5F5F5;">    
+  <br><br>
+  <ion-row class="stat-row" (tap)="goToStatisticWeekPage('earnings')">
+    <ion-col>
+        <ion-row>
+          <ion-col col-3></ion-col>
+          <ion-col col-6 class="title">
+              Ganancias<br>de esta semana
+          </ion-col>          
+        </ion-row>    
+        <hr>
+        <ion-row>          
+          <ion-col col-3></ion-col>
+          <ion-col col-6 class="value">
+            ${{ganancias | number}}
+          </ion-col>          
+          <ion-col col-3 align-self-center>
+            <ion-row>
+              <ion-col col-6 class="icon-container"><img src="assets/icon/{{gananciasCompare}}.png"></ion-col>
+              <ion-col col-6 class="icon-container" align-self-end><img src="assets/icon/bt-siguiente.png"></ion-col>
+            </ion-row>
+          </ion-col>          
+        </ion-row>
+    </ion-col>    
+  </ion-row>
+
+  <ion-row class="stat-row" (tap)="goToStatisticWeekPage('prices')">
+    <ion-col>
+        <ion-row>
+          <ion-col col-3></ion-col>
+          <ion-col col-6 class="title">
+              Cotizaciones<br>de esta semana
+          </ion-col>          
+        </ion-row>    
+        <hr>
+        <ion-row>          
+          <ion-col col-3></ion-col>
+          <ion-col col-6 class="value">
+            {{cotizaciones}}
+          </ion-col>          
+          <ion-col col-3 align-self-center>
+            <ion-row>
+              <ion-col col-6 class="icon-container"><img src="assets/icon/{{cotizacionesCompare}}.png"></ion-col>
+              <ion-col col-6 class="icon-container" align-self-end><img src="assets/icon/bt-siguiente.png"></ion-col>
+            </ion-row>
+          </ion-col>          
+        </ion-row>
+    </ion-col>    
+  </ion-row>
+
+  <ion-row class="stat-row" (tap)="goToStatisticProductsPage()">
+    <ion-col>
+        <ion-row>
+          <ion-col col-3></ion-col>
+          <ion-col col-6 class="title">
+              Pólizas<br>emitidas
+          </ion-col>          
+        </ion-row>    
+        <hr>
+        <ion-row>          
+          <ion-col col-3></ion-col>
+          <ion-col col-6 class="value">
+            {{polizas}}
+          </ion-col>          
+          <ion-col col-3 align-self-center>
+            <ion-row>
+              <ion-col col-6 class="icon-container"><img src="assets/icon/{{polizasCompare}}.png"></ion-col>
+              <ion-col col-6 class="icon-container" align-self-end><img src="assets/icon/bt-siguiente.png"></ion-col>
+            </ion-row>
+          </ion-col>          
+        </ion-row>
+    </ion-col>    
+  </ion-row>
+
+  <div style="padding:22px;">
+    <ion-row>
+      <ion-row class="item-wrapper" (tap)="goToStatisticProductsPage()">
+        <ion-row align-items-center justify-content-center class="head-icon">
+          <img src="assets/icon/historia-de-productos.png">
+        </ion-row>
+        <ion-row align-items-center justify-content-center class="center">
+          <ion-row class="main-text">
+            <span>{{ "StatisticsPage.productHistory" | translate }}</span>
+          </ion-row>
+        </ion-row>
+        <ion-row align-items-center justify-content-center class="arrow-button">
+          <img src="assets/icon/bt-siguiente.png">
+        </ion-row>
+      </ion-row>
+    </ion-row>
+
+    <ion-row (tap)="goToStatisticClientsPage()">
+      <ion-row class="item-wrapper">
+        <ion-row align-items-center justify-content-center class="head-icon">
+          <img src="assets/icon/historial-de-clientes.png">
+        </ion-row>
+        <ion-row align-items-center justify-content-center class="center">
+          <ion-row class="main-text">
+            <span>{{ "StatisticsPage.customerHistory" | translate }}</span>
+          </ion-row>
+        </ion-row>
+        <ion-row align-items-center justify-content-center class="arrow-button">
+          <img src="assets/icon/bt-siguiente.png">
+        </ion-row>
+      </ion-row>
+    </ion-row>    
+  </div>
+</ion-content>

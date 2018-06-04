@@ -17,6 +17,9 @@ import { HomePage } from '../pages/home/home';
 import { NewAdvertisementPage2 } from '../pages/new-advertisement-2/new-advertisement';
 import { AdvertisementPage } from '../pages/advertisement/advertisement';
 import { AcquireProductPage2 } from '../pages/acquire-product-2/acquire-product';
+import { NotificationPage } from '../pages/notification/notification';
+import { NotificationDetailPage } from '../pages/notification-detail/notification-detail';
+import { StatisticsPage } from '../pages/statistics/statistics';
 
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { MInputComponent } from '../components/m-input/m-input';
@@ -32,6 +35,9 @@ import { MInputComponent } from '../components/m-input/m-input';
     NewAdvertisementPage2,
     AdvertisementPage,
     AcquireProductPage2,
+    NotificationPage,
+    NotificationDetailPage,
+    StatisticsPage,
     MInputComponent,
   ],
   imports: [
@@ -51,6 +57,9 @@ import { MInputComponent } from '../components/m-input/m-input';
     NewAdvertisementPage2,
     AdvertisementPage,
     AcquireProductPage2,
+    NotificationPage,
+    NotificationDetailPage,
+    StatisticsPage,
   ],
   providers: [
     SocialSharing,

@@ -1,0 +1,113 @@
+<ion-header class="header-cls">
+
+    <ion-toolbar>
+        <ion-buttons left>
+            <button icon-only ion-button class="backButton" (tap)="goBack()">
+                <img src="assets/icon/bt-regresar-menu.png" class="image-left">
+            </button>
+        </ion-buttons>        
+        <ion-title class="titleStyle">{{ "StatisticsPage.StatisticDetailProductsPage.titleText" | translate }}</ion-title>
+    </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-row class="page-wrapper">
+        <ion-row class="item-wrapper">
+            <ion-row class="first-item">
+                <ion-row align-items-end class="main-text">
+                    <span>{{ "StatisticsPage.StatisticDetailProductsPage.insurenceText" | translate }}</span>
+                </ion-row>
+                <ion-row align-items-start class="sub-text">
+                    <span>{{productDetail.seguro}}</span>
+                </ion-row>
+            </ion-row>
+            <ion-row align-items-center class="arrow-button">
+                <ion-row align-items-end justify-content-center>
+                    <ion-row class="circle-icon {{productDetail.circleIcon}}"></ion-row>
+                </ion-row>
+                <ion-row align-items-start justify-content-center>
+                    <span>{{productDetail.isInsuranceActive}}</span>
+                </ion-row>
+            </ion-row>
+        </ion-row>
+        <ion-row class="item-wrapper">
+            <ion-row>
+                <ion-row align-items-end class="main-text">
+                    <span>{{ "StatisticsPage.StatisticDetailProductsPage.incurenceCarierText" | translate }}</span>
+                </ion-row>
+                <ion-row align-items-start class="sub-text">
+                    <span>{{productDetail.aseguradora}}</span>
+                </ion-row>
+            </ion-row>
+        </ion-row>
+        <ion-row class="item-wrapper">
+            <ion-row>
+                <ion-row align-items-end class="main-text">
+                    <span>{{ "StatisticsPage.StatisticDetailProductsPage.policyText" | translate }}</span>
+                </ion-row>
+                <ion-row align-items-start class="sub-text">
+                    <span>{{productDetail.policy}}</span>
+                </ion-row>
+            </ion-row>
+        </ion-row>
+        <ion-row class="item-wrapper">
+            <ion-row>
+                <ion-row align-items-end class="main-text">
+                    <span>{{ "StatisticsPage.StatisticDetailProductsPage.descriptionText" | translate }}</span>
+                </ion-row>
+                <ion-row align-items-start class="sub-text">
+                    <span>{{productDetail.description}}</span>
+                </ion-row>
+            </ion-row>
+        </ion-row>
+        <ion-row class="item-wrapper">
+            <ion-row>
+                <ion-row align-items-end class="main-text">
+                    <span>{{ "StatisticsPage.StatisticDetailProductsPage.validityText" | translate }}</span>
+                </ion-row>
+                <ion-row align-items-start class="sub-text">
+                    <span>{{productDetail.fInicio}} {{ "StatisticsPage.fromTo" | translate }} {{productDetail.fFin}}</span>
+                </ion-row>
+            </ion-row>
+        </ion-row>
+        <ion-row class="item-wrapper">
+            <ion-row>
+                <ion-row align-items-end class="main-text">
+                    <span>{{ "StatisticsPage.StatisticDetailProductsPage.totalPremiumText" | translate }}</span>
+                </ion-row>
+                <ion-row align-items-start class="sub-text">
+                    <span>{{productDetail.primaTotal}}</span>
+                </ion-row>
+            </ion-row>
+        </ion-row>
+        <ion-row class="item-wrapper">
+            <ion-row>
+                <ion-row align-items-end class="main-text">
+                    <span>{{ "StatisticsPage.StatisticDetailProductsPage.paymentFrequency" | translate }}</span>
+                </ion-row>
+                <ion-row align-items-start class="sub-text">
+                    <span>{{productDetail.periodicidad}}</span>
+                </ion-row>
+            </ion-row>
+        </ion-row>
+        <ion-row class="item-wrapper">
+            <ion-row>
+                <ion-row align-items-end class="main-text">
+                    <span>{{ "StatisticsPage.StatisticDetailProductsPage.wayToPayText" | translate }}</span>
+                </ion-row>
+                <ion-row align-items-start class="sub-text">
+                    <span>{{productDetail.pago}}</span>
+                </ion-row>
+            </ion-row>
+        </ion-row>
+        <ion-row align-items-center justify-content-center class="bot-button">
+            <span>{{ "StatisticsPage.StatisticDetailProductsPage.sendDownloadReminderText" | translate }}</span>
+        </ion-row>
+    </ion-row>
+</ion-content>
+
+
+
+

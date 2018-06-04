@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Pantalla" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F5F5F5;}
+	.st1{fill:url(#SVGID_1_);}
+	.st2{fill:url(#SVGID_2_);stroke:url(#SVGID_3_);stroke-miterlimit:10;}
+	.st3{fill:#FFFFFF;}
+	.st4{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:10;}
+	.st5{fill:#616161;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
+	.st6{fill:url(#SVGID_6_);stroke:url(#SVGID_7_);stroke-miterlimit:10;}
+	.st7{fill:#0099CC;}
+	.st8{fill:url(#SVGID_8_);stroke:url(#SVGID_9_);stroke-miterlimit:10;}
+	.st9{fill:url(#SVGID_10_);}
+	.st10{fill:url(#SVGID_11_);stroke:url(#SVGID_12_);stroke-miterlimit:10;}
+	.st11{opacity:0.63;fill:#000202;}
+	.st12{fill:url(#SVGID_15_);stroke:url(#SVGID_16_);stroke-miterlimit:10;}
+	.st13{fill:#FFFFFF;stroke:#0099CC;stroke-miterlimit:10;}
+	.st14{fill:url(#SVGID_17_);stroke:url(#SVGID_18_);stroke-miterlimit:10;}
+</style>
+<rect x="-2383.4" y="-446.9" class="st0" width="370" height="650"/>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-2471.9148" y1="-283.3745" x2="-1922.6492" y2="33.7442">
+	<stop  offset="0" style="stop-color:#F2F2F2"/>
+	<stop  offset="1" style="stop-color:#909090"/>
+</linearGradient>
+<rect x="-2377.3" y="-447.3" class="st1" width="360" height="645"/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="-2431.4895" y1="-316.6511" x2="-1964.9989" y2="149.8396">
+	<stop  offset="0" style="stop-color:#2492FF"/>
+	<stop  offset="9.714619e-02" style="stop-color:#2B96FF"/>
+	<stop  offset="0.2401" style="stop-color:#3F9FFF"/>
+	<stop  offset="0.4114" style="stop-color:#5FB0FF"/>
+	<stop  offset="0.6047" style="stop-color:#8DC6FF"/>
+	<stop  offset="0.8134" style="stop-color:#C6E2FF"/>
+	<stop  offset="1" style="stop-color:#FFFFFF"/>
+</linearGradient>
+<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="-2384.7349" y1="-83.4057" x2="-2011.7535" y2="-83.4057">
+	<stop  offset="0" style="stop-color:#2492FF"/>
+	<stop  offset="0.368" style="stop-color:#2693FF"/>
+	<stop  offset="0.5077" style="stop-color:#2D96FF"/>
+	<stop  offset="0.6086" style="stop-color:#399CFF"/>
+	<stop  offset="0.6909" style="stop-color:#4AA5FF"/>
+	<stop  offset="0.7617" style="stop-color:#60B0FF"/>
+	<stop  offset="0.8248" style="stop-color:#7CBEFF"/>
+	<stop  offset="0.8819" style="stop-color:#9DCEFF"/>
+	<stop  offset="0.9346" style="stop-color:#C3E1FF"/>
+	<stop  offset="0.9817" style="stop-color:#EDF6FF"/>
+	<stop  offset="1" style="stop-color:#FFFFFF"/>
+</linearGradient>
+<rect x="-2384.2" y="-363.9" class="st2" width="372" height="561"/>
+<g>
+	<defs>
+		<rect id="SVGID_4_" x="-2383.4" y="-446.9" width="370" height="81"/>
+	</defs>
+	<use xlink:href="#SVGID_4_"  style="overflow:visible;fill:#2492FF;"/>
+	<clipPath id="SVGID_5_">
+		<use xlink:href="#SVGID_4_"  style="overflow:visible;"/>
+	</clipPath>
+</g>
+<text transform="matrix(1 0 0 1 -2348.3726 -246.227)" class="st3" style="font-family:'Quicksand-Regular'; font-size:21px;">Nombre</text>
+<text transform="matrix(1 0 0 1 -2358.3726 -288.3062)"><tspan x="0" y="0" class="st3" style="font-family:'UbuntuMono-Regular'; font-size:26px;">¿</tspan><tspan x="13" y="0" class="st3" style="font-family:'Quicksand-Bold'; font-size:26px;">Cuál es tu nombre?</tspan></text>
+<text transform="matrix(1 0 0 1 -2348.373 -169.4057)" class="st3" style="font-family:'Quicksand-Regular'; font-size:21px;">Apellido paterno</text>
+<text transform="matrix(1 0 0 1 -2348.3728 -95.7161)" class="st3" style="font-family:'Quicksand-Regular'; font-size:21px;">Apellido materno</text>
+<text transform="matrix(1 0 0 1 -2272.52 -372.1924)" class="st3" style="font-family:'Quicksand-Regular'; font-size:18px;">Crea una cuenta</text>
+<path class="st3" d="M-2177.7-415.3c0-11-9-20-20-20s-20,9-20,20c0,5.8,2.5,11.1,6.5,14.7l0,0l0.6,0.5c0,0,0.1,0.1,0.1,0.1
+	c0.3,0.3,0.7,0.6,1.1,0.8c0.1,0.1,0.2,0.2,0.4,0.3c0.4,0.3,0.8,0.5,1.2,0.8c0.1,0.1,0.2,0.1,0.3,0.2c0.4,0.3,0.9,0.5,1.4,0.7
+	c0,0,0.1,0,0.1,0c1.5,0.7,3.1,1.2,4.8,1.5c0,0,0.1,0,0.1,0c0.5,0.1,1.1,0.2,1.6,0.2c0.1,0,0.1,0,0.2,0c0.5,0,1.1,0.1,1.6,0.1
+	c0.5,0,1.1,0,1.6-0.1c0.1,0,0.1,0,0.2,0c0.5,0,1.1-0.1,1.6-0.2c0,0,0.1,0,0.1,0c1.7-0.3,3.3-0.8,4.8-1.5c0.1,0,0.1,0,0.2-0.1
+	c0.4-0.2,0.9-0.4,1.3-0.7c0.1-0.1,0.2-0.1,0.3-0.2c0.4-0.2,0.8-0.5,1.1-0.7c0.1-0.1,0.3-0.2,0.4-0.3c0.3-0.2,0.6-0.5,0.9-0.7
+	c0.1-0.1,0.1-0.1,0.2-0.2l0.7-0.6l0,0C-2180.3-404.2-2177.7-409.4-2177.7-415.3z M-2216.3-415.3c0-10.2,8.3-18.5,18.5-18.5
+	c10.2,0,18.5,8.3,18.5,18.5c0,5.5-2.4,10.5-6.2,13.9c-0.2-0.1-0.4-0.3-0.6-0.4l-6.2-3.1c-0.6-0.3-0.9-0.8-0.9-1.4v-2.2
+	c0.1-0.2,0.3-0.4,0.4-0.6c0.8-1.1,1.4-2.4,1.9-3.7c0.9-0.4,1.5-1.4,1.5-2.4v-2.6c0-0.6-0.2-1.2-0.6-1.7v-3.4c0-0.4,0.2-2.5-1.4-4.3
+	c-1.3-1.5-3.5-2.3-6.4-2.3s-5.1,0.8-6.4,2.3c-1.5,1.8-1.4,3.9-1.4,4.3v3.4c-0.4,0.5-0.6,1.1-0.6,1.7v2.6c0,0.8,0.4,1.5,1,2.1
+	c0.6,2.3,1.8,4.1,2.2,4.6v2.1c0,0.6-0.3,1.1-0.8,1.4l-5.8,3.1c-0.2,0.1-0.4,0.2-0.5,0.3C-2213.9-404.9-2216.3-409.8-2216.3-415.3z
+	 M-2186.9-400.3c-0.3,0.2-0.5,0.4-0.8,0.5c-0.1,0.1-0.2,0.2-0.4,0.2c-0.3,0.2-0.7,0.4-1,0.6c-0.1,0-0.2,0.1-0.2,0.1
+	c-0.8,0.4-1.7,0.8-2.5,1.1c0,0-0.1,0-0.1,0c-0.5,0.2-0.9,0.3-1.4,0.4c0,0,0,0,0,0c-0.5,0.1-0.9,0.2-1.4,0.3c0,0,0,0,0,0
+	c-0.5,0.1-0.9,0.1-1.4,0.2c-0.1,0-0.2,0-0.2,0c-0.5,0-0.9,0.1-1.4,0.1c-0.5,0-0.9,0-1.4-0.1c-0.1,0-0.2,0-0.2,0
+	c-0.5,0-0.9-0.1-1.4-0.2c0,0,0,0-0.1,0c-1-0.2-1.9-0.4-2.8-0.7c0,0-0.1,0-0.1,0c-0.5-0.2-0.9-0.3-1.4-0.5c0,0,0,0,0,0
+	c-0.4-0.2-0.8-0.4-1.2-0.6c-0.1,0-0.1-0.1-0.2-0.1c-0.4-0.2-0.7-0.4-1.1-0.6c-0.1-0.1-0.2-0.1-0.3-0.2c-0.3-0.2-0.7-0.4-1-0.7
+	c0,0-0.1-0.1-0.1-0.1c0,0,0,0,0.1,0l5.8-3.1c1-0.5,1.6-1.6,1.6-2.7l0-2.6l-0.2-0.2c0,0-1.6-1.9-2.2-4.5l-0.1-0.3l-0.2-0.2
+	c-0.3-0.2-0.6-0.6-0.6-1v-2.6c0-0.3,0.1-0.7,0.4-0.9l0.2-0.2v-4.1l0-0.1c0,0-0.2-1.8,1-3.2c1.1-1.2,2.9-1.8,5.4-1.8
+	c2.5,0,4.3,0.6,5.3,1.8c1.2,1.4,1,3.2,1,3.2l0,4.1l0.2,0.2c0.3,0.2,0.4,0.6,0.4,0.9v2.6c0,0.5-0.4,1-0.9,1.1l-0.4,0.1l-0.1,0.4
+	c-0.4,1.3-1,2.6-1.8,3.7c-0.2,0.3-0.4,0.5-0.5,0.7l-0.2,0.2v2.7c0,1.2,0.7,2.2,1.7,2.8l6.2,3.1c0,0,0.1,0,0.1,0.1
+	C-2186.7-400.4-2186.8-400.4-2186.9-400.3z"/>
+<line class="st4" x1="-2358.4" y1="-201.9" x2="-2038.4" y2="-201.9"/>
+<line class="st4" x1="-2358.4" y1="-129.9" x2="-2038.4" y2="-129.9"/>
+<line class="st4" x1="-2358.4" y1="-52.8" x2="-2038.4" y2="-52.8"/>
+<text transform="matrix(1 0 0 1 -2348.3733 -206.9927)" class="st3" style="font-family:'Quicksand-Bold'; font-size:27px;">Daniel</text>
+<text transform="matrix(1 0 0 1 -2348.373 -134.5637)" class="st3" style="font-family:'Quicksand-Bold'; font-size:27px;">Benítez</text>
+<line class="st5" x1="-2383.4" y1="-364.9" x2="-2009.8" y2="-364.8"/>
+<rect x="-3141.5" y="-467.4" class="st0" width="370" height="650"/>
+<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="-3214.7375" y1="-399.8917" x2="-2703.0054" y2="111.8405">
+	<stop  offset="0" style="stop-color:#2477FF"/>
+	<stop  offset="9.714619e-02" style="stop-color:#2B7BFF"/>
+	<stop  offset="0.2401" style="stop-color:#3F88FF"/>
+	<stop  offset="0.4114" style="stop-color:#5F9CFF"/>
+	<stop  offset="0.6047" style="stop-color:#8DB8FF"/>
+	<stop  offset="0.8134" style="stop-color:#C6DBFF"/>
+	<stop  offset="1" style="stop-color:#FFFFFF"/>
+</linearGradient>
+<linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="-3145.3621" y1="-144.0256" x2="-2772.3809" y2="-144.0256">
+	<stop  offset="0" style="stop-color:#2492FF"/>
+	<stop  offset="0.368" style="stop-color:#2693FF"/>
+	<stop  offset="0.5077" style="stop-color:#2D96FF"/>
+	<stop  offset="0.6086" style="stop-color:#399CFF"/>
+	<stop  offset="0.6909" style="stop-color:#4AA5FF"/>
+	<stop  offset="0.7617" style="stop-color:#60B0FF"/>
+	<stop  offset="0.8248" style="stop-color:#7CBEFF"/>
+	<stop  offset="0.8819" style="stop-color:#9DCEFF"/>
+	<stop  offset="0.9346" style="stop-color:#C3E1FF"/>
+	<stop  offset="0.9817" style="stop-color:#EDF6FF"/>
+	<stop  offset="1" style="stop-color:#FFFFFF"/>
+</linearGradient>
+<rect x="-3144.9" y="-469.8" class="st6" width="372" height="651.5"/>
+<g>
+	
+		<ellipse transform="matrix(1 -8.696137e-03 8.696137e-03 1 -1.3465 -24.4761)" class="st7" cx="-2815.2" cy="142.6" rx="25" ry="25"/>
+	<g>
+		
+			<rect x="-2828.4" y="141.4" transform="matrix(-1 8.696137e-03 -8.696137e-03 -1 -5630.5249 309.685)" class="st3" width="25" height="2.5"/>
+		<g>
+			
+				<rect x="-2813.5" y="144.8" transform="matrix(-0.7009 0.7132 -0.7132 -0.7009 -4670.7715 2250.6565)" class="st3" width="12.5" height="2.5"/>
+			
+				<rect x="-2813.6" y="137.7" transform="matrix(0.7132 0.7009 -0.7009 0.7132 -707.6337 2007.5935)" class="st3" width="12.5" height="2.5"/>
+		</g>
+	</g>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 -3111.9814 -331.1763)" class="st3" style="font-family:'Quicksand-Regular'; font-size:21px;">Nombre</text>
+	<g>
+		<text transform="matrix(1 0 0 1 -3123.4941 -378.3557)"><tspan x="0" y="0" class="st3" style="font-family:'UbuntuMono-Regular'; font-size:30px;">¿</tspan><tspan x="15" y="0" class="st3" style="font-family:'Quicksand-Bold'; font-size:30px;">Cuál es tu nombre?</tspan></text>
+		<text transform="matrix(1 0 0 1 -3113.4946 -259.4552)" class="st3" style="font-family:'Quicksand-Regular'; font-size:21px;">Apellido paterno</text>
+		<text transform="matrix(1 0 0 1 -3113.4946 -185.7656)" class="st3" style="font-family:'Quicksand-Regular'; font-size:21px;">Apellido materno</text>
+		<line class="st4" x1="-3123.5" y1="-292" x2="-2803.5" y2="-292"/>
+		<line class="st4" x1="-3123.5" y1="-220" x2="-2803.5" y2="-220"/>
+		<line class="st4" x1="-3123.5" y1="-142.9" x2="-2803.5" y2="-142.9"/>
+		<text transform="matrix(1 0 0 1 -3113.4949 -297.0422)" class="st3" style="font-family:'Quicksand-Bold'; font-size:27px;">Daniel</text>
+		<text transform="matrix(1 0 0 1 -3113.4946 -224.6132)" class="st3" style="font-family:'Quicksand-Bold'; font-size:27px;">Benítez</text>
+	</g>
+</g>
+<g>
+	
+		<ellipse transform="matrix(1 -8.696137e-03 8.696137e-03 1 -1.5455 -17.9057)" class="st7" cx="-2059.8" cy="168.8" rx="25" ry="25"/>
+	<g>
+		
+			<rect x="-2064.9" y="171.4" transform="matrix(-0.7009 0.7132 -0.7132 -0.7009 -3378.4553 1761.995)" class="st3" width="12.5" height="2.5"/>
+		
+			<rect x="-2065" y="164.4" transform="matrix(0.7132 0.7009 -0.7009 0.7132 -474.2993 1490.5017)" class="st3" width="12.5" height="2.5"/>
+	</g>
+</g>
+<rect x="-3143" y="256.1" class="st0" width="370" height="650"/>
+<text transform="matrix(1 0 0 1 -3107.9607 456.8098)" style="fill:#616161; font-family:'Quicksand-Regular'; font-size:21px;">Nombre</text>
+<linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="-3216.2168" y1="323.5975" x2="-2704.4846" y2="835.3298">
+	<stop  offset="0" style="stop-color:#2492FF"/>
+	<stop  offset="0.3844" style="stop-color:#2598F8;stop-opacity:0.6925"/>
+	<stop  offset="0.9484" style="stop-color:#29A9E4;stop-opacity:0.2413"/>
+	<stop  offset="1" style="stop-color:#29ABE2;stop-opacity:0.2"/>
+</linearGradient>
+<linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="-3146.8413" y1="579.4637" x2="-2773.8599" y2="579.4637">
+	<stop  offset="0" style="stop-color:#2492FF"/>
+	<stop  offset="0.368" style="stop-color:#2693FF"/>
+	<stop  offset="0.5077" style="stop-color:#2D96FF"/>
+	<stop  offset="0.6086" style="stop-color:#399CFF"/>
+	<stop  offset="0.6909" style="stop-color:#4AA5FF"/>
+	<stop  offset="0.7617" style="stop-color:#60B0FF"/>
+	<stop  offset="0.8248" style="stop-color:#7CBEFF"/>
+	<stop  offset="0.8819" style="stop-color:#9DCEFF"/>
+	<stop  offset="0.9346" style="stop-color:#C3E1FF"/>
+	<stop  offset="0.9817" style="stop-color:#EDF6FF"/>
+	<stop  offset="1" style="stop-color:#FFFFFF"/>
+</linearGradient>
+<rect x="-3146.3" y="253.7" class="st8" width="372" height="651.5"/>
+<g>
+	
+		<ellipse transform="matrix(1 -8.696137e-03 8.696137e-03 1 -7.6381 -24.4616)" class="st7" cx="-2816.7" cy="866.1" rx="25" ry="25"/>
+	<g>
+		
+			<rect x="-2829.9" y="864.8" transform="matrix(-1 8.696137e-03 -8.696137e-03 -1 -5627.1914 1756.649)" class="st3" width="25" height="2.5"/>
+		<g>
+			
+				<rect x="-2815" y="868.3" transform="matrix(-0.7009 0.7132 -0.7132 -0.7009 -4157.2739 3482.3169)" class="st3" width="12.5" height="2.5"/>
+			
+				<rect x="-2815" y="861.2" transform="matrix(0.7132 0.7009 -0.7009 0.7132 -200.9418 2216.106)" class="st3" width="12.5" height="2.5"/>
+		</g>
+	</g>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 -3114.9736 319.6349)"><tspan x="0" y="0" class="st3" style="font-family:'UbuntuMono-Regular'; font-size:30px;">¿</tspan><tspan x="15" y="0" class="st3" style="font-family:'Quicksand-Bold'; font-size:30px;">Cuál es tu nombre?</tspan></text>
+	<text transform="matrix(1 0 0 1 -3104.9741 438.5354)" class="st3" style="font-family:'Quicksand-Regular'; font-size:21px;">Apellido paterno</text>
+	<text transform="matrix(1 0 0 1 -3104.9741 512.2249)" class="st3" style="font-family:'Quicksand-Regular'; font-size:21px;">Apellido materno</text>
+	<line class="st4" x1="-3115" y1="406" x2="-2795" y2="406"/>
+	<line class="st4" x1="-3115" y1="478" x2="-2795" y2="478"/>
+	<line class="st4" x1="-3115" y1="555.1" x2="-2795" y2="555.1"/>
+	<text transform="matrix(1 0 0 1 -3104.9744 400.9484)" class="st3" style="font-family:'Quicksand-Bold'; font-size:27px;">Daniel</text>
+	<text transform="matrix(1 0 0 1 -3104.9741 473.3773)" class="st3" style="font-family:'Quicksand-Bold'; font-size:27px;">Benítez</text>
+</g>
+<rect x="-4191.5" y="-741.7" class="st0" width="370" height="650"/>
+<linearGradient id="SVGID_10_" gradientUnits="userSpaceOnUse" x1="-4280.0596" y1="-578.1526" x2="-3730.7939" y2="-261.0339">
+	<stop  offset="0" style="stop-color:#F2F2F2"/>
+	<stop  offset="1" style="stop-color:#909090"/>
+</linearGradient>
+<rect x="-4185.4" y="-742.1" class="st9" width="360" height="645"/>
+<linearGradient id="SVGID_11_" gradientUnits="userSpaceOnUse" x1="-4239.6343" y1="-611.4293" x2="-3773.1436" y2="-144.9386">
+	<stop  offset="0" style="stop-color:#2492FF"/>
+	<stop  offset="9.714619e-02" style="stop-color:#2B96FF"/>
+	<stop  offset="0.2401" style="stop-color:#3F9FFF"/>
+	<stop  offset="0.4114" style="stop-color:#5FB0FF"/>
+	<stop  offset="0.6047" style="stop-color:#8DC6FF"/>
+	<stop  offset="0.8134" style="stop-color:#C6E2FF"/>
+	<stop  offset="1" style="stop-color:#FFFFFF"/>
+</linearGradient>
+<linearGradient id="SVGID_12_" gradientUnits="userSpaceOnUse" x1="-4192.8794" y1="-378.1839" x2="-3819.8982" y2="-378.1839">
+	<stop  offset="0" style="stop-color:#2492FF"/>
+	<stop  offset="0.368" style="stop-color:#2693FF"/>
+	<stop  offset="0.5077" style="stop-color:#2D96FF"/>
+	<stop  offset="0.6086" style="stop-color:#399CFF"/>
+	<stop  offset="0.6909" style="stop-color:#4AA5FF"/>
+	<stop  offset="0.7617" style="stop-color:#60B0FF"/>
+	<stop  offset="0.8248" style="stop-color:#7CBEFF"/>
+	<stop  offset="0.8819" style="stop-color:#9DCEFF"/>
+	<stop  offset="0.9346" style="stop-color:#C3E1FF"/>
+	<stop  offset="0.9817" style="stop-color:#EDF6FF"/>
+	<stop  offset="1" style="stop-color:#FFFFFF"/>
+</linearGradient>
+<rect x="-4192.4" y="-658.7" class="st10" width="372" height="561"/>
+<g>
+	<defs>
+		<rect id="SVGID_13_" x="-4191.5" y="-741.7" width="370" height="81"/>
+	</defs>
+	<use xlink:href="#SVGID_13_"  style="overflow:visible;fill:#2492FF;"/>
+	<clipPath id="SVGID_14_">
+		<use xlink:href="#SVGID_13_"  style="overflow:visible;"/>
+	</clipPath>
+</g>
+<text transform="matrix(1 0 0 1 -4156.5176 -541.0051)" class="st3" style="font-family:'Quicksand-Regular'; font-size:21px;">Nombre</text>
+<text transform="matrix(1 0 0 1 -4168.0171 -602.5834)"><tspan x="0" y="0" class="st3" style="font-family:'UbuntuMono-Regular'; font-size:31px;">¿</tspan><tspan x="15.5" y="0" class="st3" style="font-family:'Quicksand-Bold'; font-size:31px;">Cuál es tu nombre?</tspan></text>
+<text transform="matrix(1 0 0 1 -4156.5176 -464.1838)" class="st3" style="font-family:'Quicksand-Regular'; font-size:21px;">Apellido paterno</text>
+<text transform="matrix(1 0 0 1 -4156.5176 -390.4942)" class="st3" style="font-family:'Quicksand-Regular'; font-size:21px;">Apellido materno</text>
+<text transform="matrix(1 0 0 1 -4080.6646 -666.9705)" class="st3" style="font-family:'Quicksand-Regular'; font-size:18px;">Crea una cuenta</text>
+<path class="st3" d="M-3985.9-710.1c0-11-9-20-20-20c-11,0-20,9-20,20c0,5.8,2.5,11.1,6.5,14.7l0,0l0.6,0.5c0,0,0.1,0.1,0.1,0.1
+	c0.3,0.3,0.7,0.6,1.1,0.8c0.1,0.1,0.2,0.2,0.4,0.3c0.4,0.3,0.8,0.5,1.2,0.8c0.1,0.1,0.2,0.1,0.3,0.2c0.4,0.3,0.9,0.5,1.4,0.7
+	c0,0,0.1,0,0.1,0c1.5,0.7,3.1,1.2,4.8,1.5c0,0,0.1,0,0.1,0c0.5,0.1,1.1,0.2,1.6,0.2c0.1,0,0.1,0,0.2,0c0.5,0,1.1,0.1,1.6,0.1
+	c0.5,0,1.1,0,1.6-0.1c0.1,0,0.1,0,0.2,0c0.5,0,1.1-0.1,1.6-0.2c0,0,0.1,0,0.1,0c1.7-0.3,3.3-0.8,4.8-1.5c0.1,0,0.1,0,0.2-0.1
+	c0.4-0.2,0.9-0.4,1.3-0.7c0.1-0.1,0.2-0.1,0.3-0.2c0.4-0.2,0.8-0.5,1.1-0.7c0.1-0.1,0.3-0.2,0.4-0.3c0.3-0.2,0.6-0.5,0.9-0.7
+	c0.1-0.1,0.1-0.1,0.2-0.2l0.7-0.6l0,0C-3988.4-699-3985.9-704.2-3985.9-710.1z M-4024.4-710.1c0-10.2,8.3-18.5,18.5-18.5
+	c10.2,0,18.5,8.3,18.5,18.5c0,5.5-2.4,10.5-6.2,13.9c-0.2-0.1-0.4-0.3-0.6-0.4l-6.2-3.1c-0.6-0.3-0.9-0.8-0.9-1.4v-2.2
+	c0.1-0.2,0.3-0.4,0.4-0.6c0.8-1.1,1.4-2.4,1.9-3.7c0.9-0.4,1.5-1.4,1.5-2.4v-2.6c0-0.6-0.2-1.2-0.6-1.7v-3.4c0-0.4,0.2-2.5-1.4-4.3
+	c-1.3-1.5-3.5-2.3-6.4-2.3c-2.9,0-5.1,0.8-6.4,2.3c-1.5,1.8-1.4,3.9-1.4,4.3v3.4c-0.4,0.5-0.6,1.1-0.6,1.7v2.6c0,0.8,0.4,1.5,1,2.1
+	c0.6,2.3,1.8,4.1,2.2,4.6v2.1c0,0.6-0.3,1.1-0.8,1.4l-5.8,3.1c-0.2,0.1-0.4,0.2-0.5,0.3C-4022.1-699.7-4024.4-704.6-4024.4-710.1z
+	 M-3995-695.1c-0.3,0.2-0.5,0.4-0.8,0.5c-0.1,0.1-0.2,0.2-0.4,0.2c-0.3,0.2-0.7,0.4-1,0.6c-0.1,0-0.2,0.1-0.2,0.1
+	c-0.8,0.4-1.7,0.8-2.5,1.1c0,0-0.1,0-0.1,0c-0.5,0.2-0.9,0.3-1.4,0.4c0,0,0,0,0,0c-0.5,0.1-0.9,0.2-1.4,0.3c0,0,0,0,0,0
+	c-0.5,0.1-0.9,0.1-1.4,0.2c-0.1,0-0.2,0-0.2,0c-0.5,0-0.9,0.1-1.4,0.1c-0.5,0-0.9,0-1.4-0.1c-0.1,0-0.2,0-0.2,0
+	c-0.5,0-0.9-0.1-1.4-0.2c0,0,0,0-0.1,0c-1-0.2-1.9-0.4-2.8-0.7c0,0-0.1,0-0.1,0c-0.5-0.2-0.9-0.3-1.4-0.5c0,0,0,0,0,0
+	c-0.4-0.2-0.8-0.4-1.2-0.6c-0.1,0-0.1-0.1-0.2-0.1c-0.4-0.2-0.7-0.4-1.1-0.6c-0.1-0.1-0.2-0.1-0.3-0.2c-0.3-0.2-0.7-0.4-1-0.7
+	c0,0-0.1-0.1-0.1-0.1c0,0,0,0,0.1,0l5.8-3.1c1-0.5,1.6-1.6,1.6-2.7l0-2.6l-0.2-0.2c0,0-1.6-1.9-2.2-4.5l-0.1-0.3l-0.2-0.2
+	c-0.3-0.2-0.6-0.6-0.6-1v-2.6c0-0.3,0.1-0.7,0.4-0.9l0.2-0.2v-4.1l0-0.1c0,0-0.2-1.8,1-3.2c1.1-1.2,2.9-1.8,5.4-1.8
+	c2.5,0,4.3,0.6,5.3,1.8c1.2,1.4,1,3.2,1,3.2l0,4.1l0.2,0.2c0.3,0.2,0.4,0.6,0.4,0.9v2.6c0,0.5-0.4,1-0.9,1.1l-0.4,0.1l-0.1,0.4
+	c-0.4,1.3-1,2.6-1.8,3.7c-0.2,0.3-0.4,0.5-0.5,0.7l-0.2,0.2v2.7c0,1.2,0.7,2.2,1.7,2.8l6.2,3.1c0,0,0.1,0,0.1,0.1
+	C-3994.9-695.2-3994.9-695.1-3995-695.1z"/>
+<line class="st4" x1="-4166.5" y1="-496.7" x2="-3846.5" y2="-496.7"/>
+<line class="st4" x1="-4166.5" y1="-424.7" x2="-3846.5" y2="-424.7"/>
+<line class="st4" x1="-4166.5" y1="-347.6" x2="-3846.5" y2="-347.6"/>
+<line class="st5" x1="-4187" y1="-659.2" x2="-3823.9" y2="-659.6"/>
+<g>
+	
+		<ellipse transform="matrix(1 -8.696137e-03 8.696137e-03 1 0.9495 -33.6407)" class="st7" cx="-3867.9" cy="-126" rx="25" ry="25"/>
+	<g>
+		
+			<rect x="-3873" y="-123.4" transform="matrix(-0.7009 0.7132 -0.7132 -0.7009 -6664.229 2550.2192)" class="st3" width="12.5" height="2.5"/>
+		
+			<rect x="-3873.1" y="-130.4" transform="matrix(0.7132 0.7009 -0.7009 0.7132 -1199.4417 2673.3525)" class="st3" width="12.5" height="2.5"/>
+	</g>
+</g>
+<ellipse transform="matrix(1 -8.696137e-03 8.696137e-03 1 0.9471 -33.6421)" class="st11" cx="-3868.1" cy="-125.7" rx="25" ry="25"/>
+<g>
+	<rect x="-2360.4" y="-403.1" class="st3" width="25" height="2.5"/>
+	<g>
+		
+			<rect x="-2362.8" y="-406.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -403.5587 -1785.0934)" class="st3" width="12.5" height="2.5"/>
+		
+			<rect x="-2362.8" y="-399.6" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -3741.2629 -2346.3562)" class="st3" width="12.5" height="2.5"/>
+	</g>
+</g>
+<g>
+	<rect x="-4174.4" y="-702.3" class="st3" width="25" height="2.5"/>
+	<g>
+		
+			<rect x="-4176.8" y="-705.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -723.2867 -3155.4204)" class="st3" width="12.5" height="2.5"/>
+		
+			<rect x="-4176.8" y="-698.8" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -6626.3672 -4139.8408)" class="st3" width="12.5" height="2.5"/>
+	</g>
+</g>
+<linearGradient id="SVGID_15_" gradientUnits="userSpaceOnUse" x1="231.8896" y1="-472.5777" x2="1931.2932" y2="1226.8259">
+	<stop  offset="0" style="stop-color:#2477FF"/>
+	<stop  offset="9.714619e-02" style="stop-color:#2B7BFF"/>
+	<stop  offset="0.2401" style="stop-color:#3F88FF"/>
+	<stop  offset="0.4114" style="stop-color:#5F9CFF"/>
+	<stop  offset="0.6047" style="stop-color:#8DB8FF"/>
+	<stop  offset="0.8134" style="stop-color:#C6DBFF"/>
+	<stop  offset="1" style="stop-color:#FFFFFF"/>
+</linearGradient>
+<linearGradient id="SVGID_16_" gradientUnits="userSpaceOnUse" x1="463.4378" y1="377.1241" x2="1699.745" y2="377.1241">
+	<stop  offset="0" style="stop-color:#2492FF"/>
+	<stop  offset="0.368" style="stop-color:#2693FF"/>
+	<stop  offset="0.5077" style="stop-color:#2D96FF"/>
+	<stop  offset="0.6086" style="stop-color:#399CFF"/>
+	<stop  offset="0.6909" style="stop-color:#4AA5FF"/>
+	<stop  offset="0.7617" style="stop-color:#60B0FF"/>
+	<stop  offset="0.8248" style="stop-color:#7CBEFF"/>
+	<stop  offset="0.8819" style="stop-color:#9DCEFF"/>
+	<stop  offset="0.9346" style="stop-color:#C3E1FF"/>
+	<stop  offset="0.9817" style="stop-color:#EDF6FF"/>
+	<stop  offset="1" style="stop-color:#FFFFFF"/>
+</linearGradient>
+<rect x="463.9" y="-704.6" class="st12" width="1235.3" height="2163.5"/>
+<ellipse transform="matrix(1 -8.696137e-03 8.696137e-03 1 0.6643 2.320053e-02)" class="st13" cx="3" cy="-76.4" rx="29.2" ry="29.2"/>
+<g>
+	
+		<rect x="-3" y="-73.3" transform="matrix(-0.7009 0.7132 -0.7132 -0.7009 -43.884 -125.2327)" class="st7" width="14.6" height="2.9"/>
+	
+		<rect x="-3" y="-81.5" transform="matrix(0.7132 0.7009 -0.7009 0.7132 -54.9044 -25.9343)" class="st7" width="14.6" height="2.9"/>
+</g>
+<ellipse transform="matrix(1 -8.696137e-03 8.696137e-03 1 5.328555e-02 -1.0786)" class="st7" cx="-124" cy="-6.7" rx="29.2" ry="29.2"/>
+<g>
+	<rect x="3" y="10.8" class="st3" width="20.6" height="2.9"/>
+	<rect x="-0.8" y="6.7" transform="matrix(0.6892 -0.7246 0.7246 0.6892 -3.8457 7.259)" class="st3" width="14.6" height="2.9"/>
+	
+		<rect x="-0.5" y="14.9" transform="matrix(-0.7246 -0.6892 0.6892 -0.7246 0.357 32.8614)" class="st3" width="14.6" height="2.9"/>
+</g>
+<linearGradient id="SVGID_17_" gradientUnits="userSpaceOnUse" x1="-2127.8728" y1="-982.6899" x2="-306.1271" y2="839.0558">
+	<stop  offset="0" style="stop-color:#2492FF"/>
+	<stop  offset="9.714619e-02" style="stop-color:#2B96FF"/>
+	<stop  offset="0.2401" style="stop-color:#3F9FFF"/>
+	<stop  offset="0.4114" style="stop-color:#5FB0FF"/>
+	<stop  offset="0.6047" style="stop-color:#8DC6FF"/>
+	<stop  offset="0.8134" style="stop-color:#C6E2FF"/>
+	<stop  offset="1" style="stop-color:#FFFFFF"/>
+</linearGradient>
+<linearGradient id="SVGID_18_" gradientUnits="userSpaceOnUse" x1="-1943.8334" y1="-71.817" x2="-490.1666" y2="-71.817">
+	<stop  offset="0" style="stop-color:#2492FF"/>
+	<stop  offset="0.368" style="stop-color:#2693FF"/>
+	<stop  offset="0.5077" style="stop-color:#2D96FF"/>
+	<stop  offset="0.6086" style="stop-color:#399CFF"/>
+	<stop  offset="0.6909" style="stop-color:#4AA5FF"/>
+	<stop  offset="0.7617" style="stop-color:#60B0FF"/>
+	<stop  offset="0.8248" style="stop-color:#7CBEFF"/>
+	<stop  offset="0.8819" style="stop-color:#9DCEFF"/>
+	<stop  offset="0.9346" style="stop-color:#C3E1FF"/>
+	<stop  offset="0.9817" style="stop-color:#EDF6FF"/>
+	<stop  offset="1" style="stop-color:#FFFFFF"/>
+</linearGradient>
+<rect x="-1943.3" y="-1167.2" class="st14" width="1452.7" height="2190.8"/>
+</svg>

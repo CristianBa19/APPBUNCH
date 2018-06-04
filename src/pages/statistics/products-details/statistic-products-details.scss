@@ -1,0 +1,129 @@
+statistic-products-details-page{
+
+  ion-header {
+    .header-cls {
+      min-height: 0 !important;
+    }
+    .backButton{
+      padding-left: 18px !important;
+    }
+    .titleStyle {
+      left: 0;
+      top: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      pointer-events: none;
+      text-align: center;
+    }
+  }
+
+  .scroll-content{
+    background-color: #eeeeee;
+  }
+
+  .main-text{
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+  }
+  .sub-text{
+    font-size: 12px;
+  }
+  .item-wrapper{
+    background-color: white;
+    width: 100%;
+    height: 45px;
+    border: solid 1px #e1e1e1;
+    border-radius: 8px;
+    margin: 5px 0;
+  }
+  .bot-button{
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    background-color: #09c;
+    color: white;
+    border-radius: 15px;
+  }
+  .item-wrapper>ion-row{
+    width: 94%;
+    padding-left: 10px;
+  }
+  .arrow-button{
+    width: 15% !important;
+    padding-left: 0 !important;
+    ion-row{
+      width: 100%;
+      font-size: 12px;
+      margin-bottom: -3px;
+      span{
+        margin-top: -10px;
+      }
+    }
+  }
+  .page-wrapper{
+    .title{
+      border: solid 1px;
+      height: 80px;
+      width: 100%;
+      margin: 8px 0;
+    }
+    .sub-text{
+      font-size: 14px;
+    }
+    .first-item{
+      width: 84%;
+
+    }
+    .circle-icon{
+      width:15px;
+      height: 15px;
+      border-radius: 50%;           
+      &.green {
+        background-color: #2ec95c;
+      }
+      &.red {
+        background-color: #c9332e;
+      }
+    }    
+    .list{
+      width:100%;
+      .item{
+        width: 100%;
+        border: solid 1px;
+        margin: 10px 0;
+        .item-inner{
+          padding: 0;
+        }
+        .label{
+          height: 100%;
+        }
+        .img-wrap{
+          height: 100%;
+          width: 20%;
+          float: left;
+        }
+        .text-wrap{
+          height: 100%;
+          width:76%;
+          float: left;
+          color: #09c;
+          .a-text{
+            padding-left: 37px;
+          }
+          .value{
+            font-weight: 600;
+            padding-left: 4px;
+          }
+        }
+        .arrow-button{
+          height: 100%;
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,78 @@
+<ion-header class="header-cls">
+
+    <ion-toolbar>
+        <ion-buttons left>
+            <button icon-only ion-button class="backButton" (tap)="goBack()">
+                <img src="assets/icon/bt-regresar-menu.png" class="image-left">
+            </button>
+        </ion-buttons>
+        <ion-buttons right>
+            <button icon-only ion-button  (tap)="search()" >
+                <img src="assets/icon/buscar.png" class="image-right">
+            </button>
+        </ion-buttons>
+
+        <ion-title class="titleStyle">{{ "StatisticsPage.StatisticProductsPage.titleText" | translate }}</ion-title>
+    </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-row>
+        <ion-row *ngFor="let item of optionList" class="pago-tab">
+            <ion-row class="citation-wrap">
+                <ion-row class="padding-row">
+                    <ion-row class="top-text-wrap">
+                        <ion-row class="main-text">
+                            <span>{{item.nameOfProduct}}</span>
+                        </ion-row>
+                        <ion-row class="sub-text">
+                            <span>{{item.subNameOfProduct}}</span>
+                        </ion-row>
+                    </ion-row>
+                    <ion-row class="company-wrap">
+                        <ion-row align-items-center justify-content-center class="img-wrap">
+                            <img [src]="item.companyLogo">
+                        </ion-row>
+                        <ion-row  class="center-text-wrap">
+                            <ion-row justify-content-center class="main-text">
+                                <span>${{item.companyName | number}}</span>
+                            </ion-row>
+                            <ion-row justify-content-center class="sub-text">
+                                <span>{{item.companySubName}}</span>
+                            </ion-row>
+                        </ion-row>
+                        <ion-row class="end-text-wrap">
+                            <ion-row justify-content-center class="main-text">
+                                <span>${{item.itemValue | number}}</span>
+                            </ion-row>
+                            <ion-row justify-content-center class="sub-text">
+                                <span>{{item.itemSubValue}}</span>
+                            </ion-row>
+                        </ion-row>
+                    </ion-row>
+                    <ion-row  class="continuar-text" (tap)="goToStatisticsProductsDetailsPage()">
+                        <ion-row align-items-center class="button-details">
+                            <ion-row align-items-center class="main-text">
+                                <span>{{item.productDetails.mainText}}</span>
+                            </ion-row>
+                            <ion-row align-items-center class="main-text">
+                                <span>{{item.productDetails.policyNumber}}</span>
+                            </ion-row>
+                            <ion-row align-items-center class="sub-text">
+                                <ion-icon name="paper-plane" class="paper-plane-icon"></ion-icon>
+                                <span>{{item.productDetails.subText}}</span>
+                            </ion-row>
+                        </ion-row>
+                        <ion-row align-items-center justify-content-center class="arrow-button">
+                            <img src="assets/icon/bt-siguiente.png">
+                        </ion-row>
+                    </ion-row>
+                </ion-row>
+            </ion-row>
+        </ion-row>
+    </ion-row>
+</ion-content>
+
+

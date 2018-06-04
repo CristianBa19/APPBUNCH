@@ -1,0 +1,58 @@
+<ion-header class="header-cls">
+    <ion-toolbar>
+        <ion-buttons left>
+            <button icon-only ion-button class="button-back" (tap)="goBack()">                
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>        
+
+        <ion-title>Clientes</ion-title>        
+    </ion-toolbar>    
+</ion-header>
+
+
+<ion-content padding class="content">
+    <ion-row>
+        <ion-col col-6 style="color:#7C7C7C;font-weight:bold;">
+            Órden alfabético <ion-icon name="ios-arrow-down"></ion-icon>
+        </ion-col>
+        <ion-col col-6 style="color:#69A2CD;font-weight:bold;">
+            Órden por antigüedad <ion-icon name="ios-arrow-up"></ion-icon>
+        </ion-col>
+    </ion-row>
+    
+    <ion-list class="list">
+        <ion-row class="item">
+                <ion-col col-7 class="col">            
+                    <ion-row class="name">
+                        <ion-col col-12 class="col">
+                            Daniel Benítez
+                        </ion-col>
+                    </ion-row>
+                    <ion-row class="email">
+                        <ion-col col-12 class="col">
+                            daniel.benitez.ro@gmail.com
+                        </ion-col>
+                    </ion-row>
+                </ion-col>
+                <ion-col col-5 class="col">
+                    <ion-row class="buttons-container">
+                        <ion-col col-6 class="col">
+                            <button type="button">
+                                <ion-icon name="chatboxes"></ion-icon>
+                                Enviar Mensaje
+                            </button>
+                        </ion-col>
+                        <ion-col col-6 class="col">                            
+                            <button type="button">
+                                <ion-icon name="document"></ion-icon>
+                                Ver Pólizas
+                            </button>
+                        </ion-col>
+                    </ion-row>            
+                </ion-col>
+            </ion-row>
+    </ion-list>    
+</ion-content>
+
+

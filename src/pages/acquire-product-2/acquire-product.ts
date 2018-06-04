@@ -52,6 +52,7 @@ export class AcquireProductPage2 {
     url: string;
     data: string;
 
+    codigoError = '';
     private toast:any;    
     private cotizacion = {aseguradora: '',clave: '',bancos:[],coberturas:[],monto:0, logo: '', responsabilidadCivil: {sumaAsegurada: '', deducible: ''}, roboTotal: {sumaAsegurada: '', deducible: ''}, danosMateriales: {sumaAsegurada: '', deducible: ''}};
     private urlEmisionDocumento;
@@ -2986,12 +2987,12 @@ export class AcquireProductPage2 {
         }
     }
     
-    showProductoContinuarShown() {
+    /*showProductoContinuarShown() {
         this.productoContinuarShown = true;
     }
     showComparaItemDetail() {
         this.comparaDetailShown = true;
-    }
+    }*/
 
     //para mandar el pago
     pay() {
@@ -3722,7 +3723,7 @@ export class AcquireProductPage2 {
         }
     }
 
-    //private bottomAlertOptionsList = [];
+    bottomAlertOptionsList = [];
 
     bottomAlert(field, list, callback:any = undefined) {
         this.bottomAlertField = field;        
