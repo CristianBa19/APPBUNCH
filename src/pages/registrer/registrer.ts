@@ -7,7 +7,7 @@ import { LoadingController, ToastController } from 'ionic-angular';
 import { FormGroup } from '@angular/forms';
 import { Keyboard } from '@ionic-native/keyboard';
 import { LoginPage } from '../login/login';
-import { SocialSharing } from '@ionic-native/social-sharing';
+//import { SocialSharing } from '@ionic-native/social-sharing';
 import { HomePage } from '../home/home';
 
 //import { Component, ViewChild } from '@angular/core';
@@ -38,7 +38,7 @@ export class RegistrerPage {
         public http: Http,
         private storage: Storage,
         //public userservice: UserProvider,
-        private socialSharing: SocialSharing,
+        //private socialSharing: SocialSharing,
         public loadingCtrl: LoadingController, 
         public toastCtrl: ToastController
     ) {}
@@ -352,12 +352,12 @@ export class RegistrerPage {
           alert('no hi');
         });*/
 
-        this.socialSharing.share('message', null, null, null).then(() => {
+        /*this.socialSharing.share('message', null, null, null).then(() => {
             alert('listo');
         }).catch(() => {
             alert('no jala');
-          });
-      }
+          });*/
+    }
 
     toLoginPage() {
         this.navCtrl.push(LoginPage, { animate: true });

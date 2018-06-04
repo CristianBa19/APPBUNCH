@@ -17,7 +17,7 @@ import { Http } from '@angular/http';
 //import { errorPage } from '../error/error';
 //import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 //import { File } from '@ionic-native/file';
-import { SocialSharing } from '@ionic-native/social-sharing';
+//import { SocialSharing } from '@ionic-native/social-sharing';
 //import { MInputComponent } from '../../components/m-input/m-input';
 
 import 'rxjs/add/operator/retry';
@@ -36,7 +36,7 @@ export class AcquireProductPage2 {
         //public alertSrv: AlertService, 
         //public localizationModal: LocalizationModel, 
         public alertCtrl: AlertController, private storage: Storage, public loadingCtrl: LoadingController, public toastCtrl: ToastController, 
-        private socialSharing: SocialSharing
+        //private socialSharing: SocialSharing
         /*private transfer: FileTransfer, private file: File*/
     ) {
         this.prevPage = this.navParams.get("prevPage");
@@ -208,11 +208,11 @@ export class AcquireProductPage2 {
     fillTab1() {
         //this.navCtrl.push(SharePage, null, { animate: false });
         //alert('test');
-        this.socialSharing.canShareViaEmail().then(() => {
+        /*this.socialSharing.canShareViaEmail().then(() => {
             alert('si se puede compartir via email');
           }).catch(() => {
             alert('no se puede compartir via email');
-          });
+          });*/
         //this.socialSharing.share('orden de Compra', 'subject', 'http://server.anaseguros.com.mx/emision/impresion/temporal-impresion/04011929689000000.php', 'http://server.anaseguros.com.mx/emision/impresion/temporal-impresion/04011929689000000.php');
 
         //window.open(encodeURI('http://server.anaseguros.com.mx/emision/impresion/temporal-impresion/04011929689000000.php'), '_system', 'location=yes,EnableViewPortScale=yes');
@@ -2986,7 +2986,7 @@ export class AcquireProductPage2 {
 
     compartirOrdenDeCompra() {
         if (this.urlEmisionDocumento != undefined) {
-            this.socialSharing.share('Órden de Compra', '', undefined, this.urlEmisionDocumento);
+            //this.socialSharing.share('Órden de Compra', '', undefined, this.urlEmisionDocumento);
         }
     }
     

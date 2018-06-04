@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { SocialSharing } from '@ionic-native/social-sharing';
+//import { SocialSharing } from '@ionic-native/social-sharing';
 import { LoadingController, ToastController } from 'ionic-angular';
 import { Http } from '@angular/http';
 
@@ -15,7 +15,9 @@ export class NewAdvertisementPage2 {
   private mensajePersonalizado:string;
   private selectedImageId:number;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private socialSharing: SocialSharing, private loadingCtrl: LoadingController, private toastCtrl: ToastController, private http: Http) {    } 
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    //private socialSharing: SocialSharing, 
+    private loadingCtrl: LoadingController, private toastCtrl: ToastController, private http: Http) {    } 
 
   public showStep(stepIndex:number):void {        
 
@@ -68,7 +70,7 @@ export class NewAdvertisementPage2 {
   }
 
   public share() {
-    this.socialSharing.share('Message','subject', undefined, 'http://xataka.com');
+    //this.socialSharing.share('Message','subject', undefined, 'http://xataka.com');
   }
 
   private publicarAnuncio() {
