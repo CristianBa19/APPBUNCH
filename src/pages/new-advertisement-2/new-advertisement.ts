@@ -19,9 +19,9 @@ export class NewAdvertisementPage2 {
     public navCtrl: NavController, 
     public navParams: NavParams,
     //socialSharing: SocialSharing, 
-    loadingCtrl: LoadingController, 
-    toastCtrl: ToastController, 
-    http: Http
+    public loadingCtrl: LoadingController, 
+    public toastCtrl: ToastController, 
+    public http: Http
   ) {    } 
 
   public showStep(stepIndex:number):void {        
