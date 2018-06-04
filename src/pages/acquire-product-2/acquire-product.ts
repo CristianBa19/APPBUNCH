@@ -17,7 +17,7 @@ import { Http } from '@angular/http';
 //import { errorPage } from '../error/error';
 //import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 //import { File } from '@ionic-native/file';
-//import { SocialSharing } from '@ionic-native/social-sharing';
+import { SocialSharing } from '@ionic-native/social-sharing';
 //import { MInputComponent } from '../../components/m-input/m-input';
 
 import 'rxjs/add/operator/retry';
@@ -43,7 +43,7 @@ export class AcquireProductPage2 {
         public storage: Storage, 
         public loadingCtrl: LoadingController, 
         public toastCtrl: ToastController, 
-        //socialSharing: SocialSharing
+        public socialSharing: SocialSharing
         /*transfer: FileTransfer, file: File*/
     ) {
         this.prevPage = this.navParams.get("prevPage");
@@ -213,6 +213,7 @@ export class AcquireProductPage2 {
     }    
 
     fillTab1() {
+        //this.socialSharing.share('Órden de Compra', '', '', 'http://server.anaseguros.com.mx/emision/impresion/temporal-impresion/04011929689000000.php');
         //this.navCtrl.push(SharePage, null, { animate: false });
         //alert('test');
         /*this.socialSharing.canShareViaEmail().then(() => {
@@ -239,7 +240,7 @@ export class AcquireProductPage2 {
         this.genero = 'FEMENINO';
         this.edadTxt = `${this.edad} años`;
         this.marca = 'CHEVROLET';
-        this.modelo = '2016';
+        this.modelo = '2018';
         this.subMarca = 'AVEO';
         this.descripcion = 'A';
         this.subDescripcion = 'PAQ A';
@@ -257,7 +258,7 @@ export class AcquireProductPage2 {
     fillTab3() {
         console.log('fillTab3');
         this.email = this.getRandString() + '@gamil.com';
-        this.nombre = 'NORMA';
+        this.nombre = 'MARTHA';
         this.paterno = 'MARTINEZ';
         this.materno = 'MORALES';
         this.fechaNacimiento = '1988-09-30';        
@@ -268,11 +269,11 @@ export class AcquireProductPage2 {
         this.estado = 'SAN LUIS POTOSI';
         this.delegacion = 'CIUDAD VALLES';
         this.calle = 'SAN LUIS';
-        this.numExterior = '11';
+        this.numExterior = '18';
         //this.numInterior = '';
-        this.numMotor = 'A1234522';
-        this.numSerie = 'ZHWGE11S84LA00140'; //'ZHWGE11S84LA00152';
-        this.numPlacas = '7654321C';
+        this.numMotor = 'A1234588';
+        this.numSerie = 'ZYWGE11S84LA00154'; //'ZHWGE11S84LA00140'; //'ZHWGE11S84LA00152';
+        this.numPlacas = '7654111C';
         this.calcRFCYTitular();
     }
 
@@ -2992,8 +2993,8 @@ export class AcquireProductPage2 {
     }*/
 
     compartirOrdenDeCompra() {
-        if (this.urlEmisionDocumento != undefined) {
-            //this.socialSharing.share('Órden de Compra', '', undefined, this.urlEmisionDocumento);
+        if (this.urlEmisionDocumento != undefined) {            
+            this.socialSharing.share('Órden de Compra', '', '', this.urlEmisionDocumento);
         }
     }
     
