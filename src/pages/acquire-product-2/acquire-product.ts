@@ -66,7 +66,7 @@ export class AcquireProductPage2 {
     private topTab = 'Cliente';
     private comparaDetailShown: boolean = false;  //Revisar se declara variable apra subir a ionic pro
     private productoContinuarShown: boolean = false; //Revisar se declara variable apra subir a ionic pro
-    private bottomAlertOptionsList = [];  //Revisar se declara variable apra subir a ionic pro
+    bottomAlertOptionsList = [];  //Revisar se declara variable apra subir a ionic pro
     private isClient: any;
     private isEnglish = localStorage.getItem("language") == "en";
     private comparaList = [];
@@ -3724,9 +3724,7 @@ export class AcquireProductPage2 {
         } else {
             this.navCtrl.pop();
         }
-    }
-
-    bottomAlertOptionsList = [];
+    }    
 
     bottomAlert(field, list, callback:any = undefined) {
         this.bottomAlertField = field;        
