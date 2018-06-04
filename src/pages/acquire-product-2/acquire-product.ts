@@ -297,6 +297,19 @@ export class AcquireProductPage2 {
         return true;
     }
 
+    compartirComparativo() {
+        console.warn('compartir comparativo');
+        let param = `usuario=Bunch&password=BunCH2O18&idcotmaster=${this.idCotMaster}`;        
+        param = btoa(param);
+        let url = `http://services.bunch.guru/WebService.asmx/GenerarPDF?param=${param}`;
+        console.log('compartirComparativo', url);
+        this.http.get(url).map(res => res).subscribe(data => {                                
+            console.log('compartirCompararivo', data);
+        }, err => {
+            console.error(url, err);
+        });
+    }
+
     getCoberturas(callback) {
         
         let url = `http://services.bunch.guru/WebService.asmx/GetCoberturas?usuario=Bunch&password=BunCH2O18&aseguradora=${this.cotizacion.aseguradora}&paquete=${this.cobertura}`;        
@@ -1376,8 +1389,11 @@ export class AcquireProductPage2 {
             //seccion para la recepcion de la primaTotal y su conversion a int
             displayPrimaTotal = '';
             data2 = data.Cotizacion.PrimaTotal;
-
-            if (data2 != null && isNaN(data2) == false) {
+            if (data2.length == 0) {
+                data2 = 0;
+                displayPrimaTotalInt = 0;
+                displayPrimaTotal = 'No disponible';
+            } else if (data2 != null && isNaN(data2) == false) {                
                 displayPrimaTotalInt = Math.ceil(parseInt(data2));
                 displayPrimaTotal = this.formatPrice(displayPrimaTotalInt);
             }
@@ -1422,11 +1438,7 @@ export class AcquireProductPage2 {
             //document.getElementById("descrAuto").innerHTML = this.descripcion;
             //document.getElementById("subDescrAuto").innerHTML = this.subDescripcion;
 
-            if (aseguradora === 'ABA' && displayPrimaTotal !== "null" && !isNaN(displayPrimaTotalInt) && displayDanosMateriales !== null && displayDanosMateriales !== 'undefined') {
-
-                if (displayPrimaTotal.length == 0) {
-                    displayPrimaTotal = 'No disponible';
-                }
+            if (aseguradora === 'ABA' && displayPrimaTotal !== "null" && !isNaN(displayPrimaTotalInt) && displayDanosMateriales !== null && displayDanosMateriales !== 'undefined') {                
 
                 this.comparaList.push({
                     clave: clave,
@@ -1477,11 +1489,7 @@ export class AcquireProductPage2 {
                     //para el robo total
                     let displayRoboTotalArr = displayRoboTotal.split('-D');
                     displayRoboTotalD = this.formatPrice(displayRoboTotalArr[1]);
-                    displayRoboTotal = this.formatPrice(displayRoboTotalArr[0]);
-
-                    if (displayPrimaTotal.length == 0) {
-                        displayPrimaTotal = 'No disponible';
-                    }
+                    displayRoboTotal = this.formatPrice(displayRoboTotalArr[0]);                    
 
                     this.comparaList.push({
                         clave: clave,
@@ -1505,11 +1513,7 @@ export class AcquireProductPage2 {
                 }
                 //}
                 callback();
-            } else if (aseguradora === 'AXA' && displayPrimaTotal !== "null" && !isNaN(displayPrimaTotalInt) && displayDanosMateriales !== null && displayDanosMateriales !== 'undefined') {
-
-                if (displayPrimaTotal.length == 0) {
-                    displayPrimaTotal = 'No disponible';
-                }
+            } else if (aseguradora === 'AXA' && displayPrimaTotal !== "null" && !isNaN(displayPrimaTotalInt) && displayDanosMateriales !== null && displayDanosMateriales !== 'undefined') {                
 
                 this.comparaList.push({
                     clave: clave,
@@ -1531,11 +1535,7 @@ export class AcquireProductPage2 {
                     GastosMedicosOcupantesD: displayGastosMedicosOcupantesD
                 });
                 callback();
-            } else if (aseguradora === 'BANORTE' && displayPrimaTotal !== "null" && !isNaN(displayPrimaTotalInt) && displayDanosMateriales !== null && displayDanosMateriales !== 'undefined') {
-
-                if (displayPrimaTotal.length == 0) {
-                    displayPrimaTotal = 'No disponible';
-                }
+            } else if (aseguradora === 'BANORTE' && displayPrimaTotal !== "null" && !isNaN(displayPrimaTotalInt) && displayDanosMateriales !== null && displayDanosMateriales !== 'undefined') {                
 
                 this.comparaList.push({
                     clave: clave,
@@ -1557,11 +1557,7 @@ export class AcquireProductPage2 {
                     GastosMedicosOcupantesD: displayGastosMedicosOcupantesD
                 });
                 callback();
-            } else if (aseguradora === 'GMX' && displayPrimaTotal !== "null" && !isNaN(displayPrimaTotalInt) && displayDanosMateriales !== null && displayDanosMateriales !== 'undefined') {
-
-                if (displayPrimaTotal.length == 0) {
-                    displayPrimaTotal = 'No disponible';
-                }
+            } else if (aseguradora === 'GMX' && displayPrimaTotal !== "null" && !isNaN(displayPrimaTotalInt) && displayDanosMateriales !== null && displayDanosMateriales !== 'undefined') {                
 
                 this.comparaList.push({
                     clave: clave,
@@ -1604,11 +1600,7 @@ export class AcquireProductPage2 {
                 //para el robo total
                 let displayRoboTotalArr = displayRoboTotal.split('-D');
                 displayRoboTotalD = this.formatPrice(displayRoboTotalArr[1]);
-                displayRoboTotal = this.formatPrice(displayRoboTotalArr[0]);
-
-                if (displayPrimaTotal.length == 0) {
-                    displayPrimaTotal = 'No disponible';
-                }                    
+                displayRoboTotal = this.formatPrice(displayRoboTotalArr[0]);                                    
 
                 this.comparaList.push({
                     clave: clave,
@@ -1631,11 +1623,7 @@ export class AcquireProductPage2 {
                 });
                 //}                        
                 callback();
-            } else if (aseguradora === 'GREAT' && displayPrimaTotal !== "null" && !isNaN(displayPrimaTotalInt) && displayDanosMateriales !== null && displayDanosMateriales !== 'undefined') {
-
-                if (displayPrimaTotal.length == 0) {
-                    displayPrimaTotal = 'No disponible';
-                }
+            } else if (aseguradora === 'GREAT' && displayPrimaTotal !== "null" && !isNaN(displayPrimaTotalInt) && displayDanosMateriales !== null && displayDanosMateriales !== 'undefined') {                
 
                 this.comparaList.push({
                     clave: clave,
@@ -1703,11 +1691,7 @@ export class AcquireProductPage2 {
                 //para el robo total
                 let displayRoboTotalArr = displayRoboTotal.split('-D');
                 displayRoboTotalD = this.formatPrice(displayRoboTotalArr[1]);
-                displayRoboTotal = this.formatPrice(displayRoboTotalArr[0]);
-
-                if (displayPrimaTotal.length == 0) {
-                    displayPrimaTotal = 'No disponible';
-                }
+                displayRoboTotal = this.formatPrice(displayRoboTotalArr[0]);                
 
                 this.comparaList.push({
                     clave: clave,
@@ -1730,11 +1714,7 @@ export class AcquireProductPage2 {
                 });
                 //}
                 callback();
-            } else if (aseguradora === 'MAPFRE' && displayPrimaTotal !== "null" && !isNaN(displayPrimaTotalInt) && displayDanosMateriales !== null && displayDanosMateriales !== 'undefined') {
-
-                if (displayPrimaTotal.length == 0) {
-                    displayPrimaTotal = 'No disponible';
-                }
+            } else if (aseguradora === 'MAPFRE' && displayPrimaTotal !== "null" && !isNaN(displayPrimaTotalInt) && displayDanosMateriales !== null && displayDanosMateriales !== 'undefined') {                
 
                 this.comparaList.push({
                     clave: clave,
@@ -1757,10 +1737,6 @@ export class AcquireProductPage2 {
                 });
                 callback();
             } else if (aseguradora === 'QUALITAS' && displayPrimaTotal !== "null" && !isNaN(displayPrimaTotalInt) && displayDanosMateriales !== null && displayDanosMateriales !== 'undefined') {
-
-                if (displayPrimaTotal.length == 0) {
-                    displayPrimaTotal = 'No disponible';
-                }
 
                 this.comparaList.push({
                     clave: clave,
