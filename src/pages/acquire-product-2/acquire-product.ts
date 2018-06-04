@@ -298,14 +298,22 @@ export class AcquireProductPage2 {
     }
 
     compartirComparativo() {
+        let loader = this.loadingCtrl.create();
+        loader.present();        
         console.warn('compartir comparativo');
         let param = `usuario=Bunch&password=BunCH2O18&idcotmaster=${this.idCotMaster}`;        
         param = btoa(param);
         let url = `http://services.bunch.guru/WebService.asmx/GenerarPDF?param=${param}`;
         console.log('compartirComparativo', url);
         this.http.get(url).map(res => res).subscribe(data => {                                
-            console.log('compartirCompararivo', data);
+            console.log('compartirCompararivo', data);     
+            let match = data['_body'].toString().match(/>([^<]*)<\//);
+            url = match[1];
+            console.log(url);
+            loader.dismiss();
+            this.socialSharing.share('Comparativo', '', '', url);            
         }, err => {
+            loader.dismiss();
             console.error(url, err);
         });
     }
