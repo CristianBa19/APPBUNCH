@@ -345,19 +345,19 @@ export class RegistrerPage {
         }
     }
 
-    nada() {
-        /*this.socialSharing.canShareViaEmail().then(() => {
+    /*nada() {
+        this.socialSharing.canShareViaEmail().then(() => {
           alert('hi');
         }).catch(() => {
           alert('no hi');
-        });*/
+        });
 
-        /*this.socialSharing.share('message', null, null, null).then(() => {
+        this.socialSharing.share('message', null, null, null).then(() => {
             alert('listo');
         }).catch(() => {
             alert('no jala');
-          });*/
-    }
+          });
+    }*/
 
     toLoginPage() {
         this.navCtrl.push(LoginPage, { animate: true });

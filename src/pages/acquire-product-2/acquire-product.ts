@@ -32,12 +32,19 @@ import 'rxjs/add/operator/map';
 })
 export class AcquireProductPage2 {    
 
-    constructor(public navCtrl: NavController, public http: Http, public navParams: NavParams, public modalCtrl: ModalController, 
+    constructor(
+        public navCtrl: NavController, 
+        public http: Http, 
+        public navParams: NavParams, 
+        public modalCtrl: ModalController, 
         //public alertSrv: AlertService, 
         //public localizationModal: LocalizationModel, 
-        public alertCtrl: AlertController, private storage: Storage, public loadingCtrl: LoadingController, public toastCtrl: ToastController, 
-        //private socialSharing: SocialSharing
-        /*private transfer: FileTransfer, private file: File*/
+        public alertCtrl: AlertController, 
+        public storage: Storage, 
+        public loadingCtrl: LoadingController, 
+        public toastCtrl: ToastController, 
+        //socialSharing: SocialSharing
+        /*transfer: FileTransfer, file: File*/
     ) {
         this.prevPage = this.navParams.get("prevPage");
         this.isClient = localStorage.getItem("isClient");
@@ -46,30 +53,30 @@ export class AcquireProductPage2 {
     }
 
     @ViewChild(Content) content: Content;
-    //private fileTransfer: FileTransferObject = this.transfer.create();
+    //fileTransfer: FileTransferObject = this.transfer.create();
     color = 'pink';
     size = 16;
     url: string;
     data: string;
 
     codigoError = '';
-    private toast:any;    
-    private cotizacion = {aseguradora: '',clave: '',bancos:[],coberturas:[],monto:0, logo: '', responsabilidadCivil: {sumaAsegurada: '', deducible: ''}, roboTotal: {sumaAsegurada: '', deducible: ''}, danosMateriales: {sumaAsegurada: '', deducible: ''}};
-    private urlEmisionDocumento;
+    toast:any;    
+    cotizacion = {aseguradora: '',clave: '',bancos:[],coberturas:[],monto:0, logo: '', responsabilidadCivil: {sumaAsegurada: '', deducible: ''}, roboTotal: {sumaAsegurada: '', deducible: ''}, danosMateriales: {sumaAsegurada: '', deducible: ''}};
+    urlEmisionDocumento;
 
-    private currentStep:number = 1;
-    private bancosDeCadaAseguradora:any;
+    currentStep:number = 1;
+    bancosDeCadaAseguradora:any;
     public step:number = 1;
-    private createClient:boolean = false;    
+    createClient:boolean = false;    
     public datePicked: string;
     public datePickedBirth: string;
-    private topTab = 'Cliente';
-    private comparaDetailShown: boolean = false;  //Revisar se declara variable apra subir a ionic pro
-    private productoContinuarShown: boolean = false; //Revisar se declara variable apra subir a ionic pro
+    topTab = 'Cliente';
+    comparaDetailShown: boolean = false;  //Revisar se declara variable apra subir a ionic pro
+    productoContinuarShown: boolean = false; //Revisar se declara variable apra subir a ionic pro
     bottomAlertOptionsList = [];  //Revisar se declara variable apra subir a ionic pro
-    private isClient: any;
-    private isEnglish = localStorage.getItem("language") == "en";
-    private comparaList = [];
+    isClient: any;
+    isEnglish = localStorage.getItem("language") == "en";
+    comparaList = [];
 
     //Step 1
 
@@ -84,22 +91,22 @@ export class AcquireProductPage2 {
     subDescripcion: string;
 
     //Inputs
-    private inputModelo: any;
-    private inputSubMarca: any;
-    private inputDescripcion: any;
-    private inputSubDescripcion: any;
+    inputModelo: any;
+    inputSubMarca: any;
+    inputDescripcion: any;
+    inputSubDescripcion: any;
 
     //Lists
-    private marcaList: any;
-    private modeloList: any;
-    private subMarcaList: any;
-    private descripcionList: any;
-    private subDescripcionList: any;
-	private PrimaTotalHDI: any;
-    private PrimaNetaHDI: any;
-    private DerechosHDI: any;
-    private ImpuestosHDI: any;
-    private RecargoHDI: any;						   
+    marcaList: any;
+    modeloList: any;
+    subMarcaList: any;
+    descripcionList: any;
+    subDescripcionList: any;
+	PrimaTotalHDI: any;
+    PrimaNetaHDI: any;
+    DerechosHDI: any;
+    ImpuestosHDI: any;
+    RecargoHDI: any;						   
 
     //Step 2
 
@@ -136,7 +143,7 @@ export class AcquireProductPage2 {
     aceptoCobros: any;
 
     //Lists
-    private bancoList: any;
+    bancoList: any;
     aseguradoraPag: string;
 
     gender: string;    
@@ -176,7 +183,7 @@ export class AcquireProductPage2 {
     idDirCot: string;
     idContCot: string;
 
-    private idContVend: number;   
+    idContVend: number;   
     
     filterNumeric(elemName:string) {
         
@@ -279,7 +286,7 @@ export class AcquireProductPage2 {
         this.getCardInfo(this.numTarjeta);
     }
 
-    private validVars(fields:string[]) {        
+    validVars(fields:string[]) {        
         for (let i = 0, len = fields.length; i < len; i++) {
             if (this[fields[i]] === undefined || this[fields[i]] === null) {
                 return false;
@@ -289,7 +296,7 @@ export class AcquireProductPage2 {
         return true;
     }
 
-    private getCoberturas(callback) {
+    getCoberturas(callback) {
         
         let url = `http://services.bunch.guru/WebService.asmx/GetCoberturas?usuario=Bunch&password=BunCH2O18&aseguradora=${this.cotizacion.aseguradora}&paquete=${this.cobertura}`;        
         
@@ -530,7 +537,7 @@ export class AcquireProductPage2 {
         return text;
     }
 
-    private resetCarriers() {
+    resetCarriers() {
         document.getElementById("master").style.opacity = "1";
         document.getElementById("visa").style.opacity = "1";
         document.getElementById("amex").style.opacity = "1";
@@ -909,17 +916,17 @@ export class AcquireProductPage2 {
         });
     }            
 
-    private disableElement(id) {
+    disableElement(id) {
         document.getElementById(id).setAttribute('disabled', 'disabled');
     }
 
-    private disableElements(arrIds) {
+    disableElements(arrIds) {
         for (let i = 0, len = arrIds.length; i < len; i++) {
             this.disableElement(arrIds[i]);
         }
     }
 
-    private enableElement(id) {
+    enableElement(id) {
         document.getElementById(id).removeAttribute('disabled');
     }
 
@@ -1040,7 +1047,7 @@ export class AcquireProductPage2 {
         }
     }
 
-    private getBancosDeCadaAseguradora(aseguradoras:any, callback:any, index:number = 0) {
+    getBancosDeCadaAseguradora(aseguradoras:any, callback:any, index:number = 0) {
         console.warn('getBancosDeCadaAseguradora');
         let obj = aseguradoras[index];
         if (obj == undefined) {
@@ -1206,7 +1213,7 @@ export class AcquireProductPage2 {
         return '$ ' + price + ' ' + arr.join(' ');
     }
 
-    private idCotMaster;
+    idCotMaster;
 
     getCotizacionPorAseguradora(objAseguradora, callback) {
 
@@ -2530,7 +2537,7 @@ export class AcquireProductPage2 {
         });
     }    
 
-    private getCardInfo(numTarjeta:string) {
+    getCardInfo(numTarjeta:string) {
         let that = this,
             loader = that.loadingCtrl.create();
             loader.present();
@@ -2691,7 +2698,7 @@ export class AcquireProductPage2 {
     }
 
     //datePickerNames: any;
-    private pagoList = [
+    pagoList = [
         {
             mainText: localStorage.getItem("language") == "en" ? "Material damage:" : "Daños materiales: ",
             subText: localStorage.getItem("language") == "en" ? "5% V. trade" : "5% V. comercial"
@@ -2717,12 +2724,12 @@ export class AcquireProductPage2 {
             subText: localStorage.getItem("language") == "en" ? "50.000.0" : "50,000.00"
         },
     ];
-    private prevPage: any;
+    prevPage: any;
           
-    private userGenderList = ['MASCULINO', 'FEMENINO'];    
-    private userColonyList = [];    
-    private userStateList = [];    
-    private edadList = [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70];    
+    userGenderList = ['MASCULINO', 'FEMENINO'];    
+    userColonyList = [];    
+    userStateList = [];    
+    edadList = [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70];    
     
     minYear = new Date().getFullYear() - 18;
     maxYear = new Date().getFullYear() - 18; 
@@ -3649,12 +3656,12 @@ export class AcquireProductPage2 {
         return bad;
     }    
 
-    private coberturaList = ['Amplia', 'Limitada', 'RC'];
-    private cobertura:string = this.coberturaList[0];
-    private formaDePagoList = ['Anual', 'Mensual'];
-    private formaDePago:string = this.formaDePagoList[0];
-    private formaDePagoInt:number = (this.formaDePago == 'Mensual') ? 4 : 0; //0 es Anual, 4 es Mensual
-    private opcionesCotizacionChanged:boolean = false;
+    coberturaList = ['Amplia', 'Limitada', 'RC'];
+    cobertura:string = this.coberturaList[0];
+    formaDePagoList = ['Anual', 'Mensual'];
+    formaDePago:string = this.formaDePagoList[0];
+    formaDePagoInt:number = (this.formaDePago == 'Mensual') ? 4 : 0; //0 es Anual, 4 es Mensual
+    opcionesCotizacionChanged:boolean = false;
 
     showAlertCobertura() {
 
@@ -3766,8 +3773,8 @@ export class AcquireProductPage2 {
         }
     }
 
-    private bottomAlertField:string;
-    private triggers:any[] = [];
+    bottomAlertField:string;
+    triggers:any[] = [];
 
     bottomAlertOptionSelected(optionSelected:any):void {        
         this[this.bottomAlertField] = (optionSelected.value.length == 0) ? null : optionSelected.value;
@@ -3824,7 +3831,7 @@ export class AcquireProductPage2 {
         }
     }
 
-    /*private quitaAcentos(s) {
+    /*quitaAcentos(s) {
         var r = s.toLowerCase();
             r = r.replace(new RegExp(/\s/g),"");
             r = r.replace(new RegExp(/[àáâãäå]/g),"a");

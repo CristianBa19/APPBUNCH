@@ -10,14 +10,19 @@ import { Http } from '@angular/http';
 })
 export class NewAdvertisementPage2 {
 
-  private step:number = 1;
-  private tituloAnuncio:string;
-  private mensajePersonalizado:string;
-  private selectedImageId:number;
+  step:number = 1;
+  tituloAnuncio:string;
+  mensajePersonalizado:string;
+  selectedImageId:number;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-    //private socialSharing: SocialSharing, 
-    private loadingCtrl: LoadingController, private toastCtrl: ToastController, private http: Http) {    } 
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    //socialSharing: SocialSharing, 
+    loadingCtrl: LoadingController, 
+    toastCtrl: ToastController, 
+    http: Http
+  ) {    } 
 
   public showStep(stepIndex:number):void {        
 
@@ -54,7 +59,7 @@ export class NewAdvertisementPage2 {
     this.step = stepIndex;      
   }
 
-  private selectImage(id:number) {
+  selectImage(id:number) {
     this.selectedImageId = id;
     let images = document.getElementsByClassName('image');
     for (let i = 0, len = images.length; i < len; i++) {
@@ -73,7 +78,7 @@ export class NewAdvertisementPage2 {
     //this.socialSharing.share('Message','subject', undefined, 'http://xataka.com');
   }
 
-  private publicarAnuncio() {
+  publicarAnuncio() {
     console.log('publicarAnuncio');
     let loader = this.loadingCtrl.create();
         loader.present();        
@@ -89,7 +94,7 @@ export class NewAdvertisementPage2 {
     });
   }
 
-  private goBack() {
+  goBack() {
     if (this.step -1 >= 1) {
       --this.step;
     } else {

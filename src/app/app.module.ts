@@ -29,7 +29,7 @@ import { StatisticWeeksPage } from './../pages/statistics/weeks/statistic-weeks'
 import { ProfilePage } from './../pages/profile/profile';
 import { HelpCenterPage } from './../pages/help-center/help-center';
 
-//import { SocialSharing } from '@ionic-native/social-sharing';
+import { SocialSharing } from '@ionic-native/social-sharing';
 import { MInputComponent } from '../components/m-input/m-input';
 
 @NgModule({
@@ -82,7 +82,7 @@ import { MInputComponent } from '../components/m-input/m-input';
     HelpCenterPage,
   ],
   providers: [
-    //SocialSharing,
+    SocialSharing,
     StatusBar,
     SplashScreen,
     DatePicker,
