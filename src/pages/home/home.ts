@@ -3,13 +3,13 @@ import { Component, ViewChild } from '@angular/core';
 import { NavController, Tabs, Tab  } from 'ionic-angular';
 import { AdvertisementPage } from './../advertisement/advertisement';
 import { NotificationPage } from './../notification/notification';
+import { StatisticsPage } from './../statistics/statistics';
+import { ProfilePage } from '../../pages/profile/profile';
 
 //import { NewAdvertisementPage2 } from './../new-advertisement-2/new-advertisement';
 //import { AcquireProductPage } from './../acquire-product/acquire-product';
 //import { ProductsPage } from './../products/products';
 //import { TextingPage } from '../../pages/texting/texting';
-//import { ProfilePage } from '../../pages/profile/profile';
-//import { StatisticsPage } from './../statistics/statistics';
 //import { FilterPage } from './../filter-page/filter-page';
 
 
@@ -22,12 +22,12 @@ export class HomePage {
   public tab2Root: any = AdvertisementPage; //TextingPage;
 
   public tab3Root: any = AdvertisementPage;
-  public tab4Root: any = AdvertisementPage; //StatisticsPage;
+  public tab4Root: any = StatisticsPage;
 
   public tab5Root: any = AdvertisementPage; //FilterPage;
   public tab6Root: any = AdvertisementPage; //ProductsPage;
 
-  public tab7Root: any = AdvertisementPage; //ProfilePage;
+  public tab7Root: any = ProfilePage;
 
   public isClient: any;
   @ViewChild('appTabs')  tabsRef: Tabs;

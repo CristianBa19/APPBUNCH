@@ -19,7 +19,15 @@ import { AdvertisementPage } from '../pages/advertisement/advertisement';
 import { AcquireProductPage2 } from '../pages/acquire-product-2/acquire-product';
 import { NotificationPage } from '../pages/notification/notification';
 import { NotificationDetailPage } from '../pages/notification-detail/notification-detail';
+
 import { StatisticsPage } from '../pages/statistics/statistics';
+import { StatisticProductsPage } from './../pages/statistics/products/statistic-products';
+import { StatisticClientsPage } from './../pages/statistics/clients/statistic-clients';
+import { StatisticWeekPage } from './../pages/statistics/week/statistic-week';
+import { StatisticWeeksPage } from './../pages/statistics/weeks/statistic-weeks';
+
+import { ProfilePage } from './../pages/profile/profile';
+import { HelpCenterPage } from './../pages/help-center/help-center';
 
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { MInputComponent } from '../components/m-input/m-input';
@@ -38,6 +46,12 @@ import { MInputComponent } from '../components/m-input/m-input';
     NotificationPage,
     NotificationDetailPage,
     StatisticsPage,
+    StatisticProductsPage,
+    StatisticClientsPage,
+    StatisticWeekPage,
+    StatisticWeeksPage,
+    ProfilePage,
+    HelpCenterPage,
     MInputComponent,
   ],
   imports: [
@@ -60,6 +74,12 @@ import { MInputComponent } from '../components/m-input/m-input';
     NotificationPage,
     NotificationDetailPage,
     StatisticsPage,
+    StatisticProductsPage,
+    StatisticClientsPage,
+    StatisticWeekPage,
+    StatisticWeeksPage,
+    ProfilePage,
+    HelpCenterPage,
   ],
   providers: [
     SocialSharing,
