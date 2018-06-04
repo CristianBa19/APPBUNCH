@@ -2,7 +2,7 @@ import { Component, ViewChild  } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { StatisticProductsDetailsPage } from '../products-details/statistic-products-details';
 import { StatisticWeeksPage } from '../weeks/statistic-weeks';
-import { Chart } from 'chart.js';
+//import { Chart } from 'chart.js';
 import { Http, Headers } from '@angular/http';
 
 @Component({
@@ -210,7 +210,7 @@ export class StatisticWeekPage {
                                         t.totalPrices = lineChartData.reduce((prev, curr) => prev + curr);
                                     }
 
-                                    t.lineChart = new Chart(t.lineCanvas.nativeElement, {
+                                    /*t.lineChart = new Chart(t.lineCanvas.nativeElement, {
                                         type: 'line',            
                                         data: {
                                             labels: labels,
@@ -279,7 +279,7 @@ export class StatisticWeekPage {
                                             }
                                         }
                             
-                                    });
+                                    });*/
                                 });
                             });
                         });
