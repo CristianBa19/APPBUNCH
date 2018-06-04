@@ -1,6 +1,6 @@
 {
   "name": "bunch",
-  "app_id": "",
+  "app_id": "906d1781",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
