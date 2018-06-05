@@ -1,0 +1,104 @@
+
+<!--<ion-content padding>
+    <ion-buttons left>
+        <ion-buttons left>
+            <button icon-only ion-button (click)="slidePrev()" class="btnBack">
+                <img src="assets/icon/back.svg">
+            </button>
+        </ion-buttons>
+        <div class="titleForm">{{ "RecoveryPage.titleText" | translate}}</div>
+    </ion-buttons>
+    <ion-slides pager="false" swiper-no-swiping="true" #slides parallax spaceBetween=5>
+        <ion-slide>
+            <form #f="ngForm" name="myForm">
+                <ion-title center class="title-recovery">{{ "RecoveryPage.bodyText" | translate}}</ion-title>
+                <div class="divRow margenesInput">
+                    <ion-input type="email" ngModel name="email1" #email1 required email> </ion-input>
+                </div>
+                <br>
+                <div class="footerSection">
+                    <button [disabled]="!f.valid" ion-button (click)="sendRequest()" class="back-btn">
+                        <img src="assets/icon/Flecha derecha Morado.svg">
+                    </button>
+                </div>
+            </form>
+        </ion-slide>
+
+        <ion-slide>
+
+            <div class="confirm-recovery-text">{{ "RecoveryPage.confirRecoveryText" | translate}}</div>
+
+            <div class="footerSection" stye="background:red;">
+
+                <ion-row>
+                    <button ion-button class="products-btn inputStyle" (click)="doneRecovery()">{{ "RecoveryPage.confirmButtonText" | translate}}</button>
+                </ion-row>
+            </div>
+        </ion-slide>
+
+    </ion-slides>
+</ion-content>-->
+
+<ion-header>
+    <ion-grid>
+        <ion-row class="headerRow" align-items-center>
+            <ion-col col-2 id="backContainer">
+                <button icon-only ion-button clear class="header-back-button" (click)="goBack()">            
+                    <ion-icon name="ios-arrow-back"></ion-icon>
+                </button>                
+            </ion-col>
+            <ion-col col-8 id="titleContainer">
+                Recuperar contraseña
+            </ion-col>    
+            <ion-col col-2></ion-col>        
+        </ion-row>    
+    </ion-grid>
+  </ion-header>
+  
+  <ion-content padding>    
+        
+      <ion-row>        
+          <ion-col col-12>
+  
+              <ion-row>
+                  <ion-col col-12>            
+                      <ion-row>
+                          <ion-col col-12>
+                              <p class="instrucciones">¿Olvidaste tu contraseña?</p>
+                              <p class="sub-instrucciones">Ingresa tu email para restablecer tu contraseña y recuperar tu cuenta</p>                            
+                          </ion-col>            
+                      </ion-row>
+                  </ion-col>
+              </ion-row>
+              <br><br>
+              
+              <ion-row class="m-input" id="tituloAnuncio">
+                  <ion-col col-11>                                    
+                      <ion-row class="m-input-label">
+                          <ion-col col-12>
+                            <p>Email</p>                            
+                          </ion-col>
+                      </ion-row>
+                      <ion-row class="m-input-value">
+                          <ion-col col-12>
+                              <input type="text" [(ngModel)]="email">
+                          </ion-col>
+                      </ion-row>                    
+                  </ion-col>    
+                  <ion-col col-1>
+                      <ion-icon *ngIf="email !== undefined && email !== null" class="m-input-icon m-input-icon-ok" name="ios-checkmark-outline"></ion-icon>
+                      <ion-icon *ngIf="email === null" class="m-input-icon m-input-icon-error" name="ios-close-outline"></ion-icon>
+                  </ion-col>                            
+              </ion-row>
+                
+              <br><br>
+              <br><br>
+              <ion-row class="m-button">
+                  <ion-col col-2></ion-col>
+                  <ion-col col-8>
+                      <button type="button" (tap)="sendRequest()">Restablecer contraseña ></button>
+                  </ion-col>                
+              </ion-row>
+          </ion-col>
+      </ion-row>          
+  </ion-content>

@@ -27,6 +27,7 @@ import { StatisticWeekPage } from './../pages/statistics/week/statistic-week';
 import { StatisticWeeksPage } from './../pages/statistics/weeks/statistic-weeks';
 
 import { ProfilePage } from './../pages/profile/profile';
+import { RecoveryPage } from '../pages/recovery/recovery';
 import { HelpCenterPage } from './../pages/help-center/help-center';
 
 import { SocialSharing } from '@ionic-native/social-sharing';
@@ -51,6 +52,7 @@ import { MInputComponent } from '../components/m-input/m-input';
     StatisticWeekPage,
     StatisticWeeksPage,
     ProfilePage,
+    RecoveryPage,
     HelpCenterPage,
     MInputComponent,
   ],
@@ -79,6 +81,7 @@ import { MInputComponent } from '../components/m-input/m-input';
     StatisticWeekPage,
     StatisticWeeksPage,
     ProfilePage,
+    RecoveryPage,
     HelpCenterPage,
   ],
   providers: [

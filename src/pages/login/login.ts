@@ -5,9 +5,9 @@ import { HomePage } from '../home/home';
 import { Http } from '@angular/http';
 import { Storage } from '@ionic/storage';
 import { FormGroup } from '@angular/forms';
+import { RecoveryPage } from '../recovery/recovery';
 import 'rxjs/add/operator/map';
 
-//import { RecoveryPage } from '../recovery/recovery';
 //import { AuthProvider } from '../../providers/auth/auth';
 //import { usercreds } from '../../models/interfaces/usercreds';
 //import { ValidateEmail } from '../../app/validators/email.validator';
@@ -72,7 +72,7 @@ export class LoginPage implements OnInit {
     }
 
     forgotPass = () => {
-        //this.navCtrl.push(RecoveryPage, { animate: true });
+        this.navCtrl.push(RecoveryPage, { animate: true });
     }
 
     goCarList = () => {
