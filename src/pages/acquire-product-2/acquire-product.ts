@@ -1397,7 +1397,7 @@ export class AcquireProductPage2 {
             //seccion para la recepcion de la primaTotal y su conversion a int
             displayPrimaTotal = '';
             data2 = data.Cotizacion.PrimaTotal;
-            if (data2.length == 0) {
+            if (data2 == null || data2.length == 0) {
                 data2 = 0;
                 displayPrimaTotalInt = 0;
                 displayPrimaTotal = 'No disponible';
@@ -1771,7 +1771,7 @@ export class AcquireProductPage2 {
                 callback();
             }
         }, err => {            
-            console.error(err);
+            console.error('error A11', err);
             callback();
         });                
     }
