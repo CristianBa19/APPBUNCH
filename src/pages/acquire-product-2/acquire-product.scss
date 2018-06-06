@@ -102,7 +102,7 @@ acquire-product-page-2{
                 height:70%;
             }
             .result-amount{text-align:right;font-size:1.2em;color:map-get($colors, b-gray)}
-            .result-arrow{font-size:45px;text-align:right;ion-icon{color:#673192;}}
+            .result-arrow{font-size:2.1em;text-align:right;ion-icon{color:#673192;}}
         }                
         .result[disabled]{background:map-get($colors, b-gray);.result-amount{color:white !important;}}
     }
