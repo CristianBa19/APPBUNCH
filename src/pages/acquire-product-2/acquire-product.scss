@@ -1,6 +1,6 @@
 acquire-product-page-2{    
     .triggers{width:0px;height:0px;padding:0;margin:0;border:0;}
-    .felicidades{.title{text-align:center;width:100%;}ion-col:nth-child(2){p{color:#7D7D7D;font-size:20px;font-weight:bold;}text-align:center;.title{color:#673192;font-size:30px;font-weight:bold;}.title2{color:#673192;font-size:21px;font-weight:bold;}}}
+    .felicidades{.title{text-align:center;width:100%;}ion-col:nth-child(2){p{color:#7D7D7D;font-size:1.2em;font-weight:bold;}text-align:center;.title{color:#673192;font-size:30px;font-weight:bold;}.title2{color:#673192;font-size:21px;font-weight:bold;}}}
     #felicidadesGNP,#felicidadesGNPButton{display:none;}    
     #felicidadesGNPButton{button{padding:0;margin:0;}}
     #felicidadesGNP{p:nth-child(2){color:map-get($colors, b-gray)}p:nth-child(3){color:map-get($colors, b-lightgray)}}
