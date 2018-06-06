@@ -130,18 +130,12 @@
             </ion-row>
 
             <ion-row class="share-button">
-                <ion-col col-3></ion-col>
-                <ion-col col-6>
-                    <button type="button" (click)="compartirComparativo()">
-                        <ion-row>
-                            <ion-col col-10>
-                                Compartir Comparativo
-                            </ion-col>
-                            <ion-col col-2>
-                                <ion-icon name="md-share"></ion-icon>
-                            </ion-col>
-                        </ion-row>                                                
-                    </button>
+                <ion-col col-2></ion-col>
+                <ion-col col-8>
+                    <button ion-button icon-end (click)="compartirComparativo()">
+                        Compartir Comparativo
+                        <ion-icon name="md-share"></ion-icon>
+                    </button>                    
                 </ion-col>
                 <ion-col col-3></ion-col>
             </ion-row>            
@@ -213,17 +207,11 @@
             </ion-row>-->
 
             <ion-row class="share-button">
-                <ion-col col-3></ion-col>
-                <ion-col col-6>
-                    <button type="button">
-                        <ion-row>
-                            <ion-col col-10>
-                                Compartir Comparativo
-                            </ion-col>
-                            <ion-col col-2>
-                                <ion-icon name="md-share"></ion-icon>
-                            </ion-col>
-                        </ion-row>                                                
+                <ion-col col-2></ion-col>
+                <ion-col col-8>                    
+                    <button ion-button icon-end (click)="compartirComparativo()">
+                        Compartir Comparativo
+                        <ion-icon name="md-share"></ion-icon>
                     </button>
                 </ion-col>
                 <ion-col col-3></ion-col>
