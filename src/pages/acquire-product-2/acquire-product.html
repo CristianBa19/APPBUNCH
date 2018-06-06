@@ -61,14 +61,16 @@
             </ion-row>-->
 
             <!--<m-input label="Código Postal" id="codigoPostal1" [field]="codigoPostal1" (change)="mInputChange('codigoPostal1', codigoPostalChanged)"></m-input>-->
-            <m-input type="number" maxlength="5" label="Código Postal" id="codigoPostal1" [field]="codigoPostal1" (change)="mInputChange('codigoPostal1', codigoPostalChanged)" (keyup)="filterNumeric('codigoPostal1')"></m-input>
-            <m-input label="Edad" id="edad" [field]="edadTxt" (click)="showAlertEdad()" [disabled]="true"></m-input>
-            <m-input label="Género" [field]="genero" id="genero" (click)="showAlertGenero()" [disabled]="true"></m-input>
-            <m-input label="Marca" id="marca" [field]="marca" (click)="showAlertMarca()" [disabled]="true"></m-input>
-            <m-input label="Modelo" id="inputModelo" [field]="modelo" (click)="showAlertModelo()" id="inputModelo" [disabled]="true"></m-input>
-            <m-input label="Submarca" id="inputSubMarca" [field]="subMarca" (click)="showAlertSubMarca()" id="inputSubMarca" [disabled]="true"></m-input>            
-            <m-input label="Descripción" id="inputDescripcion" [field]="descripcion" (click)="showAlertDescripcion()" id="inputDescripcion" [disabled]="true"></m-input>
-            <m-input label="SubDescripción" id="inputSubDescripcion" [field]="subDescripcion" (click)="showAlertSubDescripcion()" id="inputSubDescripcion" [disabled]="true"></m-input>
+            <form>
+                <m-input type="number" maxlength="5" label="Código Postal" id="codigoPostal1" [field]="codigoPostal1" (change)="mInputChange('codigoPostal1', codigoPostalChanged)" (keyup)="filterNumeric('codigoPostal1')"></m-input>                
+                <m-input label="Edad" id="edad" [field]="edadTxt" (click)="showAlertEdad()" [disabled]="true"></m-input>
+                <m-input label="Género" [field]="genero" id="genero" (click)="showAlertGenero()" [disabled]="true"></m-input>
+                <m-input label="Marca" id="marca" [field]="marca" (click)="showAlertMarca()" [disabled]="true"></m-input>
+                <m-input label="Modelo" id="inputModelo" [field]="modelo" (click)="showAlertModelo()" id="inputModelo" [disabled]="true"></m-input>
+                <m-input label="Submarca" id="inputSubMarca" [field]="subMarca" (click)="showAlertSubMarca()" id="inputSubMarca" [disabled]="true"></m-input>            
+                <m-input label="Descripción" id="inputDescripcion" [field]="descripcion" (click)="showAlertDescripcion()" id="inputDescripcion" [disabled]="true"></m-input>
+                <m-input label="SubDescripción" id="inputSubDescripcion" [field]="subDescripcion" (click)="showAlertSubDescripcion()" id="inputSubDescripcion" [disabled]="true"></m-input>
+            </form>
             
             <ion-row class="m-button">
                 <ion-col col-3></ion-col>
@@ -240,41 +242,41 @@
                 </ion-col>
             </ion-row>
 
-            <m-input label="Email" id="email" [field]="email" (keyup)="toLowerCase('email')" (change)="mInputChange('email', emailChanged)"></m-input>
-            <m-input label="Nombre" id="nombre" [field]="nombre" (keyup)="mInputChange('nombre', nombreChanged)" (change)="validName()"></m-input>
-            <m-input label="Apellido Paterno" id="paterno" [field]="paterno" (keyup)="mInputChange('paterno', paternoChanged)" (change)="validPaterno()"></m-input>
-            <m-input label="Apellido Materno" id="materno" [field]="materno" (keyup)="mInputChange('materno', maternoChanged)" (change)="validMaterno()"></m-input>
-
-            <ion-row class="m-input" id="fechaNacimiento">
-                <ion-col col-11>                                    
-                    <ion-row class="m-input-label">
-                        <ion-col col-12>Fecha de Nacimiento</ion-col>
-                    </ion-row>
-                    <ion-row class="m-input-value">
-                        <ion-col col-12>
-                            <ion-datetime pickerFormat="YYYY MMMM DD" displayFormat="YYYY MMMM DD" [(ngModel)]="fechaNacimiento" (ngModelChange)="fechaNacimientoChanged()" cancelText="CANCELAR" doneText="OK" min="{{minYear}}" max="{{maxYear}}"></ion-datetime>
-                        </ion-col>
-                    </ion-row>                    
-                </ion-col>    
-                <ion-col col-1>
-                    <ion-icon *ngIf="fechaNacimiento !== undefined && fechaNacimiento !== null" class="m-input-icon m-input-icon-ok" name="ios-checkmark-outline"></ion-icon>
-                    <ion-icon *ngIf="fechaNacimiento === null" class="m-input-icon m-input-icon-error" name="ios-close-outline"></ion-icon>
-                </ion-col>                            
-            </ion-row>
-            
-            <m-input type="number" maxlength="10" label="Teléfono de Casa" id="telCasa" [field]="telCasa" (change)="mInputChange('telCasa', telCasaChanged)" (keyup)="filterNumeric('telCasa')"></m-input>
-            <m-input type="number" maxlength="10" label="Teléfono Móvil" id="telMovil" [field]="telMovil" (change)="mInputChange('telMovil', telMovilChanged)" (keyup)="filterNumeric('telMovil')"></m-input>            
-            <m-input label="RFC" id="rfc" [field]="rfc" (keyup)="toUpperCase('rfc')" (change)="mInputChange('rfc', rfcChanged)"></m-input>
-            <m-input label="Código Postal" id="codigoPostal2" [field]="codigoPostal1"></m-input>
-            <m-input label="Colonia" id="colonia" [field]="colonia" (click)="showAlertColony()" [disabled]="true"></m-input>
-            <m-input label="Estado" id="estado" [field]="estado"></m-input>
-            <m-input label="Delegación/Municipio" id="delegacion" [field]="delegacion"></m-input>
-            <m-input label="Calle" id="calle" [field]="calle" (keyup)="toUpperCase('calle')" (change)="mInputChange('calle', calleChanged)"></m-input>
-            <m-input label="Número Exterior" id="numExterior" [field]="numExterior" (keyup)="toUpperCase('numExterior')" (change)="mInputChange('numExterior')"></m-input>
-            <m-input label="Número Interior" id="numInterior" [field]="numInterior" (keyup)="toUpperCase('numInterior')" (change)="mInputChange('numInterior')"></m-input>            
-            <m-input label="Número de Motor" id="numMotor" [field]="numMotor" (keyup)="toUpperCase('numMotor')" (change)="mInputChange('numMotor', numMotorChanged)"></m-input>
-            <m-input label="Número de Serie" id="numSerie" [field]="numSerie" (keyup)="toUpperCase('numSerie')" (change)="mInputChange('numSerie', numSerieChanged)"></m-input>
-            <m-input label="Número de Placas" id="numPlacas" [field]="numPlacas" (keyup)="toUpperCase('numPlacas')" (change)="mInputChange('numPlacas', numPlacasChanged)"></m-input>
+            <form>
+                <m-input label="Email" id="email" [field]="email" (keyup)="toLowerCase('email')" (change)="mInputChange('email', emailChanged)"></m-input>
+                <m-input label="Nombre" id="nombre" [field]="nombre" (keyup)="mInputChange('nombre', nombreChanged)" (change)="validName()"></m-input>            
+                <m-input label="Apellido Paterno" id="paterno" [field]="paterno" (keyup)="mInputChange('paterno', paternoChanged)" (change)="validPaterno()"></m-input>
+                <m-input label="Apellido Materno" id="materno" [field]="materno" (keyup)="mInputChange('materno', maternoChanged)" (change)="validMaterno()"></m-input>
+                <ion-row class="m-input" id="fechaNacimiento">
+                    <ion-col col-11>                                    
+                        <ion-row class="m-input-label">
+                            <ion-col col-12>Fecha de Nacimiento</ion-col>
+                        </ion-row>
+                        <ion-row class="m-input-value">
+                            <ion-col col-12>                                
+                                <ion-datetime pickerFormat="YYYY MMMM DD" displayFormat="YYYY MMMM DD" name="fechaNacimiento" (ngModelChange)="fechaNacimientoChanged()" cancelText="CANCELAR" doneText="OK" min="{{minYear}}" max="{{maxYear}}" [(ngModel)]="fechaNacimiento"></ion-datetime>
+                            </ion-col>
+                        </ion-row>                    
+                    </ion-col>    
+                    <ion-col col-1>
+                        <ion-icon *ngIf="fechaNacimiento !== undefined && fechaNacimiento !== null" class="m-input-icon m-input-icon-ok" name="ios-checkmark-outline"></ion-icon>
+                        <ion-icon *ngIf="fechaNacimiento === null" class="m-input-icon m-input-icon-error" name="ios-close-outline"></ion-icon>
+                    </ion-col>                            
+                </ion-row>            
+                <m-input type="number" maxlength="10" label="Teléfono de Casa" id="telCasa" [field]="telCasa" (change)="mInputChange('telCasa', telCasaChanged)" (keyup)="filterNumeric('telCasa')"></m-input>
+                <m-input type="number" maxlength="10" label="Teléfono Móvil" id="telMovil" [field]="telMovil" (change)="mInputChange('telMovil', telMovilChanged)" (keyup)="filterNumeric('telMovil')"></m-input>            
+                <m-input label="RFC" id="rfc" [field]="rfc" (keyup)="toUpperCase('rfc')" (change)="mInputChange('rfc', rfcChanged)"></m-input>
+                <m-input label="Código Postal" id="codigoPostal2" [field]="codigoPostal1"></m-input>
+                <m-input label="Colonia" id="colonia" [field]="colonia" (click)="showAlertColony()" [disabled]="true"></m-input>
+                <m-input label="Estado" id="estado" [field]="estado"></m-input>
+                <m-input label="Delegación/Municipio" id="delegacion" [field]="delegacion"></m-input>
+                <m-input label="Calle" id="calle" [field]="calle" (keyup)="toUpperCase('calle')" (change)="mInputChange('calle', calleChanged)"></m-input>
+                <m-input label="Número Exterior" id="numExterior" [field]="numExterior" (keyup)="toUpperCase('numExterior')" (change)="mInputChange('numExterior')"></m-input>
+                <m-input label="Número Interior" id="numInterior" [field]="numInterior" (keyup)="toUpperCase('numInterior')" (change)="mInputChange('numInterior')"></m-input>            
+                <m-input label="Número de Motor" id="numMotor" [field]="numMotor" (keyup)="toUpperCase('numMotor')" (change)="mInputChange('numMotor', numMotorChanged)"></m-input>
+                <m-input label="Número de Serie" id="numSerie" [field]="numSerie" (keyup)="toUpperCase('numSerie')" (change)="mInputChange('numSerie', numSerieChanged)"></m-input>
+                <m-input label="Número de Placas" id="numPlacas" [field]="numPlacas" (keyup)="toUpperCase('numPlacas')" (change)="mInputChange('numPlacas', numPlacasChanged)"></m-input>
+            </form>
             
             <ion-row class="m-button">
                 <ion-col col-3></ion-col>
@@ -356,46 +358,48 @@
                 </ion-col>
             </ion-row>
 
-            <!--<m-input label="Número de Tarjeta" id="numTarjeta" [field]="numTarjeta" (click)="showAlertTarjeta()"></m-input>-->
-            <m-input label="Número de Tarjeta" id="numTarjeta" [field]="numTarjeta" (change)="mInputChange('numTarjeta', numTarjetaChanged)"></m-input>
-            <m-input label="Tipo de Tarjeta" id="tipoTarjeta" [field]="tipoTarjeta" (click)="showAlertTipoTarjeta()" [disabled]="true"></m-input>            
-            <!--<m-input label="Titular" id="titular" [field]="titular" (click)="showAlertTitular()"></m-input>-->
-            <m-input label="Titular" id="titular" [field]="titular" (keyup)="toUpperCase('titular')" (change)="mInputChange('titular', titularChanged)"></m-input>
-            <m-input label="Banco" id="inputBank" [field]="banco" (click)="showAlertBancos()" [disabled]="true"></m-input>
+            <form>
+                <!--<m-input label="Número de Tarjeta" id="numTarjeta" [field]="numTarjeta" (click)="showAlertTarjeta()"></m-input>-->
+                <m-input label="Número de Tarjeta" id="numTarjeta" [field]="numTarjeta" (change)="mInputChange('numTarjeta', numTarjetaChanged)"></m-input>
+                <m-input label="Tipo de Tarjeta" id="tipoTarjeta" [field]="tipoTarjeta" (click)="showAlertTipoTarjeta()" [disabled]="true"></m-input>            
+                <!--<m-input label="Titular" id="titular" [field]="titular" (click)="showAlertTitular()"></m-input>-->
+                <m-input label="Titular" id="titular" [field]="titular" (keyup)="toUpperCase('titular')" (change)="mInputChange('titular', titularChanged)"></m-input>
+                <m-input label="Banco" id="inputBank" [field]="banco" (click)="showAlertBancos()" [disabled]="true"></m-input>
 
-            <ion-row>
-                <ion-col col-12>
-                    <div>Carrier</div>                                    
-                </ion-col>
-            </ion-row>
-            <ion-row>
-                <ion-col col-12>
-                    <div class="button-bar">
-                        <a class="tarjetas" (tap)="amex()"><img src="assets/img/Amex.svg" id="amex"></a>
-                        <a class="tarjetas" (tap)="master()"><img src="assets/img/MasterCard.svg" id="master"></a>
-                        <a class="tarjetas" (tap)="visa()"><img src="assets/img/Visa.svg" id="visa"></a>
-                    </div> 
-                </ion-col>
-            </ion-row>                                            
+                <ion-row>
+                    <ion-col col-12>
+                        <div>Carrier</div>                                    
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12>
+                        <div class="button-bar">
+                            <a class="tarjetas" (tap)="amex()"><img src="assets/img/Amex.svg" id="amex"></a>
+                            <a class="tarjetas" (tap)="master()"><img src="assets/img/MasterCard.svg" id="master"></a>
+                            <a class="tarjetas" (tap)="visa()"><img src="assets/img/Visa.svg" id="visa"></a>
+                        </div> 
+                    </ion-col>
+                </ion-row>                                            
 
-            <ion-row class="m-input" id="vigencia">
-                <ion-col col-11>                                    
-                    <ion-row class="m-input-label">
-                        <ion-col col-12>Vigencia</ion-col>
-                    </ion-row>
-                    <ion-row class="m-input-value">
-                        <ion-col col-12>
-                            <ion-datetime pickerFormat="MMMM YY" displayFormat="MM/YY" min="2017" max="2030" [(ngModel)]="vigencia" cancelText="CANCELAR" doneText="OK"></ion-datetime>                            
-                        </ion-col>
-                    </ion-row>                    
-                </ion-col>    
-                <ion-col col-1>
-                    <ion-icon *ngIf="vigencia !== undefined && vigencia !== null" class="m-input-icon m-input-icon-ok" name="ios-checkmark-outline"></ion-icon>
-                    <ion-icon *ngIf="vigencia === null" class="m-input-icon m-input-icon-error" name="ios-close-outline"></ion-icon>
-                </ion-col>                            
-            </ion-row>
-            
-            <m-input label="CVV" id="cvv" [field]="cvv" (change)="mInputChange('cvv')"></m-input>
+                <ion-row class="m-input" id="vigencia">
+                    <ion-col col-11>                                    
+                        <ion-row class="m-input-label">
+                            <ion-col col-12>Vigencia</ion-col>
+                        </ion-row>
+                        <ion-row class="m-input-value">
+                            <ion-col col-12>
+                                <ion-datetime pickerFormat="MMMM YY" displayFormat="MM/YY" min="2017" max="2030" [(ngModel)]="vigencia" cancelText="CANCELAR" doneText="OK" name="vigencia"></ion-datetime>                            
+                            </ion-col>
+                        </ion-row>                    
+                    </ion-col>    
+                    <ion-col col-1>
+                        <ion-icon *ngIf="vigencia !== undefined && vigencia !== null" class="m-input-icon m-input-icon-ok" name="ios-checkmark-outline"></ion-icon>
+                        <ion-icon *ngIf="vigencia === null" class="m-input-icon m-input-icon-error" name="ios-close-outline"></ion-icon>
+                    </ion-col>                            
+                </ion-row>
+                
+                <m-input label="CVV" id="cvv" [field]="cvv" (change)="mInputChange('cvv')"></m-input>
+            </form>
 
             <ion-row>
                 <ion-col col-12>                                    
