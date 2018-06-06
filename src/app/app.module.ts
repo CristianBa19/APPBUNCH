@@ -58,9 +58,11 @@ import { MInputComponent } from '../components/m-input/m-input';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),    
+    IonicModule.forRoot(MyApp, {
+        monthNames: ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE'],
+    }),        
     IonicStorageModule.forRoot(),
-    HttpModule,
+    HttpModule,    
   ],
   bootstrap: [IonicApp],
   entryComponents: [

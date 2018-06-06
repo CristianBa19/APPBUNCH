@@ -2068,12 +2068,15 @@ export class AcquireProductPage2 {
         }        
     }
 
-    fechaNacimientoChanged() { 
+    fechaNacimientoChanged() {
+        console.warn('fechaNacimientoChanged', this.fechaNacimiento);
+        let that = this;
         setTimeout(function() {
-            let elem = document.getElementsByClassName('datetime-text')[0];        
-            elem.innerHTML = elem.innerHTML.toUpperCase();
+            //let elem = document.getElementsByClassName('datetime-text')[0];        
+            //elem.innerHTML = elem.innerHTML.toUpperCase();
+            that.calcRFCYTitular();
         }, 300);               
-        this.calcRFCYTitular();
+        //this.calcRFCYTitular();
     }
 
     showAlertGenero() {
@@ -3466,7 +3469,7 @@ export class AcquireProductPage2 {
         rfs = this.rfcToNumber(rfs);
         rfs = this.rfcToNumber(rfs);
     
-        var n = 0;
+        var n:any = 0;
     
         n += ( rfs.substr(0, 2) ) * 13;
         n += ( rfs.substr(2, 2) ) * 12;
@@ -3483,8 +3486,11 @@ export class AcquireProductPage2 {
         n += this.rfcToNumber(mss_one) * 3;
         n += this.rfcToNumber(mss_two) * 2;
     
-        n = ( 11000 - n ) % 11;
-            
+        n = ( 11000 - n ) % 11;        
+        if (isNaN(n)) {
+            n = '';
+        }
+        console.log('rfc_hc', this.rfc_hc, 'mss', mss, 'n', n);
         this.rfc = this.rfc_hc + mss + n;
         console.log('rfc generado', this.rfc);
         //var homoclave = this.rfc_hc + mss + n;
