@@ -3271,7 +3271,11 @@ export class AcquireProductPage2 {
             }
         });
         modal.present();*/
-    }        
+    }   
+    
+    stopKeyDown() {
+        return false;
+    }
 
     validName(txtNombre:string):boolean {
                 
@@ -3412,12 +3416,7 @@ export class AcquireProductPage2 {
         this.rfc_hc = rfc;
         this.rfc_hc = this.badWord(rfc);
         console.log('RFC', this.rfc_hc);
-    }
-
-    jaja($event) {
-        alert('genial');
-        $event.stopPropagation();
-    }
+    }    
     
     calcHC() {
         console.log('calcHC');

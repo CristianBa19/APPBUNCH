@@ -63,13 +63,14 @@
             <!--<m-input label="Código Postal" id="codigoPostal1" [field]="codigoPostal1" (change)="mInputChange('codigoPostal1', codigoPostalChanged)"></m-input>-->
             <form>
                 <m-input type="number" maxlength="5" label="Código Postal" id="codigoPostal1" [field]="codigoPostal1" (change)="mInputChange('codigoPostal1', codigoPostalChanged)" (keyup)="filterNumeric('codigoPostal1')"></m-input>                
-                <m-input label="Edad" id="edad" [field]="edadTxt" (click)="showAlertEdad()" [disabled]="true"></m-input>
-                <m-input label="Género" [field]="genero" id="genero" (click)="showAlertGenero()" [disabled]="true"></m-input>
-                <m-input label="Marca" id="marca" [field]="marca" (click)="showAlertMarca()" [disabled]="true"></m-input>
-                <m-input label="Modelo" id="inputModelo" [field]="modelo" (click)="showAlertModelo()" id="inputModelo" [disabled]="true"></m-input>
-                <m-input label="Submarca" id="inputSubMarca" [field]="subMarca" (click)="showAlertSubMarca()" id="inputSubMarca" [disabled]="true"></m-input>            
-                <m-input label="Descripción" id="inputDescripcion" [field]="descripcion" (click)="showAlertDescripcion()" id="inputDescripcion" [disabled]="true"></m-input>
-                <m-input label="SubDescripción" id="inputSubDescripcion" [field]="subDescripcion" (click)="showAlertSubDescripcion()" id="inputSubDescripcion" [disabled]="true"></m-input>
+                <input (focus)="showAlertEdad()" class="triggers">
+                <m-input label="Edad" id="edad" [field]="edadTxt" (click)="showAlertEdad()" (keydown)="stopKeyDown()" [disabled]="true" ></m-input> <!--[disabled]="true"-->                
+                <m-input label="Género" [field]="genero" id="genero" (click)="showAlertGenero()" (keydown)="stopKeyDown()" [disabled]="true"></m-input>
+                <m-input label="Marca" id="marca" [field]="marca" (click)="showAlertMarca()" (keydown)="stopKeyDown()" [disabled]="true"></m-input>
+                <m-input label="Modelo" id="inputModelo" [field]="modelo" (click)="showAlertModelo()" id="inputModelo"(keydown)="stopKeyDown()" [disabled]="true"></m-input>
+                <m-input label="Submarca" id="inputSubMarca" [field]="subMarca" (click)="showAlertSubMarca()" id="inputSubMarca" (keydown)="stopKeyDown()" [disabled]="true"></m-input>            
+                <m-input label="Descripción" id="inputDescripcion" [field]="descripcion" (click)="showAlertDescripcion()" id="inputDescripcion" (keydown)="stopKeyDown()" [disabled]="true"></m-input>
+                <m-input label="SubDescripción" id="inputSubDescripcion" [field]="subDescripcion" (click)="showAlertSubDescripcion()" id="inputSubDescripcion" (keydown)="stopKeyDown()" [disabled]="true"></m-input>
             </form>
             
             <ion-row class="m-button">
@@ -250,12 +251,12 @@
                 <ion-row class="m-input" id="fechaNacimiento">
                     <ion-col col-11>                                    
                         <ion-row class="m-input-label">
-                            <ion-col col-12>Fecha de Nacimiento</ion-col>
+                            <ion-col col-12>Fecha de Nacimiento <input (focus)="picker.open()" class="triggers"></ion-col>
                         </ion-row>
                         <ion-row class="m-input-value">
-                            <ion-col col-12>                                
-                                <ion-datetime pickerFormat="YYYY MMMM DD" displayFormat="YYYY MMMM DD" name="fechaNacimiento" (ngModelChange)="fechaNacimientoChanged()" cancelText="CANCELAR" doneText="OK" min="{{minYear}}" max="{{maxYear}}" [(ngModel)]="fechaNacimiento"></ion-datetime>
-                            </ion-col>
+                            <ion-col col-12>
+                                <ion-datetime #picker pickerFormat="YYYY MMMM DD" displayFormat="YYYY MMMM DD" name="fechaNacimiento" (ngModelChange)="fechaNacimientoChanged()" cancelText="CANCELAR" doneText="OK" min="{{minYear}}" max="{{maxYear}}" [(ngModel)]="fechaNacimiento"></ion-datetime>
+                            </ion-col>                            
                         </ion-row>                    
                     </ion-col>    
                     <ion-col col-1>
@@ -266,8 +267,8 @@
                 <m-input type="number" maxlength="10" label="Teléfono de Casa" id="telCasa" [field]="telCasa" (change)="mInputChange('telCasa', telCasaChanged)" (keyup)="filterNumeric('telCasa')"></m-input>
                 <m-input type="number" maxlength="10" label="Teléfono Móvil" id="telMovil" [field]="telMovil" (change)="mInputChange('telMovil', telMovilChanged)" (keyup)="filterNumeric('telMovil')"></m-input>            
                 <m-input label="RFC" id="rfc" [field]="rfc" (keyup)="toUpperCase('rfc')" (change)="mInputChange('rfc', rfcChanged)"></m-input>
-                <m-input label="Código Postal" id="codigoPostal2" [field]="codigoPostal1"></m-input>
-                <m-input label="Colonia" id="colonia" [field]="colonia" (click)="showAlertColony()" [disabled]="true"></m-input>
+                <m-input label="Código Postal" id="codigoPostal2" [field]="codigoPostal1" (keydown)="stopKeyDown()" [disabled]="true"></m-input>
+                <m-input label="Colonia" id="colonia" [field]="colonia" (click)="showAlertColony()" (keydown)="stopKeyDown()" [disabled]="true"></m-input>
                 <m-input label="Estado" id="estado" [field]="estado"></m-input>
                 <m-input label="Delegación/Municipio" id="delegacion" [field]="delegacion"></m-input>
                 <m-input label="Calle" id="calle" [field]="calle" (keyup)="toUpperCase('calle')" (change)="mInputChange('calle', calleChanged)"></m-input>
@@ -275,7 +276,7 @@
                 <m-input label="Número Interior" id="numInterior" [field]="numInterior" (keyup)="toUpperCase('numInterior')" (change)="mInputChange('numInterior')"></m-input>            
                 <m-input label="Número de Motor" id="numMotor" [field]="numMotor" (keyup)="toUpperCase('numMotor')" (change)="mInputChange('numMotor', numMotorChanged)"></m-input>
                 <m-input label="Número de Serie" id="numSerie" [field]="numSerie" (keyup)="toUpperCase('numSerie')" (change)="mInputChange('numSerie', numSerieChanged)"></m-input>
-                <m-input label="Número de Placas" id="numPlacas" [field]="numPlacas" (keyup)="toUpperCase('numPlacas')" (change)="mInputChange('numPlacas', numPlacasChanged)"></m-input>
+                <m-input label="Número de Placas" maxlength="8" id="numPlacas" [field]="numPlacas" (keyup)="toUpperCase('numPlacas')" (change)="mInputChange('numPlacas', numPlacasChanged)"></m-input>
             </form>
             
             <ion-row class="m-button">
@@ -360,11 +361,12 @@
 
             <form>
                 <!--<m-input label="Número de Tarjeta" id="numTarjeta" [field]="numTarjeta" (click)="showAlertTarjeta()"></m-input>-->
-                <m-input label="Número de Tarjeta" id="numTarjeta" [field]="numTarjeta" (change)="mInputChange('numTarjeta', numTarjetaChanged)"></m-input>
-                <m-input label="Tipo de Tarjeta" id="tipoTarjeta" [field]="tipoTarjeta" (click)="showAlertTipoTarjeta()" [disabled]="true"></m-input>            
+                <m-input type="number" maxlength="16" label="Número de Tarjeta" id="numTarjeta" [field]="numTarjeta" (change)="mInputChange('numTarjeta', numTarjetaChanged)" (keyup)="filterNumeric('numTarjeta')"></m-input>
+                <input (focus)="showAlertTipoTarjeta()" class="triggers">
+                <m-input label="Tipo de Tarjeta" id="tipoTarjeta" [field]="tipoTarjeta" (click)="showAlertTipoTarjeta()" (keydown)="stopKeyDown()" [disabled]="true"></m-input>
                 <!--<m-input label="Titular" id="titular" [field]="titular" (click)="showAlertTitular()"></m-input>-->
                 <m-input label="Titular" id="titular" [field]="titular" (keyup)="toUpperCase('titular')" (change)="mInputChange('titular', titularChanged)"></m-input>
-                <m-input label="Banco" id="inputBank" [field]="banco" (click)="showAlertBancos()" [disabled]="true"></m-input>
+                <m-input label="Banco" id="inputBank" [field]="banco" (click)="showAlertBancos()" (keydown)="stopKeyDown()" [disabled]="true"></m-input>
 
                 <ion-row>
                     <ion-col col-12>
@@ -384,11 +386,11 @@
                 <ion-row class="m-input" id="vigencia">
                     <ion-col col-11>                                    
                         <ion-row class="m-input-label">
-                            <ion-col col-12>Vigencia</ion-col>
+                            <ion-col col-12>Vigencia <input (focus)="picker2.open()" class="triggers"></ion-col>
                         </ion-row>
                         <ion-row class="m-input-value">
                             <ion-col col-12>
-                                <ion-datetime pickerFormat="MMMM YY" displayFormat="MM/YY" min="2017" max="2030" [(ngModel)]="vigencia" cancelText="CANCELAR" doneText="OK" name="vigencia"></ion-datetime>                            
+                                <ion-datetime #picker2 pickerFormat="MMMM YY" displayFormat="MM/YY" min="2017" max="2030" [(ngModel)]="vigencia" cancelText="CANCELAR" doneText="OK" name="vigencia"></ion-datetime>                            
                             </ion-col>
                         </ion-row>                    
                     </ion-col>    
