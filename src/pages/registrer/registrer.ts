@@ -298,18 +298,18 @@ export class RegistrerPage {
             position: 'bottom'
         });
         
-        if (this.newuser.email == '' || this.newuser.password == '' || this.newuser.celular == '') {
+        if (this.email == undefined || this.email == null || this.password == undefined || this.password == null || this.cel == undefined || this.cel == null) {
             toaster.setMessage('Se necesita llenar todos los campos');
             toaster.present();
             loader.dismiss();
-        } else if (this.newuser.password.length < 7) {
+        } else if (this.password.length < 7) {
             toaster.setMessage('El password deberá de ser de 7 caracteres');
             toaster.present();
             loader.dismiss();
         } else {
 
             //Registrar en la db de bunch.guru
-            let string = `celular=${this.newuser.celular}&password=${this.newuser.password}&email=${this.newuser.email}`,
+            let string = `celular=${this.cel}&password=${this.password}&email=${this.email}`,
                 encodedString = btoa(string),
                 url = `http://services.bunch.guru/WebService.asmx/CrearCuenta?param=${encodedString}`;
 
@@ -337,7 +337,7 @@ export class RegistrerPage {
                 
                 localStorage.idContVend = data.IdVend;
                 that.storage.set('name', data.idContacto);
-                //that.navCtrl.push(HomePage, { animate: true });
+                that.navCtrl.push(HomePage, { animate: true });
             }, err => {
                 console.error('error->', {err});
                 loader.dismiss();
@@ -391,14 +391,20 @@ export class RegistrerPage {
     }
 
     celChange(cel) {
-        if (cel.length == 0) {
+        console.warn(typeof cel);//, cel.toString().length);
+        /*if (cel == null || cel == undefined || cel.length == 0) {
             this.validCel = undefined;
         } else { 
-            this.validateCel();
-        }
+            if (cel.length == 10) {
+                this.validCel = true;
+            } else {
+                this.validCel = false;
+            }
+            //this.validateCel();
+        }*/
     }    
 
-    validateCel() {
+    /*validateCel() {
         return true;
-    }
+    }*/
 }

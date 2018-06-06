@@ -370,18 +370,22 @@
 
                 <ion-row>
                     <ion-col col-12>
-                        <div>Carrier</div>                                    
+                        <ion-row class="m-input-label">
+                            <ion-col col-12>
+                                Carrier
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col col-12>
+                                <div class="button-bar">
+                                    <a class="tarjetas" (tap)="amex()"><img src="assets/img/Amex.svg" id="amex"></a>
+                                    <a class="tarjetas" (tap)="master()"><img src="assets/img/MasterCard.svg" id="master"></a>
+                                    <a class="tarjetas" (tap)="visa()"><img src="assets/img/Visa.svg" id="visa"></a>
+                                </div> 
+                            </ion-col>
+                        </ion-row>                                            
                     </ion-col>
-                </ion-row>
-                <ion-row>
-                    <ion-col col-12>
-                        <div class="button-bar">
-                            <a class="tarjetas" (tap)="amex()"><img src="assets/img/Amex.svg" id="amex"></a>
-                            <a class="tarjetas" (tap)="master()"><img src="assets/img/MasterCard.svg" id="master"></a>
-                            <a class="tarjetas" (tap)="visa()"><img src="assets/img/Visa.svg" id="visa"></a>
-                        </div> 
-                    </ion-col>
-                </ion-row>                                            
+                </ion-row>                
 
                 <ion-row class="m-input" id="vigencia">
                     <ion-col col-11>                                    
@@ -410,8 +414,8 @@
             </ion-row>           
             
             <ion-row class="m-button">
-                <ion-col col-3></ion-col>
-                <ion-col col-6>
+                <ion-col col-2></ion-col>
+                <ion-col col-8>
                     <button type="button" (click)="pay()">Finalizar compra</button>
                 </ion-col>
                 <ion-col col-3></ion-col>
