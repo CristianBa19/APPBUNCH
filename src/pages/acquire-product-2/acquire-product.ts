@@ -26,6 +26,8 @@ import 'rxjs/add/operator/delay';
 import 'rxjs/add/operator/map';
 //import { GESTURE_PRIORITY_MENU_SWIPE } from 'ionic-angular/gestures/gesture-controller';
 
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+
 @Component({
     selector: 'acquire-product-page-2',
     templateUrl: 'acquire-product.html',
@@ -33,6 +35,7 @@ import 'rxjs/add/operator/map';
 export class AcquireProductPage2 {    
 
     constructor(
+        private iab: InAppBrowser,
         public navCtrl: NavController, 
         public http: Http, 
         public navParams: NavParams, 
@@ -211,6 +214,11 @@ export class AcquireProductPage2 {
             this[elemName] = null;
         }
     }    
+
+    verPoliza() {
+        let url = encodeURIComponent(this.urlEmisionDocumento);
+        this.iab.create('https://docs.google.com/viewer?url=' + url);
+    }
 
     fillTab1() {
 

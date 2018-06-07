@@ -33,6 +33,8 @@ import { HelpCenterPage } from './../pages/help-center/help-center';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { MInputComponent } from '../components/m-input/m-input';
 
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+
 @NgModule({
   declarations: [
     MyApp,    
@@ -92,7 +94,8 @@ import { MInputComponent } from '../components/m-input/m-input';
     SplashScreen,
     DatePicker,
     Keyboard,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    InAppBrowser
   ]
 })
 export class AppModule {}

@@ -454,7 +454,7 @@
             <ion-row>
                 <ion-col col-2></ion-col>
                 <ion-col col-8>
-                    <img src="../../assets/img/like.png" style="width:100%;height:200px;">
+                    <img src="assets/img/like.png" style="width:100%;height:200px;">
                 </ion-col>
             </ion-row>
             
@@ -462,8 +462,8 @@
                 <ion-col col-3></ion-col>
                 <ion-col col-6>                    
                     <!--<a id="felicidadesButton" href="http://server.anaseguros.com.mx/emision/impresion/temporal-impresion/04011929689000000.php" download target="_blank">Download</a>-->
-                    <button type="button" id="felicidadesButton" click="compartirOrdenDeCompra()">Ver Póliza</button>
-                    <button type="button" id="felicidadesGNPButton" click="compartirOrdenDeCompra()">Compartir<br>Órden de Compra</button>
+                    <button type="button" id="felicidadesButton" (tap)="verPoliza()">Ver Póliza</button>
+                    <button type="button" id="felicidadesGNPButton" (tap)="compartirOrdenDeCompra()">Compartir<br>Órden de Compra</button>
                 </ion-col>
                 <ion-col col-3></ion-col>
             </ion-row>
