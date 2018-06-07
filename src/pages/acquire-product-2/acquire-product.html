@@ -19,16 +19,16 @@
     <ion-row class="cliente-tab" [hidden]="step != 1">        
         <ion-col col-12>
 
-            <ion-row id="filita">
-                <ion-col col-12>            
+            <!--<ion-row id="filita">
+                <ion-col col-12>            -->
                     <ion-row>
                         <ion-col col-12>
                             <p class="instrucciones">Ingresa la siguiente información</p>
                             <p class="sub-instrucciones">Obtendrás una cotización inmediata</p>                            
                         </ion-col>            
                     </ion-row>
-                </ion-col>
-            </ion-row>
+                <!--</ion-col>
+            </ion-row>-->
 
             <!--<ion-row class="m-input" (click)="showAlertCP1()">
                 <ion-col col-12>                                    
@@ -93,8 +93,8 @@
     <ion-row class="cliente-tab" [hidden]="step != 2">        
         <ion-col col-12>
 
-            <ion-row id="lala">
-                <ion-col col-12>            
+            <!--<ion-row id="lala">
+                <ion-col col-12>            -->
                     <ion-row>
                         <ion-col col-10>
                             <p class="instrucciones">Selecciona la mejor opción</p>                            
@@ -103,8 +103,8 @@
                             <ion-icon name="ios-settings-outline" (click)="showOpcionesCotizacion()"></ion-icon>                            
                         </ion-col>       
                     </ion-row>
-                </ion-col>
-            </ion-row>
+                <!--</ion-col>
+            </ion-row>-->
 
             <ion-row class="lolo">
                 <ion-col col-12>
@@ -232,16 +232,16 @@
     <ion-row class="cliente-tab" [hidden]="step != 4">
         <ion-col col-12>            
 
-            <ion-row id="filita">
-                <ion-col col-12>            
+            <!--<ion-row id="filita">
+                <ion-col col-12>            -->
                     <ion-row>
                         <ion-col col-12>
                             <p class="instrucciones">Ingresa tus datos personales</p>
                             <p class="sub-instrucciones">Son necesarios para emitir tu póliza</p>
                         </ion-col>            
                     </ion-row>
-                </ion-col>
-            </ion-row>
+                <!--</ion-col>
+            </ion-row>-->
 
             <form>
                 <m-input label="Email" id="email" [field]="email" (keyup)="toLowerCase('email')" (change)="mInputChange('email', emailChanged)"></m-input>
@@ -301,16 +301,16 @@
     <ion-row class="cliente-tab" [hidden]="step != 5">
         <ion-col col-12>
 
-            <ion-row>
-                <ion-col col-12>            
+            <!--<ion-row>
+                <ion-col col-12>            -->
                     <ion-row>
                         <ion-col col-12>
                             <p class="instrucciones">Revisa tu resúmen de compra</p>
                             <p class="sub-instrucciones">Verifica que tus datos sean correctos</p>
                         </ion-col>            
                     </ion-row>
-                </ion-col>
-            </ion-row>
+                <!--</ion-col>
+            </ion-row>-->
             
             <ion-row class="lolo">
                 <ion-col col-12>
@@ -348,16 +348,16 @@
     <ion-row class="cliente-tab" [hidden]="step != 6">
         <ion-col col-12>
 
-            <ion-row>
-                <ion-col col-12>            
+            <!--<ion-row>
+                <ion-col col-12>            -->
                     <ion-row>
                         <ion-col col-12>
                             <p class="instrucciones">Ingresa tu forma de pago</p>
                             <p class="sub-instrucciones">Nuestra plataforma es 100% segura</p>
                         </ion-col>            
                     </ion-row>
-                </ion-col>
-            </ion-row>
+                <!--</ion-col>
+            </ion-row>-->
 
             <form>
                 <!--<m-input label="Número de Tarjeta" id="numTarjeta" [field]="numTarjeta" (click)="showAlertTarjeta()"></m-input>-->
@@ -502,7 +502,7 @@
 
 <button id="opcionesCotizacion"></button>
 <div id="opcionesCotizacionTile">
-    <ion-grid padding>
+    <!--<ion-grid padding>-->
         <ion-row>                
             <ion-col col-12>
                 <p class="text-gray">Selecciona el plan que más te convenga</p>                    
@@ -518,7 +518,7 @@
                 <button type="button" class="button-purple" (click)="closeOpcionesCotizacion()">Continuar</button>
             </ion-col>                
         </ion-row>         
-    </ion-grid>                
+    <!--</ion-grid>                -->
 </div>
 
 <button id="bottomAlertBackground" (click)="closeBottomAlert()"></button>
