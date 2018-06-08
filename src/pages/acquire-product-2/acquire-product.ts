@@ -992,6 +992,25 @@ export class AcquireProductPage2 {
         });
     }
 
+    showAlertCobertura() {
+
+        let that = this;
+        this.bottomAlert('cobertura', that.coberturaList);
+    }    
+
+    showAlertFormaDePago() {
+
+        let that = this;
+        this.bottomAlert('formaDePago', that.formaDePagoList, function(formaDePago) {
+            if (formaDePago == null) {
+                that.formaDePago = null;
+                that.formaDePagoInt = null;
+            } else {
+                that.formaDePagoInt = (formaDePago == 'Mensual') ? 4 : 0; //0 es Anual, 4 es Mensual
+            }            
+        });        
+    }
+
     showAlertMarca() {        
         let that = this; 
         this.bottomAlert('marca', this.marcaList, function() {
@@ -2103,6 +2122,7 @@ export class AcquireProductPage2 {
         //this.calcRFCYTitular();
     }
 
+    //
     showAlertGenero() {
         if (this.isEnabled == true) {            
             this.bottomAlert('genero', this.userGenderList);
@@ -3680,66 +3700,7 @@ export class AcquireProductPage2 {
     formaDePagoList = ['Anual', 'Mensual'];
     formaDePago:string = this.formaDePagoList[0];
     formaDePagoInt:number = (this.formaDePago == 'Mensual') ? 4 : 0; //0 es Anual, 4 es Mensual
-    opcionesCotizacionChanged:boolean = false;
-
-    showAlertCobertura() {
-
-        let that = this,
-            title = 'Cobertura',
-            options = [];
-
-        for (let cobertura of this.coberturaList) {
-            let checked = this.cobertura == cobertura;
-            options.push({
-                type: 'radio',
-                label: cobertura,
-                value: cobertura,
-                checked: checked,
-            });
-        }
-
-        this.showAlert(title, options, function(cobertura) {
-            cobertura = cobertura.trim();
-            if (cobertura.length == 0) {
-                that.cobertura = null;
-            } else {
-                if (cobertura != that.cobertura) { 
-                    that.opcionesCotizacionChanged = true;
-                    that.cobertura = cobertura;
-                }
-            }
-        });
-    }    
-
-    showAlertFormaDePago() {
-        let that = this,
-            title = 'Forma de Pago',
-            options = [];
-
-        for (let formaDePago of this.formaDePagoList) {
-            let checked = this.formaDePago == formaDePago;
-            options.push({
-                type: 'radio',
-                label: formaDePago,
-                value: formaDePago,
-                checked: checked,
-            });
-        }
-
-        this.showAlert(title, options, function(formaDePago) {
-            formaDePago = formaDePago.trim();
-            if (formaDePago.length == 0) {
-                that.formaDePago = null;
-                that.formaDePagoInt = null;
-            } else {
-                if (formaDePago != that.formaDePago) {
-                    that.opcionesCotizacionChanged = true;
-                    that.formaDePago = formaDePago;
-                    that.formaDePagoInt = (formaDePago == 'Mensual') ? 4 : 0; //0 es Anual, 4 es Mensual                
-                }                
-            }
-        });        
-    }
+    opcionesCotizacionChanged:boolean = false;    
 
     goBack() {                
 
@@ -3837,7 +3798,7 @@ export class AcquireProductPage2 {
         document.getElementById('opcionesCotizacionTile').style.display = 'none';        
         this.showFooterMenu();
 
-        if (that.opcionesCotizacionChanged == true) {
+        //if (that.opcionesCotizacionChanged == true) {
             let loader = this.loadingCtrl.create();
             loader.present();            
             this.cotizar(undefined, 0, function() {
@@ -3847,7 +3808,7 @@ export class AcquireProductPage2 {
                     that.content.scrollToTop();
                 });
             });
-        }
+        //}
     }
 
     /*quitaAcentos(s) {
