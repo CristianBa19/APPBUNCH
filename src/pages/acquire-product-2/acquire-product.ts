@@ -213,7 +213,33 @@ export class AcquireProductPage2 {
         } else {
             this[elemName] = null;
         }
-    }    
+    }
+    
+    checkMaxLen(elemName:string) {
+        
+        let elem = document.getElementById(elemName).getElementsByTagName('input')[0];
+        let maxLen = elem.maxLength;
+        if (elem.value != null) {
+            let value = elem.value.trim();        
+            /*let valueLen = value.length;
+            if (value[valueLen - 1] == '.') {
+                value = value.slice(0, -1); 
+            }
+            value = value.replace(/\.+/g, '');
+            value = value.replace(/\-+/g, '');            
+            try {            
+                let arr = value.match(/\d+/g);        
+                let len = arr.length;        
+                for (let i = 0; i < len; i++) {                
+                    filtered += arr[i];                
+                }
+            } catch(err) {}*/
+            let filtered:string = value;
+            elem.value = filtered.substring(0, maxLen);
+        } else {
+            this[elemName] = null;
+        }
+    }
 
     verPoliza() {
         let url = encodeURIComponent(this.urlEmisionDocumento);

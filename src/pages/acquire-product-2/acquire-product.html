@@ -266,7 +266,7 @@
                 </ion-row>            
                 <m-input type="number" maxlength="10" label="Teléfono de Casa" id="telCasa" [field]="telCasa" (change)="mInputChange('telCasa', telCasaChanged)" (keyup)="filterNumeric('telCasa')"></m-input>
                 <m-input type="number" maxlength="10" label="Teléfono Móvil" id="telMovil" [field]="telMovil" (change)="mInputChange('telMovil', telMovilChanged)" (keyup)="filterNumeric('telMovil')"></m-input>            
-                <m-input label="RFC" id="rfc" [field]="rfc" (keyup)="toUpperCase('rfc')" (change)="mInputChange('rfc', rfcChanged)"></m-input>
+                <m-input maxlength="13" label="RFC" id="rfc" [field]="rfc" (keyup)="toUpperCase('rfc')" (change)="mInputChange('rfc', rfcChanged)" (keyup)="checkMaxLen('rfc')"></m-input>
                 <m-input label="Código Postal" id="codigoPostal2" [field]="codigoPostal1" (keydown)="stopKeyDown()" [disabled]="true"></m-input>
                 <m-input label="Colonia" id="colonia" [field]="colonia" (click)="showAlertColony()" (keydown)="stopKeyDown()" [disabled]="true"></m-input>
                 <m-input label="Estado" id="estado" [field]="estado"></m-input>
