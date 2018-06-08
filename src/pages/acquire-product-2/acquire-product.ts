@@ -222,10 +222,10 @@ export class AcquireProductPage2 {
 
     fillTab1() {
 
-        let that = this;
+        /*let that = this;
         this.email = 'martin.cisneros@gmail.com';
         that.step = 8;
-        that.currentStep = 8;
+        that.currentStep = 8;*/
 
         //this.socialSharing.share('Órden de Compra', '', '', 'http://server.anaseguros.com.mx/emision/impresion/temporal-impresion/04011929689000000.php');
         //this.navCtrl.push(SharePage, null, { animate: false });
@@ -248,7 +248,7 @@ export class AcquireProductPage2 {
             alert('error'); 
         });*/
 
-        /*this.codigoPostal1 = '79050';
+        this.codigoPostal1 = '79050';
         this.processPostalCode(this.codigoPostal1);
         this.edad = 29;
         this.genero = 'FEMENINO';
@@ -257,7 +257,7 @@ export class AcquireProductPage2 {
         this.modelo = '2018';
         this.subMarca = 'AVEO';
         this.descripcion = 'A';
-        this.subDescripcion = 'PAQ A';*/
+        this.subDescripcion = 'PAQ A';
         
         /*let that = this;                
         document.getElementById('felicidadesGNP').style.display = 'block';
@@ -623,7 +623,17 @@ export class AcquireProductPage2 {
     }
 
     showToast(message) {
-        let that = this;
+        let toast = this.toastCtrl.create({
+            duration: 3000,
+            position: 'bottom',
+            showCloseButton: true,
+            closeButtonText: 'Ok',
+            cssClass: 'toast',
+            message: message,
+            //dismissOnPageChange: true,
+        });
+        toast.present();
+        /*let that = this;
         if (this.toast === undefined) {            
             this.toast = this.toastCtrl.create({
                 duration: 3000,
@@ -651,7 +661,7 @@ export class AcquireProductPage2 {
                 });
                 that.toast.present();
             });
-        }
+        }*/
     }
 
     showAlert(title: string, options: any = undefined, callback:any = undefined) {
