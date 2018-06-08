@@ -224,8 +224,8 @@ export class RegistrerPage {
         let email = this.email;
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         let result = re.test(String(email).toLowerCase());
-        if (result === true) {            
-            this.validEmail = true;
+        if (result === true) {
+            this.validEmail = true;            
             return true;
         } else {            
             this.validEmail = false;
@@ -303,7 +303,7 @@ export class RegistrerPage {
             position: 'bottom'
         });
         
-        if (this.email == undefined || this.email == null || this.password == undefined || this.password == null || this.cel == undefined || this.cel == null) {
+        if (this.validEmail !== true || this.validPass !== true || this.validCel !== true) {
             toaster.setMessage('Se necesita llenar todos los campos');
             toaster.present();
             loader.dismiss();
@@ -313,40 +313,81 @@ export class RegistrerPage {
             loader.dismiss();
         } else {
 
-            //Registrar en la db de bunch.guru
-            let string = `celular=${this.cel}&password=${this.password}&email=${this.email}`,
+            let string = `email=${this.email}`,
                 encodedString = btoa(string),
-                url = `http://services.bunch.guru/WebService.asmx/CrearCuenta?param=${encodedString}`;
+                url = `http://services.bunch.guru/WebService.asmx/validarCliente?param=${encodedString}`;
 
-            console.log({string, encodedString, url});
-            this.http.get(url).map(res => res.json()).subscribe(data => {
-                //console.log({data});
-                //this.getCotSeguridad(data);
-                //this.codeEnviar = data;                
+            //let promise = new Promise((resolve, reject) => {
+                this.http.get(url).map(res => res.json()).subscribe(data => {                                    
+                    switch(+data.status) {
+                        case 1:
+                            //el email esta disponible, quiere decir que podemos registrarlo
+                            //asi que pasamos al siguiente slide
+                            //this.getCode();
+                            toaster.dismiss(); 
+                            loader.dismiss(); 
+                            //this.newuser.email = email;                                        
+                            //resolve(true);
 
-                //Registrar en firebase
-                /*this.userservice.adduser(this.newuser).then((res: any) => {                                    
-                    if (res.success) {
-                        console.log("se ha creado una nueva cuenta");
-                        localStorage.idContVend = data.IdVend;
-                        that.storage.set('name', data.idContacto);
-                        that.navCtrl.push(HomePage, { animate: true });
-                    } else {
-                        console.error({res});
-                        loader.dismiss();
-                    }                    
-                }).catch((a) => {
-                    console.error('error!', {a});
-                    loader.dismiss();
-                });*/
-                
-                localStorage.idContVend = data.IdVend;
-                that.storage.set('name', data.idContacto);
-                that.navCtrl.push(HomePage, { animate: true });
-            }, err => {
-                console.error('error->', {err});
-                loader.dismiss();
-            });                
+                            //Registrar en la db de bunch.guru
+                            string = `celular=${this.cel}&password=${this.password}&email=${this.email}`,
+                            encodedString = btoa(string),
+                            url = `http://services.bunch.guru/WebService.asmx/CrearCuenta?param=${encodedString}`;
+
+                            console.log({string, encodedString, url});
+                            this.http.get(url).map(res => res.json()).subscribe(data => {
+                                //console.log({data});
+                                //this.getCotSeguridad(data);
+                                //this.codeEnviar = data;                
+
+                                //Registrar en firebase
+                                /*this.userservice.adduser(this.newuser).then((res: any) => {                                    
+                                    if (res.success) {
+                                        console.log("se ha creado una nueva cuenta");
+                                        localStorage.idContVend = data.IdVend;
+                                        that.storage.set('name', data.idContacto);
+                                        that.navCtrl.push(HomePage, { animate: true });
+                                    } else {
+                                        console.error({res});
+                                        loader.dismiss();
+                                    }                    
+                                }).catch((a) => {
+                                    console.error('error!', {a});
+                                    loader.dismiss();
+                                });*/
+                                
+                                localStorage.idContVend = data.IdVend;
+                                that.storage.set('name', data.idContacto);
+                                that.navCtrl.push(HomePage, { animate: true });
+                            }, err => {
+                                console.error('error->', {err});
+                                loader.dismiss();
+                            });                
+
+                            break;
+                        //case 2:
+                        //    //existe pero con info incompleta (se supone que por el cambio de forma de crear cuentas ahora esto nunca deberia pasar)
+                        //    break;
+                        //case 3:
+                        //    //existe con la info completa
+                        //    break;
+                        default:
+                            loader.dismiss();
+                            toaster = this.toastCtrl.create({
+                                duration: 3000,
+                                position: 'bottom'
+                            });            
+                            toaster.setMessage('El E-Mail ya se encuentra registrado');                                        
+                            //resolve(false);
+                            toaster.present();
+                            break;
+                    }
+                    
+                }, err => {                                    
+                    console.error({err});
+                    //reject(err);
+                });                            
+            //});            
         }
     }
 
@@ -422,18 +463,19 @@ export class RegistrerPage {
         }
     }
 
-    celChange(cel) {
-        console.warn(typeof cel);//, cel.toString().length);
-        /*if (cel == null || cel == undefined || cel.length == 0) {
+    celChange(cel) {        
+        if (cel == null || cel == undefined || cel.toString().length == 0) {
             this.validCel = undefined;
         } else { 
-            if (cel.length == 10) {
+            if (cel.toString().length == 10) {
                 this.validCel = true;
+                return true;
             } else {
                 this.validCel = false;
+                return false;
             }
             //this.validateCel();
-        }*/
+        }
     }    
 
     /*validateCel() {
