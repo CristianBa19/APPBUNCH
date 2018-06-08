@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { StatisticProductsDetailsPage } from '../products-details/statistic-products-details';
-import { Http, Headers } from '@angular/http';
+import { Http } from '@angular/http';
 
 @Component({
     selector: 'statistic-products-page',
@@ -9,41 +9,11 @@ import { Http, Headers } from '@angular/http';
 })
 export class StatisticProductsPage {
 
-    private optionList:any =[];
-    private containerTexts = [
-        {
-            mainText: localStorage.getItem("language") == "en"?"MATERIAL DAMAGE: ":"DAÑOS MATERIALES: ",
-            subText: "5% V. COMERCIAL"
-        },
-        {
-            mainText: localStorage.getItem("language") == "en"?"TOTAL THEFT: ":"ROBO TOTAL: ",
-            subText: "10% V. COMERCIAL"
-        },
-        {
-            mainText: localStorage.getItem("language") == "en"?"RC PEOPLE: ":"RC PERSONAS: ",
-            subText: "3,000,000.00"
-        },
-        {
-            mainText: localStorage.getItem("language") == "en"?"RC: ":"RC: ",
-            subText: "800,000.00"
-        },
-        {
-            mainText: localStorage.getItem("language") == "en"?"LEGAL DEFENSE: ":"DEFENSA LEGAL: ",
-            subText: "AMPARADA"
-        },
-        {
-            mainText: localStorage.getItem("language") == "en"?"MEDICAL EXPENSES: ":"GASTOS MÉDICOS: ",
-            subText: "50,000.00"
-        },
-        {
-            mainText: localStorage.getItem("language") == "en"?"ROAD OF ASSISTANCE: ":"ASISTENCIA VIAL: ",
-            subText: "AMPARADA"
-        },
-    ];
+    optionList:any =[];    
 
     constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
 
-        let data = this.navParams.data;
+        //let data = this.navParams.data;
 
         /*this.optionList = [
             {nameOfProduct:localStorage.getItem("language") == "en"?"Car insurance":"Seguro de Auto", subNameOfProduct:"Miguel Ivan Hernandez", companyLogo:"assets/icon/logo/logo-axa.png", companyName:"$12,500", companySubName:localStorage.getItem("language") == "en"?"Full payment":"Pago total", itemValue:"$2,500", itemSubValue: localStorage.getItem("language") == "en"?"Won":"Ganado", 

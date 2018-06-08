@@ -114,7 +114,7 @@ export class LoginPage implements OnInit {
 
     private validatePass() {
         let pass = this.password;
-        if (pass.length >= 6) {
+        if (pass.length >= 7) {
             this.validPass = true;
             return true;
         } else {

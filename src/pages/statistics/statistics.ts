@@ -3,7 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { StatisticProductsPage } from '../statistics/products/statistic-products';
 import { StatisticWeekPage } from '../statistics/week/statistic-week';
 import { StatisticClientsPage } from '../statistics/clients/statistic-clients';
-import { Http, Headers } from '@angular/http';
+import { Http } from '@angular/http';
 
 @Component({
     selector: 'page-statistics',
@@ -11,12 +11,12 @@ import { Http, Headers } from '@angular/http';
 })
 export class StatisticsPage {
 
-    private ganancias:number;
-    private cotizaciones:number;
-    private polizas:number;
-    private polizasCompare:string = 'equal';
-    private cotizacionesCompare:string = 'equal';
-    private gananciasCompare:string = 'equal';
+    ganancias:number;
+    cotizaciones:number;
+    polizas:number;
+    polizasCompare:string = 'equal';
+    cotizacionesCompare:string = 'equal';
+    gananciasCompare:string = 'equal';
     
     constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {}
 

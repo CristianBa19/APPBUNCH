@@ -1,4 +1,4 @@
-import { Component, ViewChild  } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { StatisticWeekPage } from '../week/statistic-week';
 
@@ -12,10 +12,10 @@ export class StatisticWeeksPage {
     doughnutChart: any;
     lineChart: any;
 
-    private weeks:any = [];
-    private weekEnd:number = this.getWeekLastDay();
-    private monthName:string = this.getMonthName();
-    private optionList:any =[];    
+    weeks:any = [];
+    //weekEnd:number = this.getWeekLastDay();
+    monthName:string = this.getMonthName();
+    optionList:any =[];    
 
     constructor(public navCtrl: NavController, public navParams: NavParams) {}        
 

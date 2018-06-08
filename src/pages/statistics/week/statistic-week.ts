@@ -3,7 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { StatisticProductsDetailsPage } from '../products-details/statistic-products-details';
 import { StatisticWeeksPage } from '../weeks/statistic-weeks';
 //import { Chart } from 'chart.js';
-import { Http, Headers } from '@angular/http';
+import { Http } from '@angular/http';
 
 @Component({
     selector: 'statistic-week',
@@ -13,15 +13,15 @@ export class StatisticWeekPage {
     @ViewChild('lineCanvas') lineCanvas;
      
     lineChart: any;
-    private title:string;
-    private option:string;
-    private weekInit:number = this.getWeekFirstDay();
-    private weekEnd:number = this.getWeekLastDay();
-    private monthName:string = this.getMonthName();    
-    private totalEarnings:number = 0;
-    private totalPrices:number = 0;
-    private selectedWeekGetWeek:string;
-    private weekStr:string = `${this.weekInit} al ${this.weekEnd} de ${this.monthName}`;
+    title:string;
+    option:string;
+    weekInit:number = this.getWeekFirstDay();
+    weekEnd:number = this.getWeekLastDay();
+    monthName:string = this.getMonthName();    
+    totalEarnings:number = 0;
+    totalPrices:number = 0;
+    selectedWeekGetWeek:string;
+    weekStr:string = `${this.weekInit} al ${this.weekEnd} de ${this.monthName}`;
 
     constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
         this.option = navParams.data.option;
@@ -164,7 +164,7 @@ export class StatisticWeekPage {
             arr[index] = date.getDate().toString();            
         });
         
-        var labels = dates;    
+        //var labels = dates;    
         var lineChartData = [];
         let encodedString, val;
 

@@ -18,7 +18,7 @@ export class AdvertisementPage {
   //to do poner los links de productos e inversiones
   public publishedAdvs: Array<{ id:string, img:string, paymentType: string, bank:string, accountType:string, bunch: string }>;
   public draftAdvs: Array<{ id:string, img:string, paymentType: string, bank:string, accountType:string, bunch: string }>;
-  private prevPage: any;
+  prevPage: any;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {

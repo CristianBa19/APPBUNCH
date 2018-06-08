@@ -1,7 +1,7 @@
-import { LoginPage } from './../login/login';
+//import { LoginPage } from './../login/login';
 import { Component } from '@angular/core';
-import { NavController, NavParams, Events, ModalController } from 'ionic-angular';
-import { HelpCenterPage} from '../help-center/help-center';
+import { NavController, NavParams, Events } from 'ionic-angular'; //ModalController
+//import { HelpCenterPage} from '../help-center/help-center';
 //import { LocalizationModel } from '../../_helpers/localizationModel'
 //import { AlertService } from '../../_helpers/alert.service'
 
@@ -21,7 +21,7 @@ export class ProfilePage {
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public _event: Events,
-              private modalCtrl: ModalController,
+              //private modalCtrl: ModalController,
               //private localizationModel: LocalizationModel,
               //private alertService: AlertService
   ) {

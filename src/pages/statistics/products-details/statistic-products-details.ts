@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { Http, Headers } from '@angular/http';
+import { Http } from '@angular/http';
 //import { NgClass } from '@angular/common';
 // import { AcquireProductPage } from '../acquire-product/acquire-product';
 
@@ -10,10 +10,10 @@ import { Http, Headers } from '@angular/http';
 })
 export class StatisticProductsDetailsPage {
 
-    private isClient: any;
-    private productDetail:any = {};    
-    private optionList:any =[];
-    private containerTexts = [
+    isClient: any;
+    productDetail:any = {};    
+    optionList:any =[];
+    containerTexts = [
         {
             mainText: "DAÑOS MATERIALES: ",
             subText: "5% V. COMERCIAL"
@@ -47,7 +47,7 @@ export class StatisticProductsDetailsPage {
     constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
 
         this.isClient = localStorage.getItem("isClient");
-        let data = this.navParams.data;
+        //let data = this.navParams.data;
         this.optionList = [
             {nameOfProduct:"Chevrolet Aveo 2010", subNameOfProduct:"Seguro de Auto", companyLogo:"assets/icon/logo/logo-axa.png", companyName:"Amplia", companySubName:"Covertura", itemValue:"$6,050", itemSubValue:"Anual", conteinerTexts:[
                 {

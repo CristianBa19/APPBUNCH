@@ -60,6 +60,11 @@ export class RegistrerPage {
     email:string;
     password:string;
     cel:number;
+    showPass = false;
+
+    viewPass(show:boolean) {
+        this.showPass = show;
+    }
 
     ionViewDidLoad() {        
         if (localStorage.idContVend != undefined) {
@@ -371,6 +376,33 @@ export class RegistrerPage {
         }
     }
 
+    filterNumeric(elemName:string) {
+        
+        let elem = document.getElementById(elemName).getElementsByTagName('input')[0];
+        let maxLen = elem.maxLength;
+        if (elem.value != null) {
+            let value = elem.value.trim();        
+            let valueLen = value.length;
+            if (value[valueLen - 1] == '.') {
+                value = value.slice(0, -1); 
+            }
+            value = value.replace(/\.+/g, '');
+            value = value.replace(/\-+/g, '');
+            let filtered:string = '';
+            try {            
+                let arr = value.match(/\d+/g);        
+                let len = arr.length;        
+                for (let i = 0; i < len; i++) {                
+                    filtered += arr[i];                
+                }
+            } catch(err) {}
+            
+            elem.value = filtered.substring(0, maxLen);
+        } else {
+            this[elemName] = null;
+        }
+    }
+
     passChange(pass) {
         if (pass.length == 0) {
             this.validPass = undefined;
@@ -381,7 +413,7 @@ export class RegistrerPage {
 
     validatePass() {
         let pass = this.password;
-        if (pass.length >= 6) {
+        if (pass.length >= 7) {
             this.validPass = true;
             return true;
         } else {

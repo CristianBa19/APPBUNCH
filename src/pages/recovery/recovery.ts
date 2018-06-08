@@ -1,7 +1,7 @@
-import { Component, Input, ViewChild } from '@angular/core';
-import { NavController, NavParams, Slides, ToastController, LoadingController } from 'ionic-angular';
+import { Component } from '@angular/core';
+import { NavController, NavParams, ToastController, LoadingController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
-import { Http, Headers } from '@angular/http';
+import { Http } from '@angular/http';
 import { AlertController } from 'ionic-angular';
 
 @Component({
@@ -10,11 +10,11 @@ import { AlertController } from 'ionic-angular';
 })
 export class RecoveryPage {    
 
-    private email:string;
+    email:string;
 
     constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http, public alertCtrl: AlertController, public loadingCtrl: LoadingController, public toastCtrl: ToastController) { }
 
-    private sendRequest() {
+    sendRequest() {
 
         var loader = this.loadingCtrl.create();
         loader.present();
@@ -84,7 +84,7 @@ export class RecoveryPage {
         this.navCtrl.setRoot(LoginPage, false, { animate: true });
     }
 
-    private goBack() {
+    goBack() {
         this.navCtrl.pop();     
     }
 }
